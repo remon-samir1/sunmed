@@ -1,0 +1,54 @@
+.WebDevelopment{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 15px;
+}
+.WebDevelopment .svg{
+  flex: 1;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+.WebDevelopment .svg h4{
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+.WebDevelopment .svg h5{
+  color: var(--main-color);
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+
+
+
+
+.WebDevelopment .content{
+  flex: 1;
+}
+.WebDevelopment .content p{
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+.WebDevelopment .content ul{
+  margin-top: 35px;
+  margin-left: 25px;
+  
+}
+.WebDevelopment .content ul li{
+  margin-top: 15px;
+  list-style: disc;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+.WebDevelopment .content .link{
+  color: var(--text-color);
+  width: 250px;
+  padding: 15px;
+  border: 1px solid var(--main-color);
+  margin-top: 25px;
+  text-align: center;
+  display: inline-block;
+}

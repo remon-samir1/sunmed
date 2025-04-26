@@ -1,0 +1,178 @@
+.LatestInsights {
+  background-color: #f6f6f6;
+  height: max-content;
+}
+.LatestInsights .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.LatestInsights .text h2 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+.LatestInsights .text h3 {
+  font-size: 1.7rem;
+  color: var(--main-color);
+}
+.LatestInsights .blogs {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 15px;
+  margin-top: 30px;
+}
+.LatestInsights .blogs .main-blog {
+  flex: 1;
+  height: 70vh;
+
+}
+.LatestInsights .blogs .main-blog .img {
+  height: 80%;
+  width: 100%;
+  position: relative;
+  transition: 3s all;
+  overflow: hidden;
+}
+.LatestInsights .blogs .main-blog .img:hover > img {
+  transform: scale(1.1);
+}
+
+.LatestInsights .blogs .main-blog .img::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 90%
+  );
+  opacity: 1;
+  transition: 3s all;
+}
+.LatestInsights .blogs .main-blog .img:hover::before {
+  opacity: 0;
+}
+.LatestInsights .blogs .main-blog .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 3s all;
+}
+.LatestInsights .blogs .main-blog .img p {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  color: #fff;
+  z-index: 999;
+  max-width: 90%;
+}
+.LatestInsights .blogs .main-blog .content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 0 0px 10px 10px;
+
+}
+.LatestInsights .blogs .main-blog .content p {
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+.LatestInsights .blogs .main-blog .content .flex span {
+  color: #c14142;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.LatestInsights .blogs .main-blog .content .flex .icon {
+  color: #c14142;
+}
+
+.LatestInsights .blogs .second-blogs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+}
+
+
+.LatestInsights .blogs .second-blogs .blog{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  /* gap: 10px; */
+  height: 40vh;
+  flex: 1;
+}
+
+.LatestInsights .blogs .second-blogs .blog .img {
+  height: 40vh !important;
+  flex: 1;
+  position: relative;
+  transition: 3s all;
+  overflow: hidden;
+}
+.LatestInsights .blogs .second-blogs .blog .img:hover > img {
+  transform: scale(1.1);
+}
+
+.LatestInsights .blogs .second-blogs .blog .img::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 90%
+  );
+  opacity: 1;
+  transition: 3s all;
+}
+.LatestInsights .blogs .second-blogs .blog .img:hover::before {
+  opacity: 0;
+}
+.LatestInsights .blogs .second-blogs .blog .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 3s all;
+}
+.LatestInsights .blogs .second-blogs .blog .img p {
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  color: #fff;
+  font-size: 0.8rem;
+  z-index: 999;
+  max-width: 90%;
+}
+.LatestInsights .blogs .second-blogs .blog .content {
+  background-color: #fff;
+  padding: 20px;
+  flex: 1;
+  height: 40vh;
+  border-radius: 0 10px 10px 0;
+
+}
+.LatestInsights .blogs .second-blogs .blog .content p {
+  color: var(--text-color);
+  font-size: 0.8rem;
+}
+.LatestInsights .blogs .second-blogs .blog .content .flex span {
+  color: #c14142;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.LatestInsights .blogs .second-blogs .blog .content .flex .icon {
+  color: #c14142;
+}

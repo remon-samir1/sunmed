@@ -4,6 +4,7 @@
 :root{
   --main-color: #CBB434;
   --bg-color:#15182b;
+  --text-color:#636572;
 }
 /* Global */
 
@@ -13,6 +14,7 @@
 body{
   background-color: var(--bg-color);
 }
+
 *{
   margin: 0;
   padding: 0;

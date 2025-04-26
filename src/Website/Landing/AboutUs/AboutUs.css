@@ -1,0 +1,28 @@
+.AboutUs{
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.AboutUs .content h3{
+ text-transform: uppercase;
+ color: var(--main-color);
+ font-size: 1.8rem;
+}
+.AboutUs .content p{
+  max-width: 35vw;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  line-height: 25px;
+  margin-top: 20px;
+}
+.AboutUs .content .link{
+  color: var(--text-color);
+  width: 250px;
+  padding: 15px;
+  border: 1px solid var(--main-color);
+  margin-top: 20px;
+  text-align: center;
+  display: inline-block;
+}

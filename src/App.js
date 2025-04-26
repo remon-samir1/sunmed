@@ -3,6 +3,7 @@ import Landing from "./Website/Landing/Landing";
 import Navbar from './Components/Navbar/Navbar';
 import MenuContext, { Menu } from './Context/MenuOpen/MenuContext';
 import { useContext } from "react";
+import WebDevelopment from "./Website/Landing/OverView/WebDevelopment/WebDevelopment";
 
 function App() {
   const menu = useContext(Menu)
@@ -15,7 +16,9 @@ function App() {
     <Router>
       <Routes>
 
-        <Route element={<Landing />} path="/" />
+        <Route element={<Landing />} path="/" >
+          <Route element={<WebDevelopment/>} path="web"/>
+        </Route>
       </Routes>
     </Router>
     </div>

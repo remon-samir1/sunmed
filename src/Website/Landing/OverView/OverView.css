@@ -1,0 +1,71 @@
+.OverView{
+  background: #fff url('../../../Images/overview-bg.png') no-repeat;
+  background-size: cover;
+  /* padding-top: 40px; */
+}
+.OverView .texts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.OverView .texts h2{
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+.OverView .texts h3{
+  font-size: 1.7rem;
+  color: var(--main-color);
+}
+.OverView .links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 35px;
+}
+.OverView .links .link{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  padding: 30px 0;
+  border-radius: 8px;
+  transition: 0.5s ease;
+}
+.OverView .links .link:hover{
+  background-color: var(--main-color);
+}
+.OverView .links .link:hover > span , .OverView .links .link:hover > .icon{
+  color: #fff;
+
+}
+.OverView .links .link .icon{
+  color: var(--text-color);
+  width: 40px;
+  height: 40px;
+  transition: 0.5s ease;
+
+}
+
+.OverView .links .link span{
+  color: var(--text-color);
+ font-size: 1.1rem;
+ transition: 0.5s ease;
+
+}
+
+
+.OverView .links .link.active{
+  background-color: var(--main-color);
+
+}
+.OverView .links .link.active span{
+  color: #fff;
+}
+.OverView .links .link.active .icon{
+  color: #fff;
+}
