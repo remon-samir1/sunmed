@@ -1,0 +1,79 @@
+.navbar{
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background: var(--bg-color);
+  color: white;
+  transition: right 0.5s ease;
+  padding-left: 5rem;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+
+}
+.navbar.open {
+  right: 0;
+}
+.navbar .links{
+display: flex;
+justify-content: start;
+align-items: start;
+flex-direction: column;
+gap: 20px;
+
+}
+.navbar .links .link{
+font-size: 1.3rem;
+color: #fff;
+transition: 0.3s;
+}
+.navbar .links .link:hover{
+  color: var(--main-color);
+}
+.navbar .social-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+.navbar .social-links .icon-container{
+  width: 26px;
+  height: 26px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .social-links .icon{
+  width: 14px;
+  height: 14px;
+
+}
+.navbar .contact span{
+font-size: 0.8rem;
+}
+.navbar .close{
+  position: relative;
+  top: -29%; left: -109px;
+cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;align-items: center;
+}
+.navbar .close .icon{
+  width: 24px;
+  height: 24px;
+  transition: 0.3s;
+}
+.navbar .close:hover > .icon{
+transform: rotate(180deg);
+}

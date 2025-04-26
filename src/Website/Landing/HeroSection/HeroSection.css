@@ -1,59 +1,11 @@
 .HeroSection {
-  background: url("../../../Images/sunmed-bg.svg");
+  background: url("../../../Images/sunmed-bg.svg") no-repeat;
   background-position: center;
-  background-size: 100% 100vw;
+  background-size: cover;
   height: 100dvh;
 
 }
 
-.HeroSection header .menu {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
-  gap: 4px;
-  width: 32px;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.HeroSection header .menu span {
-  position: relative;
-  display: block;
-  width: 32px;
-  height: 2px;
-  background-color: var(--main-color);
-  transform: translateX(0);
-  transition: 0.5s all;
-}
-
-.HeroSection header .menu span:nth-child(2) {
-  width: 20px;
-}
-
-.HeroSection header .menu span::before {
-  content: "";
-  position: absolute;
-  right: calc(100% + 6px);
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--main-color);
-  transition: 0.4s ease-in-out all; 
-  transform: translateX(0); 
-}
-.HeroSection header .menu span:nth-child(2)::before{
-  width: 5px !important;
-
-}
-
-.HeroSection header .menu:hover span {
-  transform: translateX(100%);
-}
-
-.HeroSection header .menu:hover span::before {
-  transform: translateX(6px); 
-}
 
 .HeroSection .content{
   width: 100%;

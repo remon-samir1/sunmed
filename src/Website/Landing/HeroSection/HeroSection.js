@@ -4,6 +4,7 @@ import "./HeroSection.css";
 import Logo from "../../../Components/Logo/Logo";
 import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
+import Header from "../../../Components/Header/Header";
 
 const HeroSection = () => {
   const [coords1, setCoords1] = useState({ x: 10, y: 0 });
@@ -64,14 +65,7 @@ const HeroSection = () => {
 
   return (
     <div className="HeroSection">
-      <header className="flex px-10 justify-between items-center h-20">
-        <Logo width="120px" />
-        <div className="menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </header>
+   <Header/>
       <div className="content">
         <h1 ref={titleRef}>DATA - DRIVEN REVENUE MARKETING</h1>
 

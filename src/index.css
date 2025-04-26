@@ -2,17 +2,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 /* roots */
 :root{
-  --main-color: #CBB434
+  --main-color: #CBB434;
+  --bg-color:#15182b;
 }
 /* Global */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body{
+  background-color: var(--bg-color);
+}
 *{
   margin: 0;
-  
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+
+
+::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+ }
+ ::-webkit-scrollbar-track{
+  background: #fff;
+  /* border-radius: 6px; */
+ }
+ ::-webkit-scrollbar-thumb{
+  background:var(--main-color);
+  /* border-radius: 6px; */
+ }

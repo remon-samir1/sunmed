@@ -3,7 +3,8 @@ import HeroSection from './HeroSection/HeroSection';
 
 const Landing = () => {
   return (
-    <div>
+    <div className='overflow-auto'>
+      <HeroSection/>
       <HeroSection/>
     </div>
   );
