@@ -7,9 +7,10 @@ import { useContext } from "react";
 function App() {
   const menu = useContext(Menu)
   const isOpen = menu.isOpen
+  const resize =  window.innerWidth > 600 ?"translate3d(-400px, 20%, 0) scaleY(1)" : " translate3d(-330px, 20%, 0) scaleY(1)"
   return (
     <div className='relative flex'>
-    <div className={`duration-500 flex-1 overflow-auto`} style={{ transform: isOpen &&"translate3d(-400px, 20%, 0) scaleY(1)" , maxHeight:isOpen&&'70vh', margin:isOpen&&'auto'}} >
+    <div className={`duration-500 flex-1 overflow-auto`} style={{ transform: isOpen && resize , maxHeight:isOpen&&'70vh', margin:isOpen&&'auto'}} >
 
     <Router>
       <Routes>

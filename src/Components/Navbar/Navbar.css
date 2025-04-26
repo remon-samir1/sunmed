@@ -75,6 +75,7 @@ cursor: pointer;
   border-radius: 50%;
   display: flex;
   justify-content: center;align-items: center;
+  transition: 0.5s;
 }
 .navbar .close .icon{
   width: 24px;
@@ -83,4 +84,17 @@ cursor: pointer;
 }
 .navbar .close:hover > .icon{
 transform: rotate(180deg);
+}
+.navbar .close:hover{
+  box-shadow: 0 0 10px var(--main-color);
+}
+@media (max-width:600px) {
+  .navbar{
+    width: 330px;
+  padding-left: 40px;
+  }
+.navbar .close{
+  left: -70px;
+}
+
 }
