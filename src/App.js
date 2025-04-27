@@ -16,9 +16,7 @@ function App() {
     <Router>
       <Routes>
 
-        <Route element={<Landing />} path="/" >
-          <Route element={<WebDevelopment/>} path="web"/>
-        </Route>
+        <Route element={<Landing />} path="/" />
       </Routes>
     </Router>
     </div>

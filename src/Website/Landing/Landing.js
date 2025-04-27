@@ -4,6 +4,8 @@ import AboutUs from './AboutUs/AboutUs';
 import StartProject from './StartProject/StartProject';
 import OverView from './OverView/OverView';
 import LatestInsights from './LatestInsights/LatestInsights';
+import Divider from './Divider/Divider';
+import WithUs from './WithUs/WithUs';
 
 const Landing = () => {
   return (
@@ -13,6 +15,8 @@ const Landing = () => {
       <StartProject/>
       <OverView/>
       <LatestInsights/>
+      <Divider/>
+      <WithUs/>
     </div>
   );
 }

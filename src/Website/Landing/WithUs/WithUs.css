@@ -1,0 +1,98 @@
+.WithUs{
+  background: url('../../../Images/withUs-bg.png') no-repeat;
+  padding: 20vh 7vw 10vh 7vw;
+}
+.WithUs .texts h3{
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+.WithUs .texts p{
+  color: var(--text-color);
+  font-size: 0.8rem;
+}
+.WithUs .tels p{
+  color: var(--text-color);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  margin-top: 4px;
+}
+.WithUs .tels p span{
+  color: var(--main-color);
+  font-weight: 600;
+}
+.WithUs form{
+  margin-top: 30px;
+}
+.WithUs form .input-field , .textarae-field{
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+
+}
+.WithUs form .input-field input ,.WithUs form textarea {
+  width: 100%;
+  padding: 10px;
+  color: var(--text-color);
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--main-color);
+}
+.WithUs form .input-field::before{
+  content: "";
+  height: 1.2px;
+  width: 100%;
+  position: absolute;
+  top: calc(100% - 1px);
+  left: -120%;
+  background-color:#152065;
+  transition: 0.7s ease;
+}
+.WithUs form .input-field:focus-within:before{
+left: 0;
+}
+.WithUs form .textarae-field::before{
+  content: "";
+  height: 1px;
+  border-radius: 4px;
+  width: 100%;
+  position: absolute;
+  top: calc(100% - 7px);
+  left: -120%;
+  background-color:#152065;
+  transition: 0.7s ease;
+}
+.WithUs form .textarae-field:focus-within:before{
+left: 0;
+}
+.WithUs form .form-control{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  align-items: start;
+}
+.WithUs form .form-control label ,.WithUs form .form-control p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+.WithUs form .form-control input{
+  transform: scale(0.9) translateX(-20px);
+  /* margin-right: 20px; */
+}
+.WithUs form .privacy{
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-top: 25px;
+}
+.WithUs form .privacy span{
+  color: var(--main-color);
+}
+.WithUs form .link{
+  color: var(--text-color);
+  width: 250px;
+  padding: 15px;
+  border: 1px solid var(--main-color);
+  margin-top: 25px;
+  text-align: center;
+  display: inline-block;
+}

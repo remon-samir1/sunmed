@@ -1,0 +1,36 @@
+.divider-conrainer {
+  background-color: #f6f6f6;
+  padding: 15vh 0;
+}
+.Divider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color);
+  background-image: url("../../../Images/divider-bg.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  padding: 0 15vw;
+  /* margin-top: 30px; */
+}
+.Divider h3 {
+  color: #fff;
+  font-size: 2rem;
+}
+.Divider .link {
+  color: var(--bg-color);
+  font-size: 1rem;
+  width: 200px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.4s ease-in-out;
+  text-align: center;
+}
+.Divider .link:hover {
+  background-color: var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
+  color: #fff;
+}

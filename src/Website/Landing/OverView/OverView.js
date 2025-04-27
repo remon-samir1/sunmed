@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./OverView.css";
 import { NavLink, Outlet } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { SlRocket } from "react-icons/sl";
+import WebDevelopment from "./WebDevelopment/WebDevelopment";
 
 const OverView = () => {
+  const [change , setChange] = useState('web')
   return (
     <div className="OverView px-[7vw] pt-[15vh]">
       <div className="texts">
@@ -12,7 +14,7 @@ const OverView = () => {
         <h3>our services</h3>
       </div>
       <div className="links">
-        <NavLink className='link' to="web">
+        <button className={`link ${change === 'web' && 'active'}`}>
           <Icon
             icon="streamline:browser-website-1"
             className="icon"
@@ -20,7 +22,7 @@ const OverView = () => {
             height="40"
           />
           <span>Web Development</span>
-        </NavLink>
+        </button>
         <NavLink className='link' to="/s">
           <Icon
             icon="hugeicons:marketing"
@@ -56,7 +58,9 @@ const OverView = () => {
       </div>
       <div className="mt-14">
 
-      <Outlet />
+      {
+        change === 'web' && <WebDevelopment/>
+      }
       </div>
     </div>
   );
