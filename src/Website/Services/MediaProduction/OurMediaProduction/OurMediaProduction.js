@@ -17,7 +17,6 @@ const OurMediaProduction = () => {
     const section = sectionRef.current;
     const cards = cardsRef.current;
 
-    // Animation for the heading
     gsap.from(section.querySelector(".text h3"), {
       scrollTrigger: {
         trigger: section.querySelector(".text h3"),

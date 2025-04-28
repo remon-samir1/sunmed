@@ -24,10 +24,12 @@
 }
 .HeroSection .content p{
 font-size: 1.2rem;
-font-weight: 200;
+font-weight: 400;
 letter-spacing: 1px;
+color: #fff;
 text-align: center;
 opacity: 0.8;
+padding: 10px;
 }
 .HeroSection .content .link{
   color:#0D0D0D;

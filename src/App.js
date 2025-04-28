@@ -3,8 +3,8 @@ import Landing from "./Website/Landing/Landing";
 import Navbar from './Components/Navbar/Navbar';
 import MenuContext, { Menu } from './Context/MenuOpen/MenuContext';
 import { useContext, useEffect, useState } from "react";
-import WebDevelopment from "./Website/Landing/OverView/WebDevelopment/WebDevelopment";
-import MediaProduction from "./Website/Services/MediaProduction";
+import MediaProduction from "./Website/Services/MediaProduction/MediaProduction";
+import WebSolutionsLanding from "./Website/Services/WebSolutions/WebSolutionsLanding";
 
 function App() {
   const [dynamicHeight ,setDynamicHeight ] = useState('100vh')
@@ -36,6 +36,7 @@ function App() {
 
         <Route element={<Landing />} path="/" />
         <Route element={<MediaProduction />} path="/media-production" />
+        <Route element={<WebSolutionsLanding />} path="/web-solution" />
       </Routes>
     </div>
     <div>

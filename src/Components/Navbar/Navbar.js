@@ -32,7 +32,7 @@ const Navbar = () => {
         >
           <Link className="link" to="/media-production">Media production</Link>
           <Link className="link" to="/">Education services</Link>
-          <Link className="link" to="/">Web solution</Link>
+          <Link className="link" to="/web-solution">Web solution</Link>
           <Link className="link" to="/">Digital marketing</Link>
           <Link className="link" to="/">Event management</Link>
         </div>
