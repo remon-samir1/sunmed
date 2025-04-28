@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
 import { FaFacebookF } from "react-icons/fa6";
 import { IoLogoTwitter } from "react-icons/io5";
 import { IoLogoInstagram } from "react-icons/io";
@@ -10,25 +9,39 @@ import { IoCallOutline } from "react-icons/io5";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
 import { Menu } from "../../Context/MenuOpen/MenuContext";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
+  const [openServe, setOpenServe] = useState(false);
   const menu = useContext(Menu);
   const isOpen = menu.isOpen;
   const setIsOpen = menu.setIsOpen;
+
   return (
     <div className={`navbar ${isOpen && "open"}`}>
       <div className="links">
-        <button to="/" className="link">
+        <Link to="/" className="link">
           Home
-        </button>
-        <button to="/" className="link">
+        </Link>
+        <button onClick={() => setOpenServe(prev => !prev)} className="link">
           Services
         </button>
-        <button to="/" className="link">
+        <div
+          className="services-list m-0 flex flex-col justify-start items-start gap-[6px] overflow-hidden transition-all duration-500 ease-in-out"
+          style={{ height: openServe ? '122px' : '0px' }}
+        >
+          <Link className="link" to="/media-production">Media production</Link>
+          <Link className="link" to="/">Education services</Link>
+          <Link className="link" to="/">Web solution</Link>
+          <Link className="link" to="/">Digital marketing</Link>
+          <Link className="link" to="/">Event management</Link>
+        </div>
+        <Link to="/" className="link">
           Blog
-        </button>
-        <button to="/" className="link">
+        </Link>
+        <Link to="/" className="link">
           Contact
-        </button>
+        </Link>
       </div>
       <div className="social-links">
         <div className="icon-container">
@@ -61,12 +74,11 @@ const Navbar = () => {
           <span>sales@winmarketagency.com</span>
         </div>
       </div>
-      {
-        isOpen&&
-      <div className="close" onClick={()=>setIsOpen(prev=>!prev)}>
-        <IoMdClose className="icon" />
-      </div>
-      }
+      {isOpen && (
+        <div className="close" onClick={() => setIsOpen(prev => !prev)}>
+          <IoMdClose className="icon" />
+        </div>
+      )}
     </div>
   );
 };

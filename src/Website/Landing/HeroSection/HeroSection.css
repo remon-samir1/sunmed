@@ -43,6 +43,10 @@ opacity: 0.8;
   border-radius: 10px;
 }
 @media (max-width:768px){
+.HeroSection {
+background-size: cover;
+/* background-position: ; */
+}
   .HeroSection .content h1{
     white-space: pre-wrap;
     text-align: center;

@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar';
 import MenuContext, { Menu } from './Context/MenuOpen/MenuContext';
 import { useContext, useEffect, useState } from "react";
 import WebDevelopment from "./Website/Landing/OverView/WebDevelopment/WebDevelopment";
+import MediaProduction from "./Website/Services/MediaProduction";
 
 function App() {
   const [dynamicHeight ,setDynamicHeight ] = useState('100vh')
@@ -27,20 +28,21 @@ function App() {
 
 }, [isOpen]);
   return (
-    <div className='relative flex'>
-    <div className={`duration-700 flex-1 overflow-auto will-change-transform`} style={{ transform: isOpen ? resize: closed , height:isOpen?'70vh' : dynamicHeight,margin:'auto'}} >
-
     <Router>
+    <div className='relative flex'>
+    <div className={`duration-700 flex-1  overflow-auto will-change-transform`} style={{ transform: isOpen ? resize: closed , height:isOpen?'70vh' : dynamicHeight,margin:'auto'}} >
+
       <Routes>
 
         <Route element={<Landing />} path="/" />
+        <Route element={<MediaProduction />} path="/media-production" />
       </Routes>
-    </Router>
     </div>
     <div>
       <Navbar/>
     </div>
     </div>
+    </Router>
   );
 }
 

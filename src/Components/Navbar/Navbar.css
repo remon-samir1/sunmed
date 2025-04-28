@@ -23,7 +23,7 @@ display: flex;
 justify-content: start;
 align-items: start;
 flex-direction: column;
-gap: 20px;
+gap: 10px;
 
 }
 .navbar .links .link{
@@ -73,6 +73,14 @@ font-size: 0.8rem;
 }
 
 
+.navbar .services-list .link{
+  font-size: 13px;
+  margin-left: 10px;
+  transition: 0.5s;
+}
+.navbar .services-list .link:hover{
+  color: var(--main-color);
+}
 .navbar .close{
   position: relative;
   top: -29%; left: -109px;
