@@ -26,6 +26,7 @@
 font-size: 1.2rem;
 font-weight: 200;
 letter-spacing: 1px;
+text-align: center;
 opacity: 0.8;
 }
 .HeroSection .content .link{
@@ -40,4 +41,26 @@ opacity: 0.8;
   align-items: center;
   transition: background-position 0.2s, background-size 0.2s;
   border-radius: 10px;
+}
+@media (max-width:768px){
+  .HeroSection .content h1{
+    white-space: pre-wrap;
+    text-align: center;
+    font-size: 2.3rem;
+    padding: 0 5vw;
+  }
+  .HeroSection .content .link{
+    width: 65vw;
+  }
+}
+@media (max-width:480px){
+  .HeroSection .content h1{
+    white-space: pre-wrap;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 0 5vw;
+  }
+  .HeroSection .content .link{
+    width: 65vw;
+  }
 }

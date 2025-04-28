@@ -73,7 +73,7 @@ const HeroSection = () => {
           Digital marketing agency that drives sales for your business
         </p>
 
-        <div className="flex justify-center items-center gap-7">
+        <div className="flex justify-center items-center gap-7 flex-col md:flex-row  mt-3 md:mt-0">
           <Link
             ref={link1Ref}
             onMouseMove={handleMouseMove1}
