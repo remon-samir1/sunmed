@@ -5,8 +5,8 @@ const WithUs = () => {
   return (
     <div className="bg-white pt-[18vh]">
       <div className="WithUs">
-        <div className="flex justify-center items-start gap-[10vw]">
-          <div className="flex-1">
+        <div className="flex justify-center items-start gap-[10vw] flex-wrap">
+          <div className="flex-1 ">
 
           <div className="texts ">
             <h3>INTERSTED IN DISCUSSING A PROJECT WITH US?</h3>
@@ -22,7 +22,7 @@ const WithUs = () => {
           </div>
 
          <form >
-          <div className="flex gap-8 mt-8 items-center">
+          <div className="flex gap-8 mt-8 items-center md:flex-row flex-col">
             <div className="input-field">
 
             <input type="text" placeholder="What’s your name? *" />
@@ -32,7 +32,7 @@ const WithUs = () => {
             <input type="text" placeholder="Your company ( if applicable )" />
             </div>
           </div>
-          <div className="flex gap-8 mt-8 items-center">
+          <div className="flex gap-8 mt-8 items-center md:flex-row flex-col">
           <div className="input-field">
 
             <input type="email" placeholder="Enter your email *" />

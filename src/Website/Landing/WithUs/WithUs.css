@@ -1,5 +1,6 @@
 .WithUs{
   background: url('../../../Images/withUs-bg.png') no-repeat;
+  background-size: cover;
   padding: 20vh 7vw 10vh 7vw;
 }
 .WithUs .texts h3{
@@ -27,6 +28,7 @@
   flex: 1;
   position: relative;
   overflow: hidden;
+  flex-wrap: wrap;
 
 }
 .WithUs form .input-field input ,.WithUs form textarea {
@@ -44,7 +46,7 @@
   position: absolute;
   top: calc(100% - 1px);
   left: -120%;
-  background-color:#152065;
+  background-color:var(--bg-color);
   transition: 0.7s ease;
 }
 .WithUs form .input-field:focus-within:before{
@@ -58,7 +60,7 @@ left: 0;
   position: absolute;
   top: calc(100% - 7px);
   left: -120%;
-  background-color:#152065;
+  background-color:var(--bg-color);
   transition: 0.7s ease;
 }
 .WithUs form .textarae-field:focus-within:before{
@@ -95,4 +97,24 @@ left: 0;
   margin-top: 25px;
   text-align: center;
   display: inline-block;
+}
+@media (max-width : 768px) {
+.WithUs .texts h3{
+  font-size: 1.1rem;
+}
+  .WithUs{
+  
+    padding: 20vh 7vw 10vh 5vw;
+  }
+  .WithUs .tels{
+  justify-content: start;
+    order: 1;
+  }
+  .WithUs .flex-1{
+    order: 2;
+  }
+  .WithUs form .input-field , .textarae-field{
+    flex-direction: column;
+    width: 100%;
+  }
 }

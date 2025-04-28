@@ -35,3 +35,9 @@ body{
   background:var(--main-color);
   /* border-radius: 6px; */
  }
+
+ @media (max-width:768) {
+  html{
+    font-size: 14px;
+  }
+ }

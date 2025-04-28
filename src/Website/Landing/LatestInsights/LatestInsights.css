@@ -84,12 +84,12 @@
   font-size: 0.9rem;
 }
 .LatestInsights .blogs .main-blog .content .flex span {
-  color: #c14142;
+  color: var(--main-color);
   font-size: 0.8rem;
   font-weight: 600;
 }
 .LatestInsights .blogs .main-blog .content .flex .icon {
-  color: #c14142;
+  color: var(--main-color);
 }
 
 .LatestInsights .blogs .second-blogs {
@@ -169,10 +169,30 @@
   font-size: 0.8rem;
 }
 .LatestInsights .blogs .second-blogs .blog .content .flex span {
-  color: #c14142;
+  color: var(--main-color);
   font-size: 0.8rem;
   font-weight: 600;
 }
 .LatestInsights .blogs .second-blogs .blog .content .flex .icon {
-  color: #c14142;
+  color: var(--main-color);
+}
+
+@media (max-width: 900px) {
+  .LatestInsights .blogs{
+    flex-direction: column;
+  }
+  .LatestInsights .blogs .main-blog{
+    width: 100%;
+    height: 40vh !important;
+  }
+  .LatestInsights .blogs .main-blog .img ,.LatestInsights .blogs .second-blogs .blog .img{
+    width: 100%;
+    height: 50vh !important;
+  }
+  .LatestInsights .blogs .second-blogs .blog{
+    flex-direction: column;
+  }
+  .LatestInsights .blogs .second-blogs .blog .img p{
+    top: 80%;
+  }
 }

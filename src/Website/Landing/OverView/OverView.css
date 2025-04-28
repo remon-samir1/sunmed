@@ -69,3 +69,23 @@
 .OverView .links .link.active .icon{
   color: #fff;
 }
+@media (max-width:768px) {
+  .OverView .links .link span{
+    
+   font-size: 0.5rem;
+   margin: auto;
+   text-align: center;
+   
+  
+  }
+  
+  .OverView .links .link .icon{
+    width: 15px;
+    height: 15px;
+  
+  }
+  .OverView .links .link {
+    padding: 15px 0;
+    justify-content: center;
+  }
+}

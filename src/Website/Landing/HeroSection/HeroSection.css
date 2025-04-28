@@ -1,6 +1,6 @@
 .HeroSection {
   background-color: #fff !important;
-  background: url("../../../Images/sunmed-bg.svg") no-repeat;
+  background: url("../../../Images/hero-section.png") no-repeat;
   background-position: center;
   background-size: cover;
   height: 100dvh;
@@ -25,6 +25,7 @@
 .HeroSection .content p{
 font-size: 1.2rem;
 font-weight: 200;
+letter-spacing: 1px;
 opacity: 0.8;
 }
 .HeroSection .content .link{

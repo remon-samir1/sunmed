@@ -10,8 +10,9 @@
   background-image: url("../../../Images/divider-bg.png");
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 18.75rem;
   padding: 0 15vw;
+  flex-wrap: wrap;
   /* margin-top: 30px; */
 }
 .Divider h3 {
@@ -33,4 +34,16 @@
   background-color: var(--main-color);
   box-shadow: 0 0 10px var(--main-color);
   color: #fff;
+}
+@media (max-width:768px){
+  .Divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  padding: 0 10vw;
+  }
+    .Divider h3{
+      text-align: center;
+      font-weight: 500;
+    }
 }
