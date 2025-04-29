@@ -3,13 +3,13 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import OurMediaProductionCard from '../../MediaProduction/OurMediaProduction/OurMediaProductionCard';
-import { MediaBuyingDetailsData } from './MediaBuyingDetailsData';
 import { Link } from 'react-router-dom';
+import OurMediaProductionCard from '../../MediaProduction/OurMediaProduction/OurMediaProductionCard';
+import { SocialMediaDetailsData } from './SocialMediaDetailsData';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MediaBuyingDetails = () => {
+const SocialMediaDetails = () => {
   const sectionRef = useRef(null);
   const cardsRef = useRef([]);
 
@@ -44,15 +44,15 @@ const MediaBuyingDetails = () => {
   }, []);
 
   return (
-
-    <div className='OurMediaProduction mediabuying' ref={sectionRef}>
+    <div className='OurMediaProduction' ref={sectionRef}>
       <div className="text">
-        <h3 className='!w-[350px]'>OUR MEDIA BUYING SERVICES</h3>
-        <p className='!w-[350px]'>We can offer the following services as part of our SEO campaigns:</p>
+        <h3>OUR SOCIAL MEDIA SERVICES</h3>
+        <p className='!w-[350px]'>We can offer the following services </p>
+
       </div>
 
       <div className="cards">
-        {MediaBuyingDetailsData.map((data, key) => (
+        {SocialMediaDetailsData.map((data, key) => (
           <div
             key={key}
             ref={(el) => (cardsRef.current[key] = el)}
@@ -60,7 +60,7 @@ const MediaBuyingDetails = () => {
             <OurMediaProductionCard title={data.title} disc={data.disc} icon={data.icon} />
           </div>
         ))}
-      <div className="flex justify-center w-full md:justify-start items-center gap-4 mt-3">
+          <div className="flex justify-center w-full md:justify-start items-center gap-4 mt-3">
           <Link className="btn">START PROJCET</Link>
           <Link className="btn">FREE CONSULATION</Link>
         </div>
@@ -69,4 +69,4 @@ const MediaBuyingDetails = () => {
   );
 }
 
-export default MediaBuyingDetails;
+export default SocialMediaDetails;
