@@ -47,7 +47,7 @@ const SocialMediaDetails = () => {
     <div className='OurMediaProduction' ref={sectionRef}>
       <div className="text">
         <h3>OUR SOCIAL MEDIA SERVICES</h3>
-        <p className='!w-[350px]'>We can offer the following services </p>
+        <p className='!w-[250px]'>We can offer the following services </p>
 
       </div>
 
