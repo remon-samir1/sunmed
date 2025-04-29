@@ -2,6 +2,14 @@
   background-color: #f6f6f6;
   padding: 15vh 0;
 }
+.divider-conrainer .down-text{
+   padding-top: 100px;
+   color: var(--text-color);
+   max-width: 55%;
+   font-size: 0.9rem;
+   text-align: center;
+   margin: auto;
+}
 .Divider {
   display: flex;
   justify-content: space-between;
@@ -12,18 +20,27 @@
   background-position: center;
   height: 18.75rem;
   padding: 0 15vw;
-  flex-wrap: wrap;
+  gap: 5vw;
+  /* flex-wrap: wrap; */
   /* margin-top: 30px; */
 }
 .Divider h3 {
   color: #fff;
   font-size: 2rem;
+  line-height: 15px !important;
+}
+.Divider span{
+  font-size: 0.9rem;
+  color: #fff;
+  margin-top: 20px;
+  display: inline-block;
 }
 .Divider .link {
   color: var(--bg-color);
   font-size: 1rem;
-  width: 200px;
+  width: 230px;
   padding: 10px;
+  white-space: nowrap;
   background: #fff;
   border-radius: 8px;
   font-weight: 600;
@@ -38,6 +55,7 @@
 @media (max-width:768px){
   .Divider {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
   padding: 0 10vw;

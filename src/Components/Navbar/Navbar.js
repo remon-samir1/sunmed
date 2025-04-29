@@ -58,7 +58,7 @@ const Navbar = () => {
             setIsOpen(prev=>!prev);
             setOpenServe(prev=>!prev);
 
-          }} className="link" to="/">Seo</NavLink>
+          }} className="link" to="/seo">Seo</NavLink>
         </div>
         <Link to="/" className="link">
           Blog

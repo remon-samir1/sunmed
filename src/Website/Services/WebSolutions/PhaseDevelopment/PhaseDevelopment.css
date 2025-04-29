@@ -3,7 +3,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   gap: 5vw;
+   gap: 7vw;
 }
 .PhaseDevelopment .images{
   position: relative;
@@ -29,6 +29,9 @@ transition: 0.9s ease-out;
 will-change: transform;
 
 }
+.PhaseDevelopment .images .cards .card{
+  width: 200px;
+}
 .PhaseDevelopment .images .cards:hover{
   transform: translateX(-20px);
   opacity: 0.9;
@@ -47,6 +50,13 @@ will-change: transform;
   color: var(--text-color);
   font-size: 0.9rem;
   margin-top: 15px;
+}
+.PhaseDevelopment .content ul{
+  /* padding: 20px 30px; */
+}
+.PhaseDevelopment .content ul li{
+  margin-top: 15px;
+  list-style:disc ;
 }
 .PhaseDevelopment .content .links{
   display: flex;

@@ -2,7 +2,7 @@
 .OurMediaProduction{
   background:#FAFAFA url('../../../../Images/withUs-bg.png') no-repeat;
   background-size: cover;
-  padding: 20vh 7vw 10vh 7vw;
+  padding: 20vh 3vw 10vh 7vw;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -83,6 +83,7 @@
   .OurMediaProduction{
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 .OurMediaProduction .text h3{
 text-align: center;
@@ -91,5 +92,9 @@ margin: auto;
 letter-spacing: normal;
 font-weight: 500;
 margin-top: 30px;
+}
+.OurMediaProduction .text p{
+  text-align: center;
+  width: 100% !important;
 }
 }
