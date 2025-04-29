@@ -47,7 +47,8 @@ const MediaBuyingDetails = () => {
 
     <div className='OurMediaProduction' ref={sectionRef}>
       <div className="text">
-        <h3>OUR MEDIA BUYING SERVICES</h3>
+        <h3 className='!w-[350px]'>OUR MEDIA BUYING SERVICES</h3>
+        <p className='!w-[350px]'>We can offer the following services as part of our SEO campaigns:</p>
       </div>
 
       <div className="cards">

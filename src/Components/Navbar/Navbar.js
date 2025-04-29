@@ -20,9 +20,13 @@ const Navbar = () => {
   return (
     <div className={`navbar ${isOpen && "open"}`}>
       <div className="links">
-        <Link to="/" className="link">
+        <NavLink onClick={()=>{
+            setIsOpen(prev=>!prev);
+            
+
+          }}  to="/" className="link">
           Home
-        </Link>
+        </NavLink>
         <button onClick={() => setOpenServe(prev => !prev)} className="link">
           Services
         </button>

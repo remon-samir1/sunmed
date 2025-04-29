@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: start;
   gap: 5vw;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .Footer .content .header{
@@ -171,4 +171,13 @@ letter-spacing: 0.5px;
   .Footer .content .header{
     width: 100%;
   }
+}
+
+@media (max-width: 900px) {
+  .Footer .content{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+
+}
 }
