@@ -5,6 +5,8 @@ import MenuContext, { Menu } from './Context/MenuOpen/MenuContext';
 import { useContext, useEffect, useState } from "react";
 import MediaProduction from "./Website/Services/MediaProduction/MediaProduction";
 import WebSolutionsLanding from "./Website/Services/WebSolutions/WebSolutionsLanding";
+import MediaBuyingLanding from "./Website/Services/MediaBuying/MediaBuyingLanding";
+import SocialMediaLanding from "./Website/Services/SocialMedia/SocialMediaLanding";
 
 function App() {
   const [dynamicHeight ,setDynamicHeight ] = useState('100vh')
@@ -37,6 +39,8 @@ function App() {
         <Route element={<Landing />} path="/" />
         <Route element={<MediaProduction />} path="/media-production" />
         <Route element={<WebSolutionsLanding />} path="/web-solution" />
+        <Route element={<MediaBuyingLanding />} path="/media-buying" />
+        <Route element={<SocialMediaLanding />} path="/social-media" />
       </Routes>
     </div>
     <div>

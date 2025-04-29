@@ -1,6 +1,6 @@
 
 .OurMediaProduction{
-  background:#fff url('../../../../Images/withUs-bg.png') no-repeat;
+  background:#FAFAFA url('../../../../Images/withUs-bg.png') no-repeat;
   background-size: cover;
   padding: 20vh 7vw 10vh 7vw;
   display: flex;
@@ -18,7 +18,7 @@
 }
 .OurMediaProduction .cards{
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 1.3rem;
   flex-wrap: wrap;
@@ -62,6 +62,7 @@
 @media (max-width:768px){
 .OurMediaProduction .cards{
   padding-top: 10px;
+  justify-content: center;
 }
   .OurMediaProduction{
     flex-direction: column;

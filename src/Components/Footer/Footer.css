@@ -2,7 +2,7 @@
   background-color: var(--bg-color);
 }
 .Footer .content{
-  padding: 10vh 8vw;
+  padding: 10vh 5vw;
   display: flex;
   justify-content: center;
   align-items: start;

@@ -1,0 +1,81 @@
+.PostLaunch{
+  background-color: #fafafa;
+}
+.PostLaunch .text{
+  text-align: center;
+}
+.PostLaunch .text p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+.PostLaunch .text h3 {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: var(--main-color);
+}
+.PostLaunch .flex .links{
+  padding:15px 25px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+  flex-direction: column;
+  border-right: 2px solid var(--main-color);
+}
+.PostLaunch .flex .links .link{
+  padding: 12px 0 12px 60px;
+  width: 250px;
+  white-space: nowrap;
+  color: #000000;
+  border-radius: 8px;
+
+  transition: 0.5s ease-in-out;
+}
+.PostLaunch .flex .links .link div{
+    display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+.PostLaunch .flex .links .link:hover{
+color: #fff;
+  background-color: var(--main-color);
+}
+.PostLaunch .flex .content p{
+
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+.PostLaunch .flex .content h3{
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-size: 1.7rem;
+  color: var(--main-color);
+}
+
+@media (max-width: 768px){
+  .PostLaunch .flex{
+    flex-direction: column;
+  }
+  .PostLaunch .flex .links{
+    flex-direction: row;
+    border-right: none;
+    gap: 10px;
+  padding:15px 1vw;
+
+  }
+  .PostLaunch .flex .links .link{
+    width: 20%;
+    flex: 1;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  white-space: pre-wrap;
+
+  }
+  .PostLaunch .flex .links .link div{
+    flex-direction: column;
+
+}
+}

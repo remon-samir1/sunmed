@@ -31,6 +31,9 @@ font-size: 1.3rem;
 color: #fff;
 transition: 0.3s;
 }
+.navbar .links .link.active{
+  color: var(--main-color);
+}
 .navbar .links .link:hover{
   color: var(--main-color);
 }

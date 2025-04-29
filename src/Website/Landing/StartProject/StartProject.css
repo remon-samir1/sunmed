@@ -1,6 +1,6 @@
 
 .StartProject{
-  background-color: #fff;
+  background-color: #FAFAFA;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -27,6 +27,7 @@
   border: 1px solid var(--main-color);
   margin-top: 20px;
   text-align: center;
+  text-transform: uppercase;
   display: inline-block;
 }
 @media (max-width:768px) {

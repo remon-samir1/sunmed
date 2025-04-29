@@ -1,16 +1,15 @@
 
 import React, { useEffect, useRef } from 'react';
-import OurMediaProductionCard from './OurMediaProductionCard';
-import './OurMediaProduction.css';
-import { OurMediaProductionCardData } from './OurMediaProductionCardData';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import OurMediaProductionCard from '../../MediaProduction/OurMediaProduction/OurMediaProductionCard';
+import { MediaBuyingDetailsData } from './MediaBuyingDetailsData';
 import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const OurMediaProduction = () => {
+const MediaBuyingDetails = () => {
   const sectionRef = useRef(null);
   const cardsRef = useRef([]);
 
@@ -45,13 +44,14 @@ const OurMediaProduction = () => {
   }, []);
 
   return (
+
     <div className='OurMediaProduction' ref={sectionRef}>
       <div className="text">
-        <h3>OUR MEDIA PRODUCTION SERVICES</h3>
+        <h3>OUR MEDIA BUYING SERVICES</h3>
       </div>
 
       <div className="cards">
-        {OurMediaProductionCardData.map((data, key) => (
+        {MediaBuyingDetailsData.map((data, key) => (
           <div
             key={key}
             ref={(el) => (cardsRef.current[key] = el)}
@@ -59,7 +59,7 @@ const OurMediaProduction = () => {
             <OurMediaProductionCard title={data.title} disc={data.disc} icon={data.icon} />
           </div>
         ))}
-          <div className="flex justify-center w-full md:justify-start items-center gap-4 mt-3">
+      <div className="flex justify-center w-full md:justify-start items-center gap-4 mt-3">
           <Link className="btn">START PROJCET</Link>
           <Link className="btn">FREE CONSULATION</Link>
         </div>
@@ -68,4 +68,4 @@ const OurMediaProduction = () => {
   );
 }
 
-export default OurMediaProduction;
+export default MediaBuyingDetails;

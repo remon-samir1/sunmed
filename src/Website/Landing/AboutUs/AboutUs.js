@@ -42,8 +42,8 @@ const AboutUs = () => {
         <img src={require('../../../Images/our-team.png')} alt="" />
       </div>
     </div>
-    <div className="w-full bg-white py-8">
-      <img src={require('../../../Images/vector1.png')} alt="devolpment"  />
+    <div className="w-full bg-[#FAFAFA] py-8 ">
+      <img className="object-cover" src={require('../../../Images/vector1.png')} alt="devolpment"  />
     </div>
     </>
   );

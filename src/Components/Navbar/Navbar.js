@@ -9,7 +9,7 @@ import { IoCallOutline } from "react-icons/io5";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
 import { Menu } from "../../Context/MenuOpen/MenuContext";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [openServe, setOpenServe] = useState(false);
@@ -30,11 +30,31 @@ const Navbar = () => {
           className="services-list m-0 flex flex-col justify-start items-start gap-[6px] overflow-hidden transition-all duration-500 ease-in-out"
           style={{ height: openServe ? '122px' : '0px' }}
         >
-          <Link className="link" to="/media-production">Media production</Link>
-          <Link className="link" to="/">Education services</Link>
-          <Link className="link" to="/web-solution">Web solution</Link>
-          <Link className="link" to="/">Digital marketing</Link>
-          <Link className="link" to="/">Event management</Link>
+          <NavLink onClick={()=>{
+            setIsOpen(prev=>!prev);
+            setOpenServe(prev=>!prev);
+
+          }} className="link" to="/media-production">Media Production</NavLink>
+          <NavLink onClick={()=>{
+            setIsOpen(prev=>!prev);
+            setOpenServe(prev=>!prev);
+
+          }} className="link" to="/web-solution">Web Development</NavLink>
+          <NavLink onClick={()=>{
+            setIsOpen(prev=>!prev);
+            setOpenServe(prev=>!prev);
+
+          }} className="link" to="/media-buying">Media Buying</NavLink>
+          <NavLink onClick={()=>{
+            setIsOpen(prev=>!prev);
+            setOpenServe(prev=>!prev);
+
+          }} className="link" to="/social-Media">Social Media services</NavLink>
+          <NavLink onClick={()=>{
+            setIsOpen(prev=>!prev);
+            setOpenServe(prev=>!prev);
+
+          }} className="link" to="/">Seo</NavLink>
         </div>
         <Link to="/" className="link">
           Blog

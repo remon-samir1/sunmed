@@ -58,7 +58,7 @@ const WithUs = () => {
   });
 
   return (
-    <div className="bg-white pt-[18vh]" ref={sectionRef}>
+    <div className="bg-[#FAFAFA] pt-[18vh]" ref={sectionRef}>
       <div className="WithUs">
         <div className="flex justify-center items-start gap-[10vw] flex-wrap">
           <div className="flex-1">

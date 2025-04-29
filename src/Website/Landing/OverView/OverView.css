@@ -1,7 +1,7 @@
 .OverView{
-  background: #fff url('../../../Images/overview-bg.png') no-repeat;
+  background: #FAFAFA url('../../../Images/overview-bg.png') no-repeat;
   background-size: cover;
-  /* padding-top: 40px; */
+  /* margin-top: 40px; */
 }
 .OverView .texts{
   display: flex;

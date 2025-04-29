@@ -8,6 +8,8 @@ import WebDevelopment from "./WebDevelopment/WebDevelopment";
 const OverView = () => {
   const [change , setChange] = useState('web')
   return (
+    <>
+    <div className="h-[50px] bg-[#FAFAFA]"></div>
     <div className="OverView px-[7vw] pt-[15vh]">
       <div className="texts">
         <h2>OVERVIEW</h2>
@@ -51,7 +53,7 @@ const OverView = () => {
             className="icon"
             width="40"
             height="40"
-          />
+            />
 
           <span>Media Buying</span>
         </NavLink>
@@ -63,6 +65,7 @@ const OverView = () => {
       }
       </div>
     </div>
+      </>
   );
 };
 

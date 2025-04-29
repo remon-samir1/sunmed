@@ -1,0 +1,9 @@
+.MediaBuyingHero{
+  background: #fafafa url('../../../../Images/media-buying.png') no-repeat;
+  background-size: 100% 100%;
+  height:90vh;
+}
+.MediaBuyingHero .content p{
+  letter-spacing: normal;
+  font-weight: 400;
+}
