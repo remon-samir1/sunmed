@@ -116,7 +116,9 @@ height: 400px !important;
   font-size: 1rem;
 }
 @media (max-width : 768px){
-
+  .AllWorks{
+    gap: 10px;
+  }
 .AllWorks .work{
 height: auto;
 }
@@ -130,10 +132,18 @@ height: 30%;
 
 .AllWorks .work .details .text p:first-child{
   color: var(--bg-color);
-  font-size: 0.5rem;
+  font-size: 0.6rem;
+  white-space: nowrap;
 }
 .AllWorks .work .details .text p:last-child{
   color: var(--bg-color);
   font-size: 0.7rem;
+}
+.AllWorks .work .details .icon-container {
+padding: 0;
+}
+.AllWorks .work .details .icon-container .icon{
+width: 16px;
+height: 16px;
 }
 }
