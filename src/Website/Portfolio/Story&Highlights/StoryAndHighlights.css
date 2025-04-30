@@ -45,7 +45,7 @@
 
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none; 
   }
 
 .StoryAndHighlights .highlights-container h3{
@@ -90,6 +90,7 @@ justify-content: start;
  height: 10rem;
  
 }
+
 .StoryAndHighlights .story-container {
     padding: 5vh 0vw;
     flex-wrap: wrap;

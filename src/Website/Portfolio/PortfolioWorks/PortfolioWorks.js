@@ -8,8 +8,8 @@ const PortfolioWorks = () => {
   const [openDigitalMarketing, setOpenDigitalMarketing] = useState(false);
   console.log(showData);
   return (
-    <div className="PortfolioWorks px-[7vw] py-[10vh]">
-      <div className="categories">
+    <div className="PortfolioWorks px-[7vw] py-[4vh] md:py-[10vh]">
+      <div className={`categories high !duration-500`}>
         <button onClick={()=>setShowData('all')}>All</button>
         <button>Media production</button>
         <button>Education services</button>
@@ -49,7 +49,7 @@ const PortfolioWorks = () => {
         </div>
         <button>Evevnt management</button>
       </div>
-      <div className={`data translate-y-0 py-5 will-change-auto duration-700 ${openDigitalMarketing || openWeb ? 'pt-24  ' : ''}`}>
+      <div className={`data translate-y-0 py-5 will-change-auto duration-700 ${window.innerWidth > 768 ? openDigitalMarketing || openWeb ? 'pt-24  ' : '' : ''}`}>
 
         {
           showData === 'all' ? 

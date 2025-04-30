@@ -3,7 +3,7 @@ import "./StoryAndHighlights.css";
 const StoryAndHighlights = () => {
   return (
     <div className="StoryAndHighlights py-7">
-      <div className="story-container px-[4vw] md:px-[7vw] ">
+      <div className="story-container !px-[4vw] md:!px-[7vw] ">
         <div className="story">
           <img
             src={require("../../../Images/logo-story.png")}

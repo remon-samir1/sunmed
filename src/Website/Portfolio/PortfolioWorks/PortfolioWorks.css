@@ -6,6 +6,8 @@
   justify-content: center;
   align-items: start;
   gap: 1vw;
+
+
 }
 .PortfolioWorks .categories button{
   font-size: 1.1rem;
@@ -38,4 +40,25 @@
 .PortfolioWorks .categories button:hover{
   background-size: 100% 100%;
  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .high{
+  height: 110px !important;
+  }
+.PortfolioWorks .categories{
+ justify-content: start;
+ gap: 0; 
+ overflow-x: auto;
+ overflow-y: visible;
+     scroll-snap-type: x mandatory;
+     -webkit-overflow-scrolling: touch;
+     scrollbar-width: none; 
+}
+.PortfolioWorks .categories::-webkit-scrollbar{
+display: none;
+}
+.PortfolioWorks .categories button{
+padding: 10px;
+}
 }
