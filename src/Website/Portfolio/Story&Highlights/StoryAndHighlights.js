@@ -2,8 +2,8 @@ import React from "react";
 import "./StoryAndHighlights.css";
 const StoryAndHighlights = () => {
   return (
-    <div className="StoryAndHighlights px-[4vw] md:px-[7vw] py-7">
-      <div className="story-container">
+    <div className="StoryAndHighlights py-7">
+      <div className="story-container px-[4vw] md:px-[7vw] ">
         <div className="story">
           <img
             src={require("../../../Images/logo-story.png")}
@@ -23,8 +23,8 @@ const StoryAndHighlights = () => {
         </div>
       </div>
       <div className=" highlights-container">
-        <h3>our Highlights</h3>
-        <div className="flex justify-center items-center gap-[5vw] mt-10">
+        <h3 className="px-[4vw] md:px-[7vw] py-7">our Highlights</h3>
+        <div className="flex justify-center items-center gap-[5vw] mt-10  px-[0] md:px-[7vw] ">
           <div className="highlight">
             <img
               src={require("../../../Images/logo-story.png")}

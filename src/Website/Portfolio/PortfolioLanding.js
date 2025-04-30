@@ -8,7 +8,7 @@ import Footer from '../../Components/Footer/Footer';
 
 const PortfolioLanding = () => {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <PortfolioHero/>
       <StoryAndHighlights/>
       <PortfolioWorks/>

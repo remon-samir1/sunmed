@@ -38,8 +38,15 @@
 }
 .StoryAndHighlights .highlights-container{
   margin-top: 2.5rem;
-
+  overflow-x: hidden;
 }
+.StoryAndHighlights .highlights-container .flex{
+  overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
 
 .StoryAndHighlights .highlights-container h3{
   font-size: 2rem;
@@ -74,6 +81,10 @@
 
 
 @media (max-width:768px) {
+.StoryAndHighlights .highlights-container .flex{
+padding-left: 5vw;
+justify-content: start;
+}
 .StoryAndHighlights .story-container .story img{
  width: 10rem;
  height: 10rem;
@@ -87,15 +98,9 @@
   .StoryAndHighlights .story-container .texts p{
     max-width: 100%;
   }
-  .StoryAndHighlights .highlights-container .flex{
-  overflow-x: auto;
 
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-  }
 
-  /* .StoryAndHighlights .highlights-container .flex::-webkit-scrollbar {
+  .StoryAndHighlights .highlights-container .flex::-webkit-scrollbar {
   display: none; 
-} */
+}
 }
