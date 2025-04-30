@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,7 +7,9 @@ import { useGSAP } from "@gsap/react";
 // import {Swiper , SwiperSlide} from "swiper";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
+import arrow from '../../../../Images/arrow.svg'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,8 +22,7 @@ const PhaseDevelopment = () => {
       scrollTrigger: {
         trigger: imagesRef.current[0],
         start: "top 80%",
-        toggleActions:'play none none reverse'
-
+        toggleActions: "play none none reverse",
       },
       opacity: 0,
       y: 50,
@@ -36,7 +35,7 @@ const PhaseDevelopment = () => {
       scrollTrigger: {
         trigger: contentRef.current,
         start: "top 80%",
-        toggleActions:'play none none reverse'
+        toggleActions: "play none none reverse",
       },
       opacity: 0,
       y: 50,
@@ -49,53 +48,79 @@ const PhaseDevelopment = () => {
   return (
     <div className="PhaseDevelopment pr-[7vw] py-[5vh]">
       <div className="images">
-        <div className="cards !hidden lg:!flex">
-          <div className="card" ref={(el) => (imagesRef.current[0] = el)}>
-            <img
-              src={require("../../../../Images/phase-4.png")}
-              alt="development"
-              loading="lazy"
-            />
-          </div>
-          <div className="card" ref={(el) => (imagesRef.current[1] = el)}>
-            <img
-              src={require("../../../../Images/phase-5.png")}
-              alt="development"
-              loading="lazy"
-            />
-          </div>
-          <div className="card" ref={(el) => (imagesRef.current[2] = el)}>
-            <img
-              src={require("../../../../Images/phase-6.png")}
-              alt="development"
-              loading="lazy"
-            />
-          </div>
-        </div>
-        <div className="relative lg:hidden">
-        <Swiper className="mySwiper"  slidesPerView={'auto'}
-        spaceBetween={10}>
-        <SwiperSlide>
-        <img
-              src={require("../../../../Images/phase-6.png")}
-              alt="development"
-              loading="lazy"
-            />
-        </SwiperSlide>
-        <SwiperSlide>  <img
-              src={require("../../../../Images/phase-5.png")}
-              alt="development"
-              loading="lazy"
-            /></SwiperSlide>
-        <SwiperSlide>
-        <img
-              src={require("../../../../Images/phase-4.png")}
-              alt="development"
-              loading="lazy"
-            />
-        </SwiperSlide>
-      
-      </Swiper>
+        <div className="relative  md:w-[50vw]">
+          <Swiper
+            className="mySwiper"
+            navigation={window.innerWidth < 768 ?{ nextEl: ".custom-next",} : false} 
+            slidesPerView={window.innerWidth < 768 ? 1 : 3}
+            modules={[Navigation]}
+            spaceBetween={10}
+          >
+            <div className="custom-next">
+              <img src={arrow} alt="next" />
+            </div>
+            <SwiperSlide>
+              <div className="card" ref={(el) => (imagesRef.current[2] = el)}>
+                <video
+                  src={require("../../../../Videos/deve-1.mp4")}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="video"
+                ></video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              {" "}
+              <div className="card" ref={(el) => (imagesRef.current[2] = el)}>
+                <video
+                  src={require("../../../../Videos/deve-2.mp4")}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="video"
+                ></video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card" ref={(el) => (imagesRef.current[2] = el)}>
+                <video
+                  src={require("../../../../Videos/deve-3.mp4")}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="video"
+                ></video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card" ref={(el) => (imagesRef.current[2] = el)}>
+                <video
+                  src={require("../../../../Videos/deve-1.mp4")}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="video"
+                ></video>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card" ref={(el) => (imagesRef.current[2] = el)}>
+                <video
+                  src={require("../../../../Videos/deve-2.mp4")}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="video"
+                ></video>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
       <div className="content" ref={contentRef}>
@@ -115,3 +140,4 @@ const PhaseDevelopment = () => {
 };
 
 export default PhaseDevelopment;
+

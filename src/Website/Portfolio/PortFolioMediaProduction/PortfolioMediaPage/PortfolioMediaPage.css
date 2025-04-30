@@ -1,0 +1,95 @@
+.PortfolioMediaPage{
+  background: #fafafa;
+}
+.PortfolioMediaPage .content{
+  background: url('../../../../Images/media-bg.png') no-repeat;
+  background-size: cover;
+}
+.PortfolioMediaPage .content .images{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+}
+.PortfolioMediaPage .images .img{
+  flex: 1;
+  overflow: hidden;
+}
+.PortfolioMediaPage .images .img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+}
+.PortfolioMediaPage .images .img:hover > img{
+  transform: scale(1.1);
+}
+.PortfolioMediaPage .content .text{
+  text-align: center;
+  margin-top: 35px;
+}
+.PortfolioMediaPage .content .text p {
+  font-size: 1.1rem;
+  color: var(--bg-color);
+  letter-spacing: 1px;
+  /* max-width: 90%; */
+  text-align: center;
+  margin-top: 10px;
+}
+.PortfolioMediaPage .content .text h3{
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--bg-color);
+}
+.PortfolioMediaPage .content .details{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+  margin-top: 10vh;
+}
+.PortfolioMediaPage .content .details .detail{
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 5px;
+  flex-direction: column;
+}
+.PortfolioMediaPage .content .details .detail h5{
+  font-size: 1.1rem;
+  color: var(--bg-color);
+  font-weight: 500;
+}
+.PortfolioMediaPage .content .details .detail h4{
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--bg-color);
+}
+
+.PortfolioMediaPage .content .details .social-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.PortfolioMediaPage .content .details .social-links .icon-container{
+  width: 26px;
+  height: 26px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.PortfolioMediaPage .content .details .social-links .icon-container:hover{
+  border-color: var(--main-color);
+  box-shadow: 0px 0px 10px 2px var(--main-color);
+
+}
+.PortfolioMediaPage .content .details .social-links .icon{
+  width: 14px;
+  height: 14px;
+
+}

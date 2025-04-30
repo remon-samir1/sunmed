@@ -9,7 +9,7 @@
 
 
 }
-.PortfolioWorks .categories button{
+.PortfolioWorks .categories button , .PortfolioWorks .categories a{
   font-size: 1.1rem;
   color: var(--bg-color);
  white-space: nowrap;
@@ -26,6 +26,7 @@
   background: #fff;
   box-shadow: 0 0 3px #a7a7a7;
   border-radius: 10px;
+  /* z-index: 999; */
 }
 .PortfolioWorks .categories .list button{
   background: #fff;
@@ -58,7 +59,7 @@
 .PortfolioWorks .categories::-webkit-scrollbar{
 display: none;
 }
-.PortfolioWorks .categories button{
+.PortfolioWorks .categories button {
 padding: 10px;
 }
 }
