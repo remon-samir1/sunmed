@@ -1,9 +1,38 @@
-import React from "react";
+
+
+import React, { useEffect, useRef } from "react";
 import "./StoryAndHighlights.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const StoryAndHighlights = () => {
+  const sectionRef = useRef(null);
+
+  useGSAP(() => {
+    const el = sectionRef.current;
+    gsap.fromTo(
+      el.querySelectorAll(".zoom-in"),
+      { opacity: 0, scale: 0.8 },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: el,
+          start: "top 70%",
+        },
+      }
+    );
+  });
+
   return (
-    <div className="StoryAndHighlights py-7">
-      <div className="story-container !px-[4vw] md:!px-[7vw] ">
+    <div ref={sectionRef} className="StoryAndHighlights py-7">
+      <div className="story-container !px-[4vw] md:!px-[7vw] zoom-in">
         <div className="story">
           <img
             src={require("../../../Images/logo-story.png")}
@@ -22,61 +51,27 @@ const StoryAndHighlights = () => {
           </p>
         </div>
       </div>
-      <div className=" highlights-container">
+
+      <div className="highlights-container zoom-in">
         <h3 className="px-[4vw] md:px-[7vw] py-7">our Highlights</h3>
-        <div className="flex justify-center items-center gap-[2vw] md:gap-[5vw] mt-10  px-[0] md:px-[7vw] ">
-          <div className="highlight">
-            <img
-              src={require("../../../Images/logo-story.png")}
-              alt="story"
-              loading="lazy"
-            />
-            <span>About us</span>
-          </div>
-          <div className="highlight">
-            <img
-              src={require("../../../Images/reviews1.png")}
-              alt="story"
-              loading="lazy"
-            />
-            
-          <span>Reviews</span>
-          </div>
-
-          <div className="highlight">
-            <img
-              src={require("../../../Images/highlight2.png")}
-              alt="story"
-              loading="lazy"
-            />
-            <span>Reviews</span>
-          </div>
-          <div className="highlight">
-            <img
-              src={require("../../../Images/logo-story.png")}
-              alt="story"
-              loading="lazy"
-            />
-          <span>Reviews</span>
-
-          </div>
-          <div className="highlight">
-            <img
-              src={require("../../../Images/logo-story.png")}
-              alt="story"
-              loading="lazy"
-            />
-            <span>About us</span>
-
-          </div>
-          <div className="highlight">
-            <img
-              src={require("../../../Images/add-highlight.png")}
-              alt="story"
-              loading="lazy"
-            />
-            <span>New</span>
-          </div>
+        <div className="flex justify-center items-center gap-[2vw] md:gap-[5vw] mt-10 px-[0] md:px-[7vw]">
+          {[
+            { src: "logo-story.png", label: "About us" },
+            { src: "reviews1.png", label: "Reviews" },
+            { src: "highlight2.png", label: "Reviews" },
+            { src: "logo-story.png", label: "Reviews" },
+            { src: "logo-story.png", label: "About us" },
+            { src: "add-highlight.png", label: "New" },
+          ].map((item, index) => (
+            <div key={index} className="highlight zoom-in">
+              <img
+                src={require(`../../../Images/${item.src}`)}
+                alt="story"
+                loading="lazy"
+              />
+              <span>{item.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
