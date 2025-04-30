@@ -10,9 +10,12 @@
 
 }
 
+.StoryAndHighlights .story-container .story {
+  min-width: max-content;
+}
 .StoryAndHighlights .story-container .story img{
-  width: 460px;
-  height: 200px;
+  width: 12.5rem;
+  height: 12.5rem;
   border-radius: 50%;
   cursor: pointer;
   padding: 5px;
@@ -35,6 +38,9 @@
 }
 .StoryAndHighlights .highlights-container{
   margin-top: 2.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 .StoryAndHighlights .highlights-container h3{
   font-size: 2rem;
@@ -45,6 +51,7 @@
 }
 .StoryAndHighlights .highlights-container .highlight{
   text-align: center;
+  min-width: max-content;
 }
 .StoryAndHighlights .highlights-container .highlight img{
   width: 110px;
@@ -64,4 +71,19 @@
   color: var(--text-color);
   margin-top: 10px;
   display: inline-block;
+}
+@media (max-width:768px) {
+.StoryAndHighlights .story-container .story img{
+ width: 10rem;
+ height: 10rem;
+ 
+}
+.StoryAndHighlights .story-container {
+    padding: 5vh 0vw;
+    flex-wrap: wrap;
+  gap: 1rem;
+  }  
+  .StoryAndHighlights .story-container .texts p{
+    max-width: 100%;
+  }
 }
