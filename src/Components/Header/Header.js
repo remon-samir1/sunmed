@@ -8,7 +8,9 @@ const Header = () => {
   const isOpen = menu.isOpen
   console.log(isOpen);
   return (
-    <div className="Header">
+    <div className=" h-20">
+
+    <div className="Header ">
       <header className="flex px-10 justify-between items-center h-20">
         <Logo width="120px" />
         <div className="menu" onClick={()=>setIsOpen(prev=> !prev)}>
@@ -17,6 +19,7 @@ const Header = () => {
           <span></span>
         </div>
       </header>
+    </div>
     </div>
   );
 };

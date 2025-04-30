@@ -1,3 +1,5 @@
 .WebSolutionsHero{
-  background: #fff url('../../../../Images//WebSolutionsHero.png');
+  background: #fafafa url('../../../../Images//WebSolutionsHero.png') no-repeat;
+  background-size: 100% 100%;
+  height: 90vh;
 }

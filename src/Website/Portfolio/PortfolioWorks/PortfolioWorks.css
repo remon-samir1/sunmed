@@ -1,0 +1,41 @@
+.PortfolioWorks{
+  background-color: #fafafa;
+}
+.PortfolioWorks .categories{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 1vw;
+}
+.PortfolioWorks .categories button{
+  font-size: 1.1rem;
+  color: var(--bg-color);
+ white-space: nowrap;
+  padding: 15px 25px;
+  width: max-content;
+  background: linear-gradient(#CBB434 ,#CBB434) no-repeat;
+  background-position-x: left;
+  background-size: 0% 100%;
+  border-radius: 30px;
+  justify-self: center;
+  transition: 0.3s ease-in-out;
+}
+.PortfolioWorks .categories .list{
+  background: #fff;
+  box-shadow: 0 0 3px #a7a7a7;
+  border-radius: 10px;
+}
+.PortfolioWorks .categories .list button{
+  background: #fff;
+  border-radius: 0px 10px 10px 0;
+}
+.PortfolioWorks .categories .list button:first-child{
+  border-radius: 10px 0 0 10px;
+}
+.PortfolioWorks .categories .list button:hover{
+  background-color: var(--main-color);
+}
+.PortfolioWorks .categories button:hover{
+  background-size: 100% 100%;
+ color: #fff;
+}

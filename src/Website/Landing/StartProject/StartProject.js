@@ -38,7 +38,7 @@ const StartProject = () => {
         <Link className="link">START PROJECT</Link>
       </div>
       <div className="img">
-        <img src={require('../../../Images/our-team.png')} alt="" />
+        <img src={require('../../../Images/our-team.png')} alt=""  style={{width:'60%'}} />
       </div>
     </div>
   );

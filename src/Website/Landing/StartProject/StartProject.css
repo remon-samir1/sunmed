@@ -30,7 +30,24 @@
   text-transform: uppercase;
   display: inline-block;
 }
+.StartProject .img{
+  width: 40vw;
+}
+.StartProject .img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width:850px) {
+  .StartProject{
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 @media (max-width:768px) {
+  .StartProject .img{
+    width: 80vw;
+  }
   .StartProject .content{
     margin-top: 10px;
   }

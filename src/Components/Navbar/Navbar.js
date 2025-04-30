@@ -20,52 +20,89 @@ const Navbar = () => {
   return (
     <div className={`navbar ${isOpen && "open"}`}>
       <div className="links">
-        <NavLink onClick={()=>{
-            setIsOpen(prev=>!prev);
-            
-
-          }}  to="/" className="link">
+        <NavLink
+          onClick={() => {
+            setIsOpen((prev) => !prev);
+          }}
+          to="/"
+          className="link"
+        >
           Home
         </NavLink>
-        <button onClick={() => setOpenServe(prev => !prev)} className="link">
+        <button onClick={() => setOpenServe((prev) => !prev)} className="link">
           Services
         </button>
         <div
           className="services-list m-0 flex flex-col justify-start items-start gap-[6px] overflow-hidden transition-all duration-500 ease-in-out"
-          style={{ height: openServe ? '122px' : '0px' }}
+          style={{ height: openServe ? "122px" : "0px" }}
         >
-          <NavLink onClick={()=>{
-            setIsOpen(prev=>!prev);
-            setOpenServe(prev=>!prev);
-
-          }} className="link" to="/media-production">Media Production</NavLink>
-          <NavLink onClick={()=>{
-            setIsOpen(prev=>!prev);
-            setOpenServe(prev=>!prev);
-
-          }} className="link" to="/web-solution">Web Development</NavLink>
-          <NavLink onClick={()=>{
-            setIsOpen(prev=>!prev);
-            setOpenServe(prev=>!prev);
-
-          }} className="link" to="/media-buying">Media Buying</NavLink>
-          <NavLink onClick={()=>{
-            setIsOpen(prev=>!prev);
-            setOpenServe(prev=>!prev);
-
-          }} className="link" to="/social-Media">Social Media services</NavLink>
-          <NavLink onClick={()=>{
-            setIsOpen(prev=>!prev);
-            setOpenServe(prev=>!prev);
-
-          }} className="link" to="/seo">Seo</NavLink>
+          <NavLink
+            onClick={() => {
+              setIsOpen((prev) => !prev);
+              setOpenServe((prev) => !prev);
+            }}
+            className="link"
+            to="/media-production"
+          >
+            Media Production
+          </NavLink>
+          <NavLink
+            onClick={() => {
+              setIsOpen((prev) => !prev);
+              setOpenServe((prev) => !prev);
+            }}
+            className="link"
+            to="/web-solution"
+          >
+            Web Development
+          </NavLink>
+          <NavLink
+            onClick={() => {
+              setIsOpen((prev) => !prev);
+              setOpenServe((prev) => !prev);
+            }}
+            className="link"
+            to="/media-buying"
+          >
+            Media Buying
+          </NavLink>
+          <NavLink
+            onClick={() => {
+              setIsOpen((prev) => !prev);
+              setOpenServe((prev) => !prev);
+            }}
+            className="link"
+            to="/social-Media"
+          >
+            Social Media services
+          </NavLink>
+          <NavLink
+            onClick={() => {
+              setIsOpen((prev) => !prev);
+              setOpenServe((prev) => !prev);
+            }}
+            className="link"
+            to="/seo"
+          >
+            Seo
+          </NavLink>
         </div>
-        <Link to="/" className="link">
+        <NavLink to="/blog" className="link">
           Blog
-        </Link>
-        <Link to="/" className="link">
+        </NavLink>
+        <NavLink
+          onClick={() => {
+            setIsOpen((prev) => !prev);
+            setOpenServe((prev) => !prev);
+          }}
+          to="/portfolio"
+          className="link"
+        >
+          Portfolio
+        </NavLink>
+        <NavLink to="/contact" className="link">
           Contact
-        </Link>
+        </NavLink>
       </div>
       <div className="social-links">
         <div className="icon-container">
@@ -99,7 +136,7 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="close" onClick={() => setIsOpen(prev => !prev)}>
+        <div className="close" onClick={() => setIsOpen((prev) => !prev)}>
           <IoMdClose className="icon" />
         </div>
       )}

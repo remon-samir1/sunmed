@@ -1,0 +1,13 @@
+.AllWorks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.AllWorks .work{
+  width: 30%;
+}
+.AllWorks .work img{
+  width: 100%;
+}

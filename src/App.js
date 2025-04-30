@@ -8,6 +8,7 @@ import WebSolutionsLanding from "./Website/Services/WebSolutions/WebSolutionsLan
 import MediaBuyingLanding from "./Website/Services/MediaBuying/MediaBuyingLanding";
 import SocialMediaLanding from "./Website/Services/SocialMedia/SocialMediaLanding";
 import SeoLanding from "./Website/Services/Seo/SeoLanding";
+import PortfolioLanding from "./Website/Portfolio/PortfolioLanding";
 
 function App() {
   const [dynamicHeight ,setDynamicHeight ] = useState('100vh')
@@ -43,6 +44,7 @@ function App() {
         <Route element={<MediaBuyingLanding />} path="/media-buying" />
         <Route element={<SocialMediaLanding />} path="/social-media" />
         <Route element={<SeoLanding />} path="/seo" />
+        <Route element={<PortfolioLanding />} path="/portfolio" />
       </Routes>
     </div>
     <div>
