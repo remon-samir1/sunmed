@@ -27,7 +27,7 @@
 .Divider h3 {
   color: #fff;
   font-size: 2rem;
-  line-height: 15px !important;
+  /* line-height: 15px !important; */
 }
 .Divider span{
   font-size: 0.9rem;

@@ -1,0 +1,66 @@
+.SocialDivider{
+background: #fafafa;
+}
+.SocialDivider .insta{
+  background: url('../../../Images/bg-divider.png') no-repeat;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SocialDivider .insta .text{
+  color: #fff;
+  background-color: var(--bg-color);
+  padding: 10px 60px;
+  border-radius: 40px;
+text-align: center;
+transition: 0.5s;
+}
+.SocialDivider .insta .text h5{
+  font-size: 1rem;
+}
+.SocialDivider .insta .text h4{
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.SocialDivider .insta .text:hover{
+  box-shadow: 0 0 3px var(--bg-color);
+  opacity: 0.9;
+  filter: blur(0.5px);
+}
+
+
+.SocialDivider .identity{
+
+  padding: 10vh 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.SocialDivider .identity .flex .icon-container{
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--bg-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.SocialDivider .identity .flex .icon-container:hover{
+  border-color: var(--bg-color);
+  box-shadow: 0px 0px 10px var(--bg-color);
+
+}
+.SocialDivider .identity .flex .icon{
+  width: 14px;
+  height: 14px;
+ color:var(--bg-color);
+}
+.SocialDivider .identity p {
+  color: var(--bg-color);
+   font-size: 0.8rem;
+   font-weight: 500;
+}
