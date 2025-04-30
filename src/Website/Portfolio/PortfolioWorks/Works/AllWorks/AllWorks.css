@@ -10,9 +10,40 @@
   height: 250px;
   position: relative;
  border-radius: 10px;
+
  overflow: hidden;
 }
 
+
+.AllWorks .img-container{
+/* width: 250px; */
+flex: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 10px;
+}
+.AllWorks .img-container .work{
+  width: 100% !important;
+  
+}
+
+.AllWorks .img-container .work:first-child{
+height: 400px;
+}
+.AllWorks .img-container .work:last-child{
+height: 250px;
+}
+
+.AllWorks .container-2 .work:first-child{
+height: 250px !important;
+
+}
+.AllWorks .container-2 .work:last-child{
+height: 400px !important;
+
+}
 .AllWorks .work img{
   width: 100%;
   height: 100%;
@@ -21,7 +52,7 @@
 .AllWorks .work .details{
   /* padding: 10px; */
   background: #fff;
-  height: 30%;
+  height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,9 +74,33 @@
   align-items: center;
   padding: 20px;
   cursor: pointer;
+  transition: 0.5s;
+}
+.AllWorks .work .details .icon-container:hover{
+  background-color: #fff;
+}
+.AllWorks .work .details .icon-container:hover > .icon{
+  color: var(--main-color);
+  animation: move 1s infinite 1s;
 }
 .AllWorks .work .details .icon-container .icon{
   color: #fff;
+  transition: 0.5s;
+
+}
+@keyframes move {
+  0%{
+    transform: translateX(0px);
+
+  }
+  50%{
+    transform: translateX(5px);
+
+  }
+  100%{
+    transform: translateX(0px);
+
+  }
 }
 .AllWorks .work .details .text{
   padding: 30px;
