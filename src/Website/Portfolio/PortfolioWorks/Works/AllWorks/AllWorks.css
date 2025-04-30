@@ -123,7 +123,7 @@ height: 400px !important;
 height: auto;
 }
 .AllWorks .work .details{
-height: 30%;
+height: 60px;
 }
 .AllWorks .work .details .text{
   
@@ -146,4 +146,21 @@ padding: 0;
 width: 16px;
 height: 16px;
 }
+
+
+.AllWorks .img-container .work:first-child{
+  height: 280px;
+  }
+  .AllWorks .img-container .work:last-child{
+  height: 180px;
+  }
+  
+  .AllWorks .container-2 .work:first-child{
+  height: 180px !important;
+  
+  }
+  .AllWorks .container-2 .work:last-child{
+  height: 280px !important;
+  
+  }
 }
