@@ -2,7 +2,7 @@ import React from "react";
 import "./StoryAndHighlights.css";
 const StoryAndHighlights = () => {
   return (
-    <div className="StoryAndHighlights px-[7vw] py-7">
+    <div className="StoryAndHighlights px-[4vw] md:px-[7vw] py-7">
       <div className="story-container">
         <div className="story">
           <img
