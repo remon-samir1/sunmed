@@ -24,7 +24,7 @@ const StoryAndHighlights = () => {
       </div>
       <div className=" highlights-container">
         <h3 className="px-[4vw] md:px-[7vw] py-7">our Highlights</h3>
-        <div className="flex justify-center items-center gap-[5vw] mt-10  px-[0] md:px-[7vw] ">
+        <div className="flex justify-center items-center gap-[2vw] md:gap-[5vw] mt-10  px-[0] md:px-[7vw] ">
           <div className="highlight">
             <img
               src={require("../../../Images/logo-story.png")}
