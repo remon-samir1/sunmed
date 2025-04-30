@@ -10,7 +10,7 @@ import Footer from '../../Components/Footer/Footer';
 
 const Landing = () => {
   return (
-    <div className=''>
+    <div className='overflow-hidden'>
       <HeroSection/>
       <AboutUs/>
       <StartProject/>
