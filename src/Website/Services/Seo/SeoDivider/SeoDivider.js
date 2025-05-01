@@ -77,7 +77,7 @@ const SeoDivider = () => {
             feugiat id. Sed lectus ultricies elementum viverra lectus.
           </span>
         </div>
-        <Link className="link">CHECK MY SEO NOW</Link>
+        <Link to='/bookNow' className="link">CHECK MY SEO NOW</Link>
       </div>
 
       <p className="down-text">

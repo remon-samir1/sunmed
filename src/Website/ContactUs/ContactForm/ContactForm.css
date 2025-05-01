@@ -1,0 +1,84 @@
+.ContactForm{
+  background-color: #fafafa;
+}
+.ContactForm .text{
+  text-align: center;
+}
+.ContactForm .text h3{
+  font-size: 1.8rem;
+  color: var(--main-color);
+  font-weight: 500;
+}
+.ContactForm .text p{
+  font-weight: 500;
+  color:var(--bg-color);
+  font-size: 1.1rem;
+  margin-top: 10px;
+
+}
+.ContactForm form{
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: auto;
+  width: 90%;
+  margin-top: 10vh;
+}
+.ContactForm form .input-field {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap;
+  
+}
+
+
+.ContactForm form .input-field input  {
+  width: 100%;
+  padding: 10px;
+  color: var(--text-color);
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #d0d1d5;
+}
+
+.ContactForm form .input-field::before{
+  content: "";
+  height: 1.2px;
+  width: 100%;
+  position: absolute;
+  top: calc(100% - 1px);
+  left: -120%;
+  background-color:var(--main-color);
+  transition: 0.7s ease;
+}
+.ContactForm form .input-field:focus-within:before{
+left: 0;
+}
+.ContactForm form button{
+  color: #fff;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 250px;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 8vh;
+}
+
+@media (max-width : 768px) {
+.ContactForm form .input-field{
+  flex-direction: column;
+  width: 100%;
+}
+.ContactForm form{
+  width: 100%;
+}
+
+.ContactForm form button{
+  width: 100%;
+  border-radius: 2px;
+}
+}

@@ -32,12 +32,17 @@ will-change: transform;
 .PhaseDevelopment .images  .card{
   width: 200px;
   height: 400px;
+
 }
 .PhaseDevelopment .images .video{
   object-fit: cover;
   height: 100%;
   width: 100%;
+  position: relative;
 }
+
+  
+
 .PhaseDevelopment .images .cards:hover{
   transform: translateX(-20px);
   opacity: 0.9;

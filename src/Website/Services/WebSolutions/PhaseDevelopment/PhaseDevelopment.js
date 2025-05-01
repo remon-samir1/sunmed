@@ -46,13 +46,13 @@ const PhaseDevelopment = () => {
   });
 
   return (
-    <div className="PhaseDevelopment pr-[7vw] py-[5vh]">
+    <div className="PhaseDevelopment md:pr-[7vw] py-[5vh]">
       <div className="images">
         <div className="relative  md:w-[50vw]">
           <Swiper
             className="mySwiper"
             navigation={window.innerWidth < 768 ?{ nextEl: ".custom-next",} : false} 
-            slidesPerView={window.innerWidth < 768 ? 1 : 3}
+            slidesPerView={window.innerWidth < 768 ? 1.3 : 3}
             modules={[Navigation]}
             spaceBetween={10}
           >

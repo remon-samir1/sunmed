@@ -9,7 +9,7 @@ const PortfplioDivider = () => {
       <h3 className='text-center font-bold'>
       We’re Ready to Bring Bigger & Stronger  <br/> Projects
       </h3>
-      <Link className='link'>Book now</Link>
+      <Link to='/bookNow' className='link'>Book now</Link>
     </div>
     </div>
   );

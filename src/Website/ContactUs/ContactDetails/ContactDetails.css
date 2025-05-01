@@ -1,0 +1,90 @@
+.ContactDetails{
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+
+}
+.ContactDetails .text{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+  flex-direction: column;
+}
+.ContactDetails .text h3{
+  color: var(--bg-color);
+  font-size: 1.3rem;
+  font-weight: 500;
+  max-width: 90%;
+}
+.ContactDetails .text p{
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.ContactDetails .text button{
+  color: #fff;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 230px;
+  padding: 15px;
+align-self: start;
+  /* border-radius: 8px; */
+  margin: 20px 20%;
+}
+.ContactDetails .box{
+  flex: 1;
+  background: url('../../../Images/conatctBox-bg.png') no-repeat;
+  background-position: center;
+  padding: 25px;
+  background-size: cover;
+  border-radius: 20px;
+}
+.ContactDetails .box h3{
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--bg-color);
+}
+.ContactDetails .box .container .item{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+.ContactDetails .box .container .item span{
+  font-size: 0.9rem;
+}
+.ContactDetails .box .container .item .icon{
+  width: 24px;
+  height: 24px;
+}
+@media (max-width:768px) {
+  .ContactDetails {
+    flex-direction: column;
+  }
+.ContactDetails .text h3{
+
+max-width: 100%
+
+}
+
+.ContactDetails .text button{
+
+
+margin: auto;
+width: 100%;
+}
+.ContactDetails .box .container .item .icon{
+width: 18px;
+height: 18px;
+
+}
+}

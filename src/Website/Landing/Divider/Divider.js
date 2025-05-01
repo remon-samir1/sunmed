@@ -10,7 +10,7 @@ const Divider = () => {
       <h3>
       We’re Ready to Bring Bigger <br/>& Stronger Projects
       </h3>
-      <Link className='link'>Book now</Link>
+      <Link to='bookNow' className='link'>Book now</Link>
     </div>
     </div>
   );

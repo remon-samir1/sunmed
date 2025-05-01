@@ -36,7 +36,7 @@ const PortfolioMediaPage = () => {
           </p>
         </div>
 
-        <div className="details">
+        <div className="details gap-[7vw] md:gap-[10vw]">
           <div className="detail">
             <h5>Published</h5>
             <h4>September 17, 2022</h4>
@@ -68,8 +68,21 @@ const PortfolioMediaPage = () => {
         </div>
       </div>
 
-      <div className="videos">
-        
+      <div className="videos px-[7vw] md:mt-[10vh]">
+        <div className="video">
+          <video src={require("../../../../Videos/media-1.mp4")} controls></video>
+          
+        </div>
+        <div className="video">
+          <video
+            src={require("../../../../Videos/media-2.mp4")}
+            controls
+          ></video>
+        </div>
+        <div className="video hidden md:inline-block">
+          <video src={require("../../../../Videos/media-1.mp4")} controls></video>
+          
+        </div>
       </div>
     </div>
   );

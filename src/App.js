@@ -11,6 +11,9 @@ import SeoLanding from "./Website/Services/Seo/SeoLanding";
 import PortfolioLanding from "./Website/Portfolio/PortfolioLanding";
 import PortFolioMediaProductionHero from "./Website/Portfolio/PortFolioMediaProduction/PortFolioMediaProductionHero/PortFolioMediaProductionHero";
 import PortFolioMediaProduction from "./Website/Portfolio/PortFolioMediaProduction/PortFolioMediaProduction";
+import ContactUs from "./Website/ContactUs/ContactUs";
+import BookNow from "./Website/BookNow/BookNow";
+import DevelopmentPage from "./Website/Portfolio/DevelopmentPage/DevelopmentPage";
 
 function App() {
   const [dynamicHeight ,setDynamicHeight ] = useState('100vh')
@@ -41,6 +44,8 @@ function App() {
       <Routes>
 
         <Route element={<Landing />} path="/" />
+        <Route element={<ContactUs />} path="/contact" />
+        <Route element={<BookNow />} path="/bookNow" />
         <Route element={<MediaProduction />} path="/media-production" />
         <Route element={<WebSolutionsLanding />} path="/web-solution" />
         <Route element={<MediaBuyingLanding />} path="/media-buying" />
@@ -48,6 +53,7 @@ function App() {
         <Route element={<SeoLanding />} path="/seo" />
         <Route element={<PortfolioLanding />} path="/portfolio" />
         <Route element={<PortFolioMediaProduction />} path="/portfolio/media-production-datails" />
+        <Route element={<DevelopmentPage />} path="/portfolio/development" />
       </Routes>
     </div>
     <div>

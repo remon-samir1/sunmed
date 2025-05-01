@@ -10,6 +10,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SocialMediaPage from "./Works/SocialMediaPage/SocialMediaPage";
 import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
+import Development from "./Works/Development/Development";
+import UiUxDesign from "./Works/Ui-uxDesign/UiUxDesign";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,7 +68,7 @@ const PortfolioWorks = () => {
           <div
             className={`list flex overflow-hidden mt-4 duration-500 ${openWeb ? "h-14" : "h-0"} top-[100%] absolute z-50`}
           >
-            <button>UI/UX design</button>
+            <button onClick={() => setShowData("UI&UX")}>UI/UX design</button>
             <button onClick={() => setShowData("development")}>Development</button>
           </div>
         </div>
@@ -93,7 +95,7 @@ const PortfolioWorks = () => {
             : ""
         }`}
       >
-        {showData === "all" ? <AllWorks /> : <SocialMediaPage />}
+        {showData === "all" ? <AllWorks /> :showData === "socialMedia" ?  <SocialMediaPage /> :showData === "development" ? <Development/> : showData === 'UI&UX' && <UiUxDesign/> }
       </div>
     </div>
   );
