@@ -8,8 +8,12 @@ const MediaBuyingTab = () => {
           <h4>BESPOKE SOLUTION</h4>
           <h5>Media Buying services</h5>
           <div className="w-[80vw] md:w-[35vw] mt-[5vh]">
-
-          <img className="w-full h-full object-cover" src={require('../../../../Images/media-buying-about.png')} alt="media services" loading="lazy" />
+            <img
+              className="w-full h-full object-cover"
+              src={require("../../../../Images/media-buying-about.png")}
+              alt="media services"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -47,8 +51,30 @@ const MediaBuyingTab = () => {
             odio
           </li>
         </ul>
-        <Link className="link" to='/media-buying'>Media buying</Link>
-
+        <Link className="btn-hover" to="/media-buying">
+          <span>Media buying</span>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="m14.331 7l3.5 5l-3.5 5h-3.052l3.5-5l-3.5-5z"
+                clip-rule="evenodd"
+              />
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="m8.331 7l3.5 5l-3.5 5H5.279l3.5-5l-3.5-5z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+        </Link>
       </div>
     </div>
   );

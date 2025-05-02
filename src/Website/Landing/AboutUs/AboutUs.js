@@ -37,7 +37,7 @@ const AboutUs = () => {
             senectus. Quam tristique semper tristique bibendum maecenas viverra
             lectus.
           </p>
-          <Link className="link">
+          <Link className="link btn-hover">
             <span>
 
             ABOUT US

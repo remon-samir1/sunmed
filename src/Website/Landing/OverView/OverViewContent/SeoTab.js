@@ -8,8 +8,12 @@ const SeoTab = () => {
           <h4>BESPOKE SOLUTION</h4>
           <h5>Seo services</h5>
           <div className="w-[80vw] md:w-[35vw] mt-[5vh]">
-
-          <img className="w-full h-full object-cover" src={require('../../../../Images/seo.png')} alt="web" loading="lazy" />
+            <img
+              className="w-full h-full object-cover"
+              src={require("../../../../Images/seo.png")}
+              alt="web"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -47,8 +51,27 @@ const SeoTab = () => {
             odio
           </li>
         </ul>
-        <Link className="link" to='/seo'>Seo</Link>
-
+        <Link className="btn-hover" to="/seo">
+          <span>Seo</span>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="m12.404 8.303l3.431 3.327c.22.213.22.527 0 .74l-6.63 6.43C8.79 19.201 8 18.958 8 18.43v-5.723z"
+              />
+              <path
+                fill="currentColor"
+                d="M8 11.293V5.57c0-.528.79-.771 1.205-.37l2.481 2.406z"
+                opacity="0.5"
+              />
+            </svg>
+          </span>
+        </Link>
       </div>
     </div>
   );

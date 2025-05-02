@@ -8,8 +8,12 @@ const ProductionTab = () => {
           <h4>BESPOKE SOLUTION</h4>
           <h5>Media production</h5>
           <div className="w-[80vw] md:w-[35vw] mt-[5vh]">
-
-          <img className="w-full h-full object-cover" src={require('../../../../Images/media-services.png')} alt="media services" loading="lazy" />
+            <img
+              className="w-full h-full object-cover"
+              src={require("../../../../Images/media-services.png")}
+              alt="media services"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -47,8 +51,24 @@ const ProductionTab = () => {
             odio
           </li>
         </ul>
-        <Link className="link" to='media-production'>Media Production</Link>
-
+        <Link className="btn-hover" to="media-production">
+          <span>Media Production</span>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M11 4H9v18h2zm8 3h-2v12h2zM7 8.8H5v8h2zm6 .2h2v8h-2zm8 1.8h2v4h-2zm-18 0H1v4h2z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+        </Link>
       </div>
     </div>
   );
