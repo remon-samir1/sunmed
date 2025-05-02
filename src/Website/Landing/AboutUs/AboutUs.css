@@ -114,6 +114,10 @@ transform: translate(-50%, -50%);
   object-fit: cover;
 }
 @media (max-width: 768px){
+  .AboutUs{
+    justify-content: center;
+    align-items: center;
+  }
   .AboutUs .img{
     width: 80vw;
     align-self: center;
