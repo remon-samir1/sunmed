@@ -1,0 +1,27 @@
+.highlight-Swiper{
+  height: 100%;
+  width: 100%;
+}
+.highlight-Swiper .swiper-slide{
+  background-color: var(--bg-color) !important;
+transform: 0.5s;
+  height: 100%;
+  /* width: auto!important; */
+
+  margin-top: 20vh;
+}
+.highlight-Swiper .swiper-slide-active{
+  /* background-color: var(--main-color) !important; */
+  margin-top: 20px;
+  cursor: default;
+}
+.highlight-Swiper .swiper-slide-active div:first-child{
+  width: 30vw !important;
+  height: 90vh;
+  margin: auto;
+}
+@media (max-width:768px) {
+.highlight-Swiper .swiper-slide-active div:first-child{
+ width: 90vw !important; 
+}
+}

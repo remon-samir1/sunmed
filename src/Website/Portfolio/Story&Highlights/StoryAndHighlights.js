@@ -5,7 +5,7 @@ import "./StoryAndHighlights.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import SingleStory from "../../../Components/Highlight/SingleStory";
+import SingleStory from "../../../Components/SingleStory/SingleStory";
 import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);

@@ -95,6 +95,9 @@ body {
   .swiper-button-prev {
     display: none !important;
   }
+}
+
+
 
   .swiper-button-next {
     position: absolute;
@@ -131,5 +134,3 @@ body {
     width: 24px;
     height: 24px;
   }
-}
-

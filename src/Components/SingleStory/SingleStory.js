@@ -7,9 +7,9 @@ import { Icon } from "@iconify/react";
 
 const SingleStory = () => {
   const storyData = [
-    { title: "Story 1", image: image, logo: logo },
-    { title: "Story 2", image: image, logo: logo },
-    { title: "Story 3", image: image, logo: logo },
+    { title: "Sunmed Story ", image: image, logo: logo },
+    { title: "Sunmed Story", image: image, logo: logo },
+    { title: "Sunmed Story", image: image, logo: logo },
   ];
 
   const storyContent = storyData.map((story, index) => ({
