@@ -95,7 +95,7 @@ const DevelopmentProjectDetails = () => {
 
           <div className="flex flex-col mt-3">
             <button>
-              <Icon icon="pajamas:eye" width="30" height="30" />
+              <Icon icon="pajamas:eye" width="22" height="22" />
               <span>Live preview</span>
             </button>
             <button>

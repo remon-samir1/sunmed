@@ -14,6 +14,10 @@ import PortFolioMediaProduction from "./Website/Portfolio/PortFolioMediaProducti
 import ContactUs from "./Website/ContactUs/ContactUs";
 import BookNow from "./Website/BookNow/BookNow";
 import DevelopmentPage from "./Website/Portfolio/DevelopmentPage/DevelopmentPage";
+import Blogs from "./Website/Blogs/Blogs";
+import HighlightsStories from "./Components/Highlight/SingleStory";
+import StoryWithHeaderAndClose from "./Components/Highlight/SingleStory";
+import SingleStory from "./Components/Highlight/SingleStory";
 
 function App() {
   const [dynamicHeight ,setDynamicHeight ] = useState('100vh')
@@ -44,8 +48,10 @@ function App() {
       <Routes>
 
         <Route element={<Landing />} path="/" />
+        <Route element={<SingleStory />} path="/stories" />
         <Route element={<ContactUs />} path="/contact" />
         <Route element={<BookNow />} path="/bookNow" />
+        <Route element={<Blogs />} path="/blog" />
         <Route element={<MediaProduction />} path="/media-production" />
         <Route element={<WebSolutionsLanding />} path="/web-solution" />
         <Route element={<MediaBuyingLanding />} path="/media-buying" />

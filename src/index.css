@@ -70,6 +70,10 @@ body {
   object-fit: cover;
 }
 
+.story-contanier{
+  background-color: #15182bb7;
+  backdrop-filter: blur(19px) saturate(180%) ;
+}
 @media (max-width: 768px) {
   html {
     font-size: 14px;

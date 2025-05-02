@@ -1,0 +1,82 @@
+.custom-blog{
+  background-color: #fafafa;
+}
+.custom-blog .custom-head{
+  background-color: hsl(232, 34%, 13% , 15%);
+}
+.custom-blog .head{
+  display: flex;
+  justify-content:start;
+  align-items: center;
+  gap: 30px;
+}
+.custom-blog .head h4{
+  margin-top: 0 !important;
+}
+.custom-blog .head .link{
+  color: #fff;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 250px;
+  padding: 15px;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.custom-blog .head .link:hover{
+  box-shadow: 0 0 10px var(--main-color);
+  
+
+}
+.custom-blog h4{
+font-size: 1.7rem;
+font-weight: 600;
+color: var(--bg-color);
+margin-top: 30px;
+}
+.custom-blog .img{
+  margin-top: 20px;
+  width: 100%;
+  height: 80vh;
+}
+.custom-blog .img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.custom-blog p{
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-top: 30px;
+}
+.custom-blog p span{
+  margin-top: 10px;
+  display: inline-block;
+}
+.custom-blog .side-img{
+  width: 30%;
+  height: 180px;
+  margin-top: 20px;
+
+}
+.custom-blog .side-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.custom-blog ul{
+  margin-top: 30px;
+}
+.custom-blog ul li{
+  margin-top: 25px;
+  font-size: 1.1rem;
+  color: var(--bg-color);
+  list-style: disc;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.custom-blog ul li span{
+  font-weight: 700;
+}

@@ -60,74 +60,32 @@ const Development = () => {
           <SwiperSlide>
             {" "}
             <Link to="/portfolio/development" className="card" ref={(el) => (imagesRef.current[2] = el)}>
-              <video
-                src={require("../../../../../Videos/deve-2.mp4")}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="video"
-              ></video>
+            <img src={require('../../../../../Images/phase-4.png')} alt="development" loading='lazy' />
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to='/portfolio/development' className="card" ref={(el) => (imagesRef.current[2] = el)}>
-              <video
-                src={require("../../../../../Videos/deve-3.mp4")}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="video"
-              ></video>
+            <img src={require('../../../../../Images/phase-5.png')} alt="development" loading='lazy' />
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to="portfolio/development" className="card" ref={(el) => (imagesRef.current[2] = el)}>
-              <video
-                src={require("../../../../../Videos/deve-1.mp4")}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="video"
-              ></video>
+            <img src={require('../../../../../Images/phase-6.png')} alt="development" loading='lazy' />
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to='/portfolio/development' className="card" ref={(el) => (imagesRef.current[2] = el)}>
-              <video
-                src={require("../../../../../Videos/deve-2.mp4")}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="video"
-              ></video>
+            <img src={require('../../../../../Images/phase-4.png')} alt="development" loading='lazy' />
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to='/portfolio/development' className="card" ref={(el) => (imagesRef.current[2] = el)}>
-              <video
-                src={require("../../../../../Videos/deve-3.mp4")}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="video"
-              ></video>
+            <img src={require('../../../../../Images/phase-5.png')} alt="development" loading='lazy' />
             </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Link to= '/portfolio/development' className="card" ref={(el) => (imagesRef.current[2] = el)}>
-              <video
-                src={require("../../../../../Videos/deve-1.mp4")}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="video"
-              ></video>
+            <img src={require('../../../../../Images/phase-6.png')} alt="development" loading='lazy' />
             </Link>
           </SwiperSlide>
         </Swiper>

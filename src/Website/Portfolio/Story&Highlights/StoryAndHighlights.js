@@ -1,16 +1,18 @@
 
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./StoryAndHighlights.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import SingleStory from "../../../Components/Highlight/SingleStory";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const StoryAndHighlights = () => {
   const sectionRef = useRef(null);
-
+  const [showStory , setShowStory] = useState(false)
   useGSAP(() => {
     const el = sectionRef.current;
     gsap.fromTo(
@@ -33,15 +35,20 @@ const StoryAndHighlights = () => {
   });
 
   return (
+    <>
     <div ref={sectionRef} className="StoryAndHighlights py-7">
+  
+  
+
+
       <div className="story-container !px-[4vw] md:!px-[7vw] zoom-in">
-        <div className="story">
+        <Link className="story" to='/stories'>
           <img
             src={require("../../../Images/logo-story.png")}
             alt="story"
             loading="lazy"
           />
-        </div>
+        </Link>
         <div className="texts">
           <h3>SUNMED AGENCY</h3>
           <p>
@@ -77,6 +84,7 @@ const StoryAndHighlights = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

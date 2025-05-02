@@ -7,6 +7,7 @@ import LatestInsights from './LatestInsights/LatestInsights';
 import Divider from './Divider/Divider';
 import WithUs from './WithUs/WithUs';
 import Footer from '../../Components/Footer/Footer';
+import HighlightsStories from '../../Components/Highlight/SingleStory';
 
 const Landing = () => {
   return (
