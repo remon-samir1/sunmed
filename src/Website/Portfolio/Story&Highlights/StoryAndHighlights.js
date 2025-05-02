@@ -72,14 +72,14 @@ const StoryAndHighlights = () => {
             { src: "logo-story.png", label: "About us" },
             { src: "add-highlight.png", label: "New" },
           ].map((item, index) => (
-            <div key={index} className="highlight zoom-in">
+            <Link to={'/highlights'} key={index} className="highlight zoom-in">
               <img
                 src={require(`../../../Images/${item.src}`)}
                 alt="story"
                 loading="lazy"
               />
               <span>{item.label}</span>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

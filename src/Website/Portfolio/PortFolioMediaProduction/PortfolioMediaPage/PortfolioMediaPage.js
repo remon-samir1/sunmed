@@ -47,7 +47,7 @@ const PortfolioMediaPage = () => {
           </div>
           <div className="detail">
             <h5>Share</h5>
-            <div className="social-links">
+            <div className="social-links flex-wrap md:flex-nowrap !justify-start md:justify-center ">
               <div className="icon-container">
                 <FaFacebookF className="icon" />
               </div>
