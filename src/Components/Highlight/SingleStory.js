@@ -73,7 +73,7 @@ const SingleStory = () => {
   return (
 
     <div className="relative ">
-      <div className="w-[2.8rem] z-50 h-[2.8rem] rounded-full bg-[#636572] absolute top-[5vh] md:top-[0vh] right-[5vw]  md:right-[20vw] flex justify-center items-center">
+      <div className="w-[2.8rem] z-50 h-[2.8rem] rounded-full bg-[#636572] absolute hidden  md:top-[0vh]   md:right-[20vw] md:flex justify-center items-center">
 
       <Link to='/portfolio' className="text-white ">
       <Icon icon="dashicons:no" width="25" height="25" />
