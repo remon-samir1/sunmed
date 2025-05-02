@@ -39,7 +39,7 @@ const AboutUs = () => {
         <Link className="link">ABOUT US</Link>
       </div>
       <div className="img">
-        <img src={require('../../../Images/our-team.png')} alt="" />
+        <img src={require('../../../Images/seo.png')} alt="" />
       </div>
     </div>
     <div className="w-full bg-[#FAFAFA] py-8 ">

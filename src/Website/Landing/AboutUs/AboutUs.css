@@ -27,7 +27,18 @@
   text-align: center;
   display: inline-block;
 }
+.AboutUs .img{
+  width: 35vw;
+}
+.AboutUs .img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 @media (max-width: 768px){
+  .AboutUs .img{
+    width: 80vw;
+  }
   .AboutUs .content{
     margin-top: 15px;
   }
