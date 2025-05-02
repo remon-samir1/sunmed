@@ -3,7 +3,11 @@ import "./OverView.css";
 import { NavLink, Outlet } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { SlRocket } from "react-icons/sl";
-import WebDevelopment from "./WebDevelopment/WebDevelopment";
+import WebDevelopment from "./OverViewContent/WebDevelopment/WebDevelopment";
+import SocialMediaTab from "./OverViewContent/SocialMediaTab";
+import SeoTab from "./OverViewContent/SeoTab";
+import ProductionTab from "./OverViewContent/ProductionTab";
+import MediaBuyingTab from "./OverViewContent/MediaBuyingTab";
 
 const OverView = () => {
   const [change , setChange] = useState('web')
@@ -16,7 +20,7 @@ const OverView = () => {
         <h3>our services</h3>
       </div>
       <div className="links">
-        <button className={`link ${change === 'web' && 'active'}`}>
+        <button className={`link ${change === 'web' && 'active'}`} onClick={()=>setChange('web')} >
           <Icon
             icon="streamline:browser-website-1"
             className="icon"
@@ -25,7 +29,7 @@ const OverView = () => {
           />
           <span>Web Development</span>
         </button>
-        <NavLink className='link' to="/s">
+        <button className={`link ${change === 'social' && 'active'}`} onClick={()=>setChange('social')}>
           <Icon
             icon="hugeicons:marketing"
             className="icon"
@@ -33,12 +37,12 @@ const OverView = () => {
             height="40"
           />
           <span>Social Media Marketing</span>
-        </NavLink>
-        <NavLink className='link' to="/s">
+        </button>
+        <button className={`link ${change === 'seo' && 'active'}`} onClick={()=>setChange('seo')}>
           <SlRocket className="icon" />
           <span>SEO</span>
-        </NavLink>
-        <NavLink className='link' to="/s">
+        </button>
+        <button className={`link ${change === 'production' && 'active'}`} onClick={()=>setChange('production')}>
           <Icon
             icon="ix:media-player"
             width="40"
@@ -46,8 +50,8 @@ const OverView = () => {
             className="icon"
           />
           <span>Media Production</span>
-        </NavLink>
-        <NavLink className='link' to="/t">
+        </button>
+        <button className={`link ${change === 'buying' && 'active'}`} onClick={()=>setChange('buying')}>
           <Icon
             icon="streamline:browser-website-1"
             className="icon"
@@ -56,12 +60,12 @@ const OverView = () => {
             />
 
           <span>Media Buying</span>
-        </NavLink>
+        </button>
       </div>
       <div className="mt-14">
 
       {
-        change === 'web' && <WebDevelopment/>
+        change === 'web' ? <WebDevelopment/> : change === 'social' ? <SocialMediaTab/> : change === 'seo' ? <SeoTab/> : change === 'production' ? <ProductionTab/> : change === 'buying' && <MediaBuyingTab/>
       }
       </div>
     </div>

@@ -20,7 +20,6 @@ const PortfolioWorks = () => {
   const [openDigitalMarketing, setOpenDigitalMarketing] = useState(false);
   const sectionRef = useRef(null);
 
-  // GSAP effect for fade-in on scroll
   useGSAP( () => {
     const el = sectionRef.current;
 
@@ -44,12 +43,12 @@ const PortfolioWorks = () => {
 
   const toggleWebDropdown = () => {
     setOpenWeb((prev) => !prev);
-    setOpenDigitalMarketing(false); // Close digital marketing dropdown when web is opened
+    setOpenDigitalMarketing(false);
   };
 
   const toggleDigitalMarketingDropdown = () => {
     setOpenDigitalMarketing((prev) => !prev);
-    setOpenWeb(false); // Close web dropdown when digital marketing is opened
+    setOpenWeb(false); 
   };
 
 

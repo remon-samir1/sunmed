@@ -1,13 +1,16 @@
 import React from "react";
-import "./WebDevelopment.css";
 import { Link } from "react-router-dom";
-const WebDevelopment = () => {
+const MediaBuyingTab = () => {
   return (
     <div className="WebDevelopment">
       <div className="svg">
-        <div className="">
+        <div className="flex flex-col items-start">
           <h4>BESPOKE SOLUTION</h4>
-          <h5>Web Development</h5>
+          <h5>Media Buying services</h5>
+          <div className="w-[80vw] md:w-[35vw] mt-[5vh]">
+
+          <img className="w-full h-full object-cover" src={require('../../../../Images/media-buying-about.png')} alt="media services" loading="lazy" />
+          </div>
         </div>
       </div>
       <div className="content">
@@ -44,11 +47,11 @@ const WebDevelopment = () => {
             odio
           </li>
         </ul>
-        <Link className="link">Web Development</Link>
+        <Link className="link" to='/media-buying'>Media buying</Link>
 
       </div>
     </div>
   );
 };
 
-export default WebDevelopment;
+export default MediaBuyingTab;
