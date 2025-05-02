@@ -79,7 +79,7 @@ const SingleStory = () => {
       <Icon icon="dashicons:no" width="25" height="25" />
       </Link>
       </div>
-    <div className="md:w-[30vw] w-[95vw]  h-[90vh]  m-auto mt-6 rounded-lg">
+    <div className="md:w-[30vw] w-[95vw]  h-[90vh]  m-auto mt-6 rounded-lg overflow-hidden">
       <Stories stories={storyContent} width="100%" height="100%" />
     </div>
     </div>
