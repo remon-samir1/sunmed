@@ -37,7 +37,7 @@ const StartProject = () => {
         </p>
         <Link className="link">START PROJECT</Link>
       </div>
-      <div className="img">
+      <div className="img ">
         <img src={require('../../../Images/media-buying-about.png')} alt="project"   />
       </div>
     </div>

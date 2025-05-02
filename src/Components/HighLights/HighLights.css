@@ -4,18 +4,16 @@
 }
 .highlight-Swiper .swiper-slide{
   background-color: var(--bg-color) !important;
-transform: 0.5s;
-  height: 100%;
-  /* width: auto!important; */
 
-  margin-top: 20vh;
+
+  /* margin-top: 20vh; */
 }
-.highlight-Swiper .swiper-slide-active{
-  /* background-color: var(--main-color) !important; */
+/* .highlight-Swiper .swiper-slide-active{
+  background-color: var(--main-color) !important;
   margin-top: 20px;
   cursor: default;
 }
-.highlight-Swiper .swiper-slide-active div:first-child{
+.highlight-Swiper .swiper-slide div:first-child{
   width: 30vw !important;
   height: 90vh;
   margin: auto;
@@ -24,4 +22,4 @@ transform: 0.5s;
 .highlight-Swiper .swiper-slide-active div:first-child{
  width: 90vw !important; 
 }
-}
+} */

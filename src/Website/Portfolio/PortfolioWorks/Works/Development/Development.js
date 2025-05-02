@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
+import { Link } from 'react-router-dom';
 const Development = () => {
   return (
     <div className='AllWorks flex'>
@@ -10,10 +11,10 @@ const Development = () => {
             <p>Fimilor experience</p>
 
           </div>
-          <div className="icon-container">
+          <Link to='/portfolio/development' className="icon-container">
 
           <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </div>
+          </Link>
         </div>
         <img src={require('../../../../../Images/work-1.png')} alt="work" loading='lazy' />
       </div>
@@ -24,10 +25,10 @@ const Development = () => {
             <p>Fimilor experience</p>
 
           </div>
-          <div className="icon-container">
+          <Link to='/portfolio/development' className="icon-container">
 
           <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </div>
+          </Link>
         </div>
         <img src={require('../../../../../Images/work-2.png')} alt="work" loading='lazy' />
       </div>
@@ -39,10 +40,10 @@ const Development = () => {
             <p>Fimilor experience</p>
 
           </div>
-          <div className="icon-container">
+          <Link to='/portfolio/development' className="icon-container">
 
           <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </div>
+          </Link>
         </div>
         <img src={require('../../../../../Images/work-3.png')} alt="work" loading='lazy' />
       </div>
@@ -53,10 +54,10 @@ const Development = () => {
             <p>Fimilor experience</p>
 
           </div>
-          <div className="icon-container">
+          <Link to='/portfolio/development' className="icon-container">
 
           <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </div>
+          </Link>
         </div>
         <img src={require('../../../../../Images/work-4.png')} alt="work" loading='lazy' />
       </div>
@@ -67,10 +68,10 @@ const Development = () => {
             <p>Fimilor experience</p>
 
           </div>
-          <div className="icon-container">
+          <Link to='/portfolio/development' className="icon-container">
 
           <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </div>
+          </Link>
         </div>
         <img src={require('../../../../../Images/work-5.png')} alt="work" loading='lazy' />
       </div>
@@ -81,10 +82,10 @@ const Development = () => {
             <p>Fimilor experience</p>
 
           </div>
-          <div className="icon-container">
+          <Link to='/portfolio/development' className="icon-container">
 
           <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </div>
+          </Link>
         </div>
         <img src={require('../../../../../Images/work-6.png')} alt="work" loading='lazy' />
       </div>

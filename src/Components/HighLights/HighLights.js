@@ -90,13 +90,13 @@ const HighLights = () => {
   }));
   return (
     <div className="relative !bg-transparent pl-[2vw] pr-[8vw]">
-      {/* <div className="w-[2.8rem] z-50 h-[2.8rem] rounded-full bg-[#636572] absolute hidden  md:top-[0vh]   md:right-[20vw] md:flex justify-center items-center">
+     <div className="w-[2.8rem] z-50 h-[2.8rem] rounded-full bg-[#636572] absolute hidden  md:top-[5vh]   md:right-[10vw] md:flex justify-center items-center"> 
         <Link to="/portfolio" className="text-white ">
           <Icon icon="dashicons:no" width="25" height="25" />
         </Link>
-      </div> */}
+      </div> 
       <Swiper
-      slidesPerView={window.innerWidth > 768 ? 3 : 1}
+      slidesPerView={1}
         navigation={{ nextEl: ".custom-next",}}
         modules={[Navigation]}
         className="highlight-Swiper"
@@ -105,27 +105,27 @@ const HighLights = () => {
               <img src={arrow} alt="next" />
             </div>
         <SwiperSlide className="">
-          <div className=" md:w-[10vw] w-[95vw]  h-[70vh]  m-auto mt-6 rounded-lg overflow-hidden">
+          <div className=" md:w-[30vw] w-[95vw]  h-[90vh]  m-auto mt-6 rounded-lg overflow-hidden">
             <Stories className='z-50' stories={storyContent} width="100%" height="100%" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="z-50 md:w-[20vw] w-[95vw]  h-[70vh]  m-auto mt-6 rounded-lg overflow-hidden">
+          <div className="z-50 md:w-[30vw] w-[95vw]  h-[90vh]  m-auto mt-6 rounded-lg overflow-hidden">
             <Stories stories={storyContent} width="100%" height="100%" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="md:w-[20vw] w-[95vw]  h-[70vh]   m-auto mt-6 rounded-lg overflow-hidden">
+          <div className="md:w-[30vw] w-[95vw]  h-[90vh]   m-auto mt-6 rounded-lg overflow-hidden">
             <Stories stories={storyContent} width="100%" height="100%" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="md:w-[20vw] w-[95vw]  h-[70vh]  m-auto mt-6 rounded-lg overflow-hidden">
+          <div className="md:w-[30vw] w-[95vw]  h-[90vh]  m-auto mt-6 rounded-lg overflow-hidden">
             <Stories stories={storyContent} width="100%" height="100%" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="md:w-[20vw] w-[95vw]  h-[70vh]  m-auto mt-6 rounded-lg overflow-hidden">
+          <div className="md:w-[30vw] w-[95vw]  h-[90vh]  m-auto mt-6 rounded-lg overflow-hidden">
             <Stories stories={storyContent} width="100%" height="100%" />
           </div>
         </SwiperSlide>
