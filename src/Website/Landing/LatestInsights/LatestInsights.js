@@ -11,7 +11,7 @@ const LatestInsights = () => {
       </div>
 
       <div className="blogs">
-        <Link className="main-blog">
+        <Link className="main-blog" to='/blog'>
           <div className="img">
             <img src={require("../../../Images/cairo.png")} alt="blog" />
             <p>
@@ -34,7 +34,7 @@ const LatestInsights = () => {
           </div>
         </Link>
         <div className="second-blogs">
-          <Link className="blog">
+          <Link className="blog" to='/blog'>
             <div className="img">
               <img src={require("../../../Images/cairo.png")} alt="blog" />
               <p>
@@ -56,7 +56,7 @@ const LatestInsights = () => {
             </div>
           </Link>
 
-          <Link className="blog">
+          <Link className="blog" to='/blog'>
             <div className="img">
               <img src={require("../../../Images/cairo.png")} alt="blog" />
               <p>

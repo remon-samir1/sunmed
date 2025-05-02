@@ -10,7 +10,7 @@ const Blogs = () => {
       <Header />
       <div className="contnet px-[7vw] py-5">
         <div className="head">
-          <Link className="link">Media production</Link>
+          <Link  to='/media-production' className="link">Media production</Link>
           <h4>The best 5 video production service in egypt</h4>
         </div>
         <div className="img">
@@ -122,3 +122,4 @@ const Blogs = () => {
 };
 
 export default Blogs;
+
