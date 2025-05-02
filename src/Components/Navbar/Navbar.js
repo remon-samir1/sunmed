@@ -87,7 +87,14 @@ const Navbar = () => {
             Seo
           </NavLink>
         </div>
-        <NavLink to="/blog" className="link">
+        <NavLink
+          onClick={() => {
+            setIsOpen((prev) => !prev);
+            setOpenServe((prev) => !prev);
+          }}
+          to="/blog"
+          className="link"
+        >
           Blog
         </NavLink>
         <NavLink
@@ -100,7 +107,14 @@ const Navbar = () => {
         >
           Portfolio
         </NavLink>
-        <NavLink to="/contact" className="link">
+        <NavLink
+          onClick={() => {
+            setIsOpen((prev) => !prev);
+            setOpenServe((prev) => !prev);
+          }}
+          to="/contact"
+          className="link"
+        >
           Contact
         </NavLink>
       </div>

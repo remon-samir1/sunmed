@@ -80,3 +80,18 @@ margin-top: 30px;
 .custom-blog ul li span{
   font-weight: 700;
 }
+@media (max-width:768px) {
+.custom-blog .head{
+ flex-direction: column; 
+
+}
+.custom-blog .head h4{
+  text-align: center;
+}
+.custom-blog .img{
+height: 40vh;
+}
+.custom-blog .side-img{
+width: 100%;
+}
+}
