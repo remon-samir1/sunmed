@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PostLaunch.css";
 import { Icon } from "@iconify/react";
+import HostContent from "./PostLaunchContent/HostContent";
+import SupportContent from "./PostLaunchContent/SupportContent";
+import MonthlyCareContent from "./PostLaunchContent/MonthlyCareContent";
+import PortalContent from "./PostLaunchContent/PortalContent";
 const PostLaunch = () => {
+  const [content, setContent] = useState("host");
   return (
     <div className="PostLaunch px-[3vw] md:px-[7vw] py-7">
       <div className="text">
@@ -10,64 +15,68 @@ const PostLaunch = () => {
       </div>
       <div className="flex items-start gap-4 mt-6 ">
         <div className="links">
-          <button className="link">
+          <button
+            className={`link ${content === "host" && "active"}`}
+            onClick={() => setContent("host")}
+          >
             <div>
-
-            <Icon
-              icon="game-icons:falling-star"
-              className="icon"
-              width="32"
-              height="32"
+              <Icon
+                icon="game-icons:falling-star"
+                className="icon"
+                width="32"
+                height="32"
               />
-            <span>Hosting</span>
-              </div>
-          </button>
-          <button className="link">
-            <div>
-
-            <Icon icon="ix:support" className="icon" width="32" height="32" />
-            <span>Support services</span>
+              <span>Hosting</span>
             </div>
           </button>
-          <button className="link">
+          <button
+            className={`link ${content === "support" && "active"}`}
+            onClick={() => setContent("support")}
+          >
             <div>
-              
-            <Icon
-              icon="grommet-icons:plan"
-              className="icon"
-              width="32"
-              height="32"
+              <Icon icon="ix:support" className="icon" width="32" height="32" />
+              <span>Support services</span>
+            </div>
+          </button>
+          <button
+            className={`link ${content === "plans" && "active"}`}
+            onClick={() => setContent("plans")}
+          >
+            <div>
+              <Icon
+                icon="grommet-icons:plan"
+                className="icon"
+                width="32"
+                height="32"
               />
-            <span>Monthly care plans</span>
-              </div>
+              <span>Monthly care plans</span>
+            </div>
           </button>
 
-          <button className="link">
-          <div>
-            <Icon icon="jam:messages" className="icon" width="32" height="32" />
-            <span>Our portal</span>
-          </div>
+          <button
+            className={`link ${content === "portal" && "active"}`}
+            onClick={() => setContent("portal")}
+          >
+            <div>
+              <Icon
+                icon="jam:messages"
+                className="icon"
+                width="32"
+                height="32"
+              />
+              <span>Our portal</span>
+            </div>
           </button>
         </div>
-        <div className="content px-4">
-          <p>Managed & Supported</p>
-          <h3>Hosting solution</h3>
-          <p className="mt-2">
-            Lorem ipsum dolor sit amet consectetur. In semper lorem consequat
-            aenean bibendum at nam. Aliquet amet porttitor neque ridiculus.
-            Velit integer ultricies velit vitae eget tellus nulla tempor.
-            <br />
-             <span className="mt-3 inline-block">
-
-            Lorem ipsum dolor sit amet consectetur. Dictum ultrices pharetra cum
-            in velit dui tellus et risus. Non ipsum in ornare gravida sed eget
-            amet in lectus. Sed suspendisse faucibus felis ultricies mollis mi
-            lectus. Ut purus varius ornare enim nisl sem. Rhoncus turpis ut
-            dignissim condimentum diam enim donec volutpat. Amet auctor eleifend
-            augue sagittis. Velit rhoncus id lacus massa arcu.
-            </span>
-          </p>
-        </div>
+        {content === "host" ? (
+          <HostContent />
+        ) : content === "support" ? (
+          <SupportContent />
+        ) : content === "plans" ? (
+          <MonthlyCareContent />
+        ) : (
+          content === "portal" && <PortalContent />
+        )}
       </div>
     </div>
   );

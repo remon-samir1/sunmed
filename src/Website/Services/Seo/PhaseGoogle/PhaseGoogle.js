@@ -84,7 +84,7 @@ const PhaseGoogle = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 10%",
+        start: "top 80%",
         toggleActions: "play none none reverse",
       },
     });
@@ -100,7 +100,7 @@ const PhaseGoogle = () => {
       y: 60,
       duration: 1.2,
       ease: "power3.out",
-    }, "-=0.8"); // التداخل بين الأنيميشن
+    }, "-=0.8");
 
   });
 

@@ -57,7 +57,7 @@ const AboutSocialMedia = () => {
       <div className="img">
         <img
           ref={imgRef}
-          src={require("../../../../Images/aboutsocialmedia.png")}
+          src={require("../../../../Images/social-media.png")}
           alt="devolpment"
           loading="lazy"
         />

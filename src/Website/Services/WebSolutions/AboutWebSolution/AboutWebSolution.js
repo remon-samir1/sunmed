@@ -53,7 +53,7 @@ const AboutWebSolution = () => {
         <Link className="link">What’s include</Link>
       </div>
       <div className="img">
-        <img ref={imgRef} src={require("../../../../Images/aboutWeb.png")} alt="devolpment" loading="lazy" />
+        <img ref={imgRef} src={require("../../../../Images/web-development.png")} alt="devolpment" loading="lazy" />
       </div>
     </div>
   );

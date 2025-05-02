@@ -56,7 +56,7 @@ const PhaseDevelopment = () => {
             modules={[Navigation]}
             spaceBetween={10}
           >
-            <div className="custom-next">
+            <div className="custom-next md:hidden">
               <img src={arrow} alt="next" />
             </div>
             <SwiperSlide>

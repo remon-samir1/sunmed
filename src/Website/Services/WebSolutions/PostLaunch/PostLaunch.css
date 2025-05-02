@@ -41,6 +41,12 @@
 color: #fff;
   background-color: var(--main-color);
 }
+
+.PostLaunch .flex .links .link.active{
+  color: #fff;
+    background-color: var(--main-color);
+
+}
 .PostLaunch .flex .content p{
 
   font-size: 0.9rem;

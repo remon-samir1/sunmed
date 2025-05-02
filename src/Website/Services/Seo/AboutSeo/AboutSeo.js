@@ -57,7 +57,7 @@ const AboutSeo = () => {
       <div className="img">
         <img
           ref={imgRef}
-          src={require("../../../../Images/aboutmedia.png")}
+          src={require("../../../../Images/seo.png")}
           alt="devolpment"
           loading="lazy"
         />

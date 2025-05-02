@@ -11,7 +11,6 @@ import SocialMediaPage from "./Works/SocialMediaPage/SocialMediaPage";
 import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
 import Development from "./Works/Development/Development";
-import UiUxDesign from "./Works/Ui-uxDesign/UiUxDesign";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,15 +62,8 @@ const PortfolioWorks = () => {
         <Link to='/portfolio/media-production-datails'>Media production</Link>
         <button>Education services</button>
 
-        <div className="flex flex-col items-center relative">
-          <button onClick={toggleWebDropdown}>Web solution</button>
-          <div
-            className={`list flex overflow-hidden mt-4 duration-500 ${openWeb ? "h-14" : "h-0"} top-[100%] absolute z-50`}
-          >
-            <button onClick={() => setShowData("UI&UX")}>UI/UX design</button>
-            <button onClick={() => setShowData("development")}>Development</button>
-          </div>
-        </div>
+          <button onClick={() => setShowData("development")}>Web Development</button>
+        
 
         <div className="flex flex-col items-center relative">
           <button onClick={toggleDigitalMarketingDropdown}>Digital Marketing</button>
@@ -95,7 +87,7 @@ const PortfolioWorks = () => {
             : ""
         }`}
       >
-        {showData === "all" ? <AllWorks /> :showData === "socialMedia" ?  <SocialMediaPage /> :showData === "development" ? <Development/> : showData === 'UI&UX' && <UiUxDesign/> }
+        {showData === "all" ? <AllWorks /> :showData === "socialMedia" ?  <SocialMediaPage /> :showData === "development" && <Development/>  }
       </div>
     </div>
   );

@@ -42,7 +42,7 @@ const AboutMediaProduction = () => {
         <Link className="link">What’s include</Link>
       </div>
       <div className="img">
-        <img src={require("../../../../Images/aboutmedia.png")} alt="" loading="lazy" />
+        <img src={require("../../../../Images/media-services.png")} alt="media services" loading="lazy" />
       </div>
     </div>
   );
