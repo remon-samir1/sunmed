@@ -1,14 +1,24 @@
 import { Link } from "react-router-dom";
 import "./AboutUs.css";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import deal from "../../../Images/deal.svg";
+import Lottie from 'react-lottie';
+import animation from '../../../Animation/Aboutus.json'
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutUs = () => {
   const contentRef = useRef(null);
+  const defaultOptions = {
+    loop: true,
+    autoplay: true, 
+    animationData: animation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
+
 
   useGSAP(() => {
     gsap.from(contentRef.current, {
@@ -58,6 +68,10 @@ const AboutUs = () => {
           </Link>
         </div>
         <div className="img">
+        {/* <Lottie options={defaultOptions}
+              height={400}
+              width={400}
+        /> */}
           <img src={require("../../../Images/seo.png")} alt="" />
         </div>
       </div>

@@ -8,12 +8,16 @@ import Divider from './Divider/Divider';
 import WithUs from './WithUs/WithUs';
 import Footer from '../../Components/Footer/Footer';
 import HighlightsStories from '../../Components/SingleStory/SingleStory';
+import LandingPortfolioPart from './LandingPortfolioPart/LandingPortfolioPart';
+import OurLatestStudios from './OurLatestStudios/OurLatestStudios';
 
 const Landing = () => {
   return (
     <div className='overflow-hidden'>
       <HeroSection/>
       <AboutUs/>
+      <LandingPortfolioPart/>
+      <OurLatestStudios/> 
       <StartProject/>
       <OverView/>
       <LatestInsights/>

@@ -1,0 +1,58 @@
+.OurLatestStudios{
+  background-color: #fafafa;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 5vw;
+}
+.OurLatestStudios .text h3{
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--main-color);
+
+}
+.OurLatestStudios .text p{
+  font-size: 1rem;
+  margin-top: 10px;
+  color: var(--text-color);
+  max-width: 380px;
+}
+.OurLatestStudios .text .images{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+.OurLatestStudios .images .top ,.OurLatestStudios .images .down {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+}
+.OurLatestStudios .images .down{
+  margin-top: 10px;
+}
+.OurLatestStudios .images .top img ,.OurLatestStudios .images .down img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.OurLatestStudios .images .top .img:first-child{
+width: 30%;
+height: 290px;
+}
+.OurLatestStudios .images .top .img:last-child{
+  height: 290px;
+flex: 1;
+}
+
+.OurLatestStudios .images .down .img:nth-child(2) ,.OurLatestStudios .images .down .img:nth-child(3) {
+ width: 25%;
+ height: 290px;
+}
+.OurLatestStudios .images .down .img:first-child{
+  height: 290px;
+  flex: 1;
+}

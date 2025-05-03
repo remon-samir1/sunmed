@@ -157,6 +157,12 @@ transform: translate(-50%, -50%);
 
 
 @media (max-width: 768px) {
+ .btn-hover{
+max-width: 180px;
+min-width: none;
+height: 50px;
+
+ }
   html {
     font-size: 14px;
   }

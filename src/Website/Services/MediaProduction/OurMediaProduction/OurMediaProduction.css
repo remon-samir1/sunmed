@@ -79,6 +79,7 @@
 .OurMediaProduction .cards{
   padding-top: 10px;
   justify-content: center;
+  flex-direction: column;
 }
   .OurMediaProduction{
     flex-direction: column;
