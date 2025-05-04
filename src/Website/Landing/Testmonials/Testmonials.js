@@ -17,7 +17,7 @@ const Testmonials = () => {
       </div>
       <div className="t-container mt-[10vh]">
 
-      <Swiper  slidesPerView={window.innerWidth > 600 ?  3 : 1} pagination={true}  spaceBetween={40} modules={[Pagination]} className="t-swiper">
+      <Swiper  slidesPerView={window.innerWidth > 600 ?  3 : 1} centeredSlides={true} pagination={true}  spaceBetween={10} modules={[Pagination]} className="t-swiper">
         <SwiperSlide>
  <TestmonialBox/>
 
