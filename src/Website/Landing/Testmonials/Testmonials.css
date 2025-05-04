@@ -72,4 +72,7 @@ height: max-content !important;
     height: 40vh !important;
   
   }
+  .t-swiper  .swiper-slide{
+    width: 100% !important;
+  }
 }
