@@ -40,8 +40,9 @@
 @media (max-width:768px) {
 .Wrapper{
   background:#f6f6f6 url('../../../Images/wrapper-pattern.png') no-repeat;
+  background-attachment: fixed;
   background-size: cover;
-
+ padding: 0px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,11 +50,12 @@
 }
 .Wrapper .items-container{
  flex-direction: column; 
-  justify-content: center;
+  justify-content: start;
   align-items: start;
-  gap: 15px;
+  gap: 5vh;
 background: transparent;
 width: max-content;
+padding: 5vh 0vw;
 
 }
 
