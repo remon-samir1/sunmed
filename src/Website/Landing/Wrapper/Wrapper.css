@@ -37,3 +37,25 @@
   font-weight: 400;
   color: var(--bg-color);
 }
+@media (max-width:768px) {
+.Wrapper{
+  background:#f6f6f6 url('../../../Images/wrapper-pattern.png') no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.Wrapper .items-container{
+ flex-direction: column; 
+  justify-content: center;
+  align-items: start;
+  gap: 15px;
+background: transparent;
+width: max-content;
+
+}
+
+
+}

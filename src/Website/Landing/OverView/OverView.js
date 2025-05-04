@@ -66,7 +66,7 @@ const OverView = () => {
           <span>Event management</span>
         </button>
       </div>
-      <div className="mt-14">
+      <div className="mt-14 pb-10 md:pb-0">
 
       {
         change === 'web' ? <WebDevelopment/> : change === 'digital' ? <DigitalMarketingTab/> : change === 'education' ? <EducationTab/> : change === 'production' ? <ProductionTab/> : change === 'event' && <EventMangeTab/>

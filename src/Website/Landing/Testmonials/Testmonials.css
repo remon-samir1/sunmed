@@ -65,3 +65,11 @@ height: max-content !important;
   font-size: 14px;
   max-width: 240px;
 }
+
+@media (max-width:768px) {
+  .t-swiper{
+    width: 95vw !important;
+    height: 40vh !important;
+  
+  }
+}
