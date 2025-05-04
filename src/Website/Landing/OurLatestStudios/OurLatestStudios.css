@@ -17,6 +17,22 @@
   color: var(--text-color);
   max-width: 380px;
 }
+
+.OurLatestStudios .text .link{
+  width: 240px;
+  text-align: center;
+  padding: 15px;
+  background-color: var(--main-color);
+  color:#fff;
+  margin-top: 30px;
+  display: inline-block;
+  transition: 0.4s;
+  border: 1px solid var(--main-color);
+}
+.OurLatestStudios .text .link:hover{
+background-color: #fafafa;
+color: var(--main-color);
+}
 .OurLatestStudios .text .images{
   display: flex;
   justify-content: start;
@@ -41,18 +57,25 @@
 }
 .OurLatestStudios .images .top .img:first-child{
 width: 30%;
-height: 290px;
+height: 40vh;
 }
 .OurLatestStudios .images .top .img:last-child{
-  height: 290px;
+  height: 40vh;
 flex: 1;
 }
 
 .OurLatestStudios .images .down .img:nth-child(2) ,.OurLatestStudios .images .down .img:nth-child(3) {
  width: 25%;
- height: 290px;
+ height: 40vh;
 }
 .OurLatestStudios .images .down .img:first-child{
-  height: 290px;
+  height: 40vh;
   flex: 1;
+}
+
+@media (max-width:768px){
+.OurLatestStudios{
+flex-direction: column;
+
+}
 }

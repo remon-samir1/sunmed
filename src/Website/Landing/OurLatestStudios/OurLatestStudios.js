@@ -1,16 +1,18 @@
 import React from "react";
 import "./OurLatestStudios.css";
+import { Link } from "react-router-dom";
 const OurLatestStudios = () => {
 
 
   return (
     <div className="OurLatestStudios px-[7vw] py-7">
       <div className="text">
-        <h3>Our latest studios</h3>
+        <h3 className="uppercase">Our latest studios</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur. Dictumst amet in duis feugiat
           id. Sed lectus ultricies elementum lectus.
         </p>
+        <Link className="link" to='/studios'>GO TO STUDIO</Link>
       </div>
       <div className="images">
         <div className="top">

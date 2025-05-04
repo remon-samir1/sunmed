@@ -7,7 +7,7 @@ const LatestInsights = () => {
     <div className="LatestInsights px-[7vw] py-[15vh]">
       <div className="text">
         <h2>Read our news</h2>
-        <h3>Latest insights </h3>
+        <h3 className="uppercase">Latest insights </h3>
       </div>
 
       <div className="blogs">

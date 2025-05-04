@@ -1,0 +1,67 @@
+.Testmonials{
+  background: #f6f6f6;
+  padding: 10vh 7vw ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Testmonials .text{
+  text-align: center;
+  max-width: 400px;
+}
+.Testmonials .text h3{
+font-size: 1.8rem;
+color: var(--main-color);
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 500;
+}
+.Testmonials .text p{
+  color: var(--text-color);
+  font-size: 1rem;
+}
+.t-swiper{
+  width: 85vw !important;
+  height: 50vh !important;
+
+}
+.t-swiper  .swiper-slide {
+width: max-content !important;
+height: max-content !important;
+
+}
+
+.Testmonials .swiper-pagination-bullet-active{
+  background-color: var(--main-color) !important;
+  /* padding: 20px; */
+  border: 1px solid var(--main-color);
+}
+.TestmonialBox{
+  box-shadow: 0 0 5px #EEEEEE;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #FFf;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+  /* width: 330px; */
+}
+.TestmonialBox .img{
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+}
+.TestmonialBox .img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.TestmonialBox .text{
+  text-align: left;
+}
+.TestmonialBox .text p{
+  font-size: 14px;
+  max-width: 240px;
+}

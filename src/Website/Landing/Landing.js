@@ -10,6 +10,9 @@ import Footer from '../../Components/Footer/Footer';
 import HighlightsStories from '../../Components/SingleStory/SingleStory';
 import LandingPortfolioPart from './LandingPortfolioPart/LandingPortfolioPart';
 import OurLatestStudios from './OurLatestStudios/OurLatestStudios';
+import Wrapper from './Wrapper/Wrapper';
+import OurPartners from './OurPartners/OurPartners';
+import Testmonials from './Testmonials/Testmonials';
 
 const Landing = () => {
   return (
@@ -20,8 +23,12 @@ const Landing = () => {
       <OurLatestStudios/> 
       <StartProject/>
       <OverView/>
+      <Wrapper/>
       <LatestInsights/>
+      <OurPartners/>
+      <Testmonials/>
       <Divider/>
+
       <WithUs/>
       <Footer/>
     </div>

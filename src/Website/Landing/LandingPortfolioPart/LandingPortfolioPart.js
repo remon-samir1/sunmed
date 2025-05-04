@@ -53,7 +53,7 @@ const LandingPortfolioPart = () => {
 
   return (
     <div ref={sectionRef} className="PortfolioWorks py-[4vh] md:py-[10vh]">
-      <h3 className="md:pl-[7vw] py-[5vh] text-[1.8rem] text-[#cbb434] font-semibold  " style={{letterSpacing:'1px'}}>Best projects</h3>
+      <h3 className="md:pl-[7vw] py-[5vh] pl-[1rem] text-[1.8rem] text-[#cbb434] font-semibold  uppercase" style={{letterSpacing:'1px'}}>Best projects</h3>
       <div
         className={`categories ${openWeb || openDigitalMarketing ? "h-[120px]" : ""} !duration-500 md:px-[7vw] fade-in`}
       >

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const MediaBuyingTab = () => {
+const EventMangeTab = () => {
   return (
     <div className="WebDevelopment">
       <div className="svg">
         <div className="flex flex-col items-start">
           <h4>BESPOKE SOLUTION</h4>
-          <h5>Media Buying services</h5>
+          <h5>Event management</h5>
           <div className="w-[80vw] md:w-[35vw] mt-[5vh]">
             <img
               className="w-full h-full object-cover"
@@ -80,4 +80,4 @@ const MediaBuyingTab = () => {
   );
 };
 
-export default MediaBuyingTab;
+export default EventMangeTab;

@@ -1,0 +1,39 @@
+.Wrapper{
+  padding: 10vh 0;
+  background: #f6f6f6;
+}
+.Wrapper .items-container{
+  background: url('../../../Images/wrapper-pattern.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 15vh 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Wrapper .items-container .item{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+}
+.Wrapper .items-container .item .text{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+}
+.Wrapper .items-container .item .icon{
+  color: var(--main-color);
+}
+.Wrapper .items-container .item .text span:first-child{
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--bg-color);
+}
+.Wrapper .items-container .item .text span:last-child{
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--bg-color);
+}

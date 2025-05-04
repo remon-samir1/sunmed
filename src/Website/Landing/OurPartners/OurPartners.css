@@ -1,0 +1,31 @@
+.OurPartners{
+  background: url('../../../Images//ourpartners-bg.png') no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 10vw;
+}
+.OurPartners .content h3{
+  font-size: 1.7em;
+  text-align: center;
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+.OurPartners .content .items-container{
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  grid-template-rows: repeat(3 , 1fr);
+  justify-content: space-between;
+  gap: 50px 15vw;
+}
+.OurPartners .content .items-container .item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.OurPartners .content .items-container .item span{
+  color: var(--bg-color);
+  white-space: nowrap;
+}

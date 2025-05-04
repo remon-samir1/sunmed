@@ -43,6 +43,8 @@
   white-space: nowrap;
   background: #fff;
   border-radius: 8px;
+  text-transform: uppercase;
+
   font-weight: 600;
   transition: 0.4s ease-in-out;
   text-align: center;
