@@ -4,21 +4,18 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import Lottie from 'react-lottie';
-import animation from '../../../Animation/AboutUs.json'
-import video from '../../../Videos/about.mp4'
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutUs = () => {
   const contentRef = useRef(null);
-  const defaultOptions = {
-    loop: true,
-    autoplay: true, 
-    animationData: animation,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true, 
+  //   animationData: animation,
+  //   rendererSettings: {
+  //     preserveAspectRatio: 'xMidYMid slice'
+  //   }
+  // };
 
 
   useGSAP(() => {
@@ -69,11 +66,6 @@ const AboutUs = () => {
           </Link>
         </div>
         <div className="img">
-        {/* <Lottie options={defaultOptions}
-              height={400}
-              width={400}
-        /> */}
-        {/* <video src={require('../../../Videos/about.mp4')}></video> */}
           <img src={require("../../../Images/seo.png")} alt="" />
         </div>
       </div>
