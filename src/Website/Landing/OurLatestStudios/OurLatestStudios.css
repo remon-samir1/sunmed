@@ -74,6 +74,9 @@ flex: 1;
 }
 
 @media (max-width:768px){
+  .OurLatestStudios .images .top .img , .OurLatestStudios .images .down .img{
+    height: 30vh;
+  }
 .OurLatestStudios{
 flex-direction: column;
 
