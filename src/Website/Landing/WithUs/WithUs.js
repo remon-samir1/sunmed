@@ -1,17 +1,58 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./WithUs.css";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import axios from "axios";
+import Loading from "../../../Components/Loading/loading";
+import { toast } from "react-toastify";
+import Notification from "../../../Components/Notification/Notification";
+import LoadingContext, { LoadingCon } from "../../../Context/LoadingContext/LoadingContext";
+// import LoadingContext from "../../../Context/LoadingContext/LoadingContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const WithUs = () => {
+  const LoadContext = useContext(LoadingCon)
+  const setLoading = LoadContext.setLoading
+  const [form, setForm] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone_number: "",
+    message: "",
+    brief: "",
+  });
   const sectionRef = useRef(null);
   const formElementsRef = useRef([]);
   const telsRef = useRef(null);
+console.log(form);
+const handelSubmit =async (e)=>{
+e.preventDefault()
+setLoading(true)
 
+const formData = new FormData();
+formData.append('name',form.name)
+formData.append('company',form.company)
+formData.append('email',form.email)
+formData.append('phone_number',form.phone_number)
+formData.append('message',form.message)
+if (form.brief != ''){
+
+  formData.append('brief',form.brief)
+}
+try{
+ await axios.post('https://sunmedagency.com/api/contact-us' , formData).then(data=>{
+setLoading(false)
+ console.log(data)})
+}catch(err){
+  console.log(err);
+setLoading(false)
+toast.error(err.response.data.message)
+
+}
+}
   useGSAP(() => {
     const section = sectionRef.current;
     const formElements = formElementsRef.current;
@@ -20,7 +61,7 @@ const WithUs = () => {
     gsap.from(section.querySelector(".texts"), {
       scrollTrigger: {
         trigger: section.querySelector(".texts"),
-        start: "top 80%",
+        start: "top 90%",
         toggleActions: "play none none reverse",
       },
       opacity: 0,
@@ -32,7 +73,7 @@ const WithUs = () => {
     gsap.from(formElements, {
       scrollTrigger: {
         trigger: section.querySelector("form"),
-        start: "top 80%",
+        start: "top 90%",
         toggleActions: "play none none reverse",
       },
       opacity: 0,
@@ -56,7 +97,11 @@ const WithUs = () => {
   });
 
   return (
-    <div className="bg-[#FAFAFA] pt-[18vh]" ref={sectionRef}>
+    <>
+  
+
+        <div className= " bg-[#FAFAFA] pt-[18vh] " ref={sectionRef} >
+    <Notification/>
       <div className="WithUs">
         <div className="flex justify-center items-start gap-[10vw] flex-wrap">
           <div className="flex-1">
@@ -73,13 +118,13 @@ const WithUs = () => {
               </p>
             </div>
 
-            <form>
+            <form onSubmit={handelSubmit}>
               <div className="flex gap-8 mt-8 items-center md:flex-row flex-col">
                 <div
                   className="input-field"
                   ref={(el) => (formElementsRef.current[0] = el)}
-                >
-                  <input type="text" placeholder="What’s your name? *" />
+                  >
+                  <input required type="text" placeholder="What’s your name? *" name='name' value={form.name} onChange={(e)=>setForm({...form,name:e.target.value})}/>
                 </div>
                 <div
                   className="input-field"
@@ -88,7 +133,8 @@ const WithUs = () => {
                   <input
                     type="text"
                     placeholder="Your company ( if applicable )"
-                  />
+                    name='company' value={form.company} onChange={(e)=>setForm({...form,company:e.target.value})}
+                    />
                 </div>
               </div>
               <div className="flex gap-8 mt-8 items-center md:flex-row flex-col">
@@ -96,15 +142,17 @@ const WithUs = () => {
                   className="input-field"
                   ref={(el) => (formElementsRef.current[2] = el)}
                 >
-                  <input type="email" placeholder="Enter your email *" />
+                  <input required type="email" placeholder="Enter your email *" name='email' value={form.email} onChange={(e)=>setForm({...form,email:e.target.value})}/>
                 </div>
                 <div
                   className="input-field"
                   ref={(el) => (formElementsRef.current[3] = el)}
                 >
                   <input
+                  required
                     type="number"
                     placeholder="Enter your phone number *"
+                    name='phone_number' value={form.phone_number} onChange={(e)=>setForm({...form,phone_number:e.target.value})}
                   />
                 </div>
               </div>
@@ -113,8 +161,10 @@ const WithUs = () => {
                 ref={(el) => (formElementsRef.current[4] = el)}
               >
                 <textarea
+                required
                   className="mt-8 h-32"
                   placeholder="Enter your message here... "
+                  value={form.message} onChange={(e)=>setForm({...form , message:e.target.value})}
                 />
               </div>
               <div
@@ -124,7 +174,7 @@ const WithUs = () => {
                 <label htmlFor="image">
                   Send us your brief ( if applicable )
                 </label>
-                <input type="file" />
+                <input type="file" onChange={(e)=>setForm({...form,brief:e.target.files[0]})}/>
                 <p className="mt-1">
                   Accepted file types: jpg, png, pdf, doc, ppt, docx.
                 </p>
@@ -137,15 +187,26 @@ const WithUs = () => {
                 correspond with you. Check out our <span>privacy policy</span>{" "}
                 for more information about how we protect and manage your data
               </p>
-              <Link
+              <button
+              type="submit"
                 className="btn-hover"
                 ref={(el) => (formElementsRef.current[7] = el)}
               >
                 <span>SEND YOUR ENQUIRY</span>
                 <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634L21.044 2.32c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8l-8 6z"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M1.946 9.315c-.522-.174-.527-.455.01-.634L21.044 2.32c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8l-8 6z"
+                    />
+                  </svg>
                 </span>
-              </Link>
+              </button>
             </form>
           </div>
 
@@ -163,6 +224,7 @@ const WithUs = () => {
         </div>
       </div>
     </div>
+                </>
   );
 };
 

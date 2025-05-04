@@ -1,6 +1,6 @@
 .Testmonials{
   background: #f6f6f6;
-  padding: 10vh 7vw ;
+  padding: 5vh 5vw ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@ font-weight: 500;
 }
 .t-swiper{
   width: 85vw !important;
-  height: 50vh !important;
+  height: 40vh !important;
 
 }
 .t-swiper  .swiper-slide {

@@ -1,6 +1,8 @@
 .OurPartners{
   background: url('../../../Images//ourpartners-bg.png') no-repeat;
   display: flex;
+  background-size: cover;
+  width: 100%;
   justify-content: center;
   align-items: center;
   padding: 10vh 10vw;

@@ -5,7 +5,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Lottie from 'react-lottie';
-import animation from '../../../Animation/Aboutus.json'
+import animation from '../../../Animation/AboutUs.json'
+import video from '../../../Videos/about.mp4'
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutUs = () => {
@@ -72,6 +73,7 @@ const AboutUs = () => {
               height={400}
               width={400}
         /> */}
+        {/* <video src={require('../../../Videos/about.mp4')}></video> */}
           <img src={require("../../../Images/seo.png")} alt="" />
         </div>
       </div>

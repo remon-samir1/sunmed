@@ -22,13 +22,19 @@ import HighlightCard from "./Components/HighLights/HighLights";
 import Highlights from "./Components/HighLights/HighLights";
 import HighlightsPage from "./Components/HighLights/HighLights";
 import HighlightsStoriesSwiper from "./Components/HighLights/HighLights";
+import Loading from "./Components/Loading/loading";
+import LoadingContext, { LoadingCon } from "./Context/LoadingContext/LoadingContext";
 
 function App() {
+  // height on open navbar
   const [dynamicHeight ,setDynamicHeight ] = useState('100vh')
   const menu = useContext(Menu)
   const closed = "translate3d(0, 0, 0) scaleY(1)"; 
   const isOpen = menu.isOpen
   const resize =  window.innerWidth > 600 ? "translate3d(-400px, 20%, 0) scaleY(1)" : " translate3d(-330px, 20%, 0) scaleY(1)"
+  //  set Loading screen
+  const LoadingContext = useContext(LoadingCon)
+  const loading = LoadingContext.loading
   useEffect(() => {
     if(!isOpen){
   setDynamicHeight('100vh')
@@ -45,9 +51,15 @@ function App() {
 
 }, [isOpen]);
   return (
+      <>
+      {
+loading &&
+<Loading/>
+
+      }
     <Router>
-    <div className='relative flex'>
-    <div className={`duration-700 flex-1  overflow-auto will-change-transform`} style={{ transform: isOpen ? resize: closed , height:isOpen?'70vh' : dynamicHeight,margin:'auto'}} >
+    <div className=' flex'>
+    <div className={`duration-700 flex-1  overflow-auto  will-change-transform`} style={{ transform: isOpen ? resize: closed , height:isOpen?'70vh' : dynamicHeight,margin:'auto'}} >
 
       <Routes>
 
@@ -72,6 +84,7 @@ function App() {
     </div>
     </div>
     </Router>
+      </>
   );
 }
 

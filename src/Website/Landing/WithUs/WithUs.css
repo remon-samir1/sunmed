@@ -1,7 +1,7 @@
 .WithUs{
   background:#FAFAFA url('../../../Images/withUs-bg.png') no-repeat;
   background-size: cover;
-  padding: 20vh 7vw 10vh 7vw;
+  padding: 5vh 7vw ;
 }
 .WithUs .texts h3{
   color: var(--text-color);

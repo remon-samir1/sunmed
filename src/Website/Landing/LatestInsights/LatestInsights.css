@@ -67,7 +67,7 @@
 }
 .LatestInsights .blogs .main-blog .img p {
   position: absolute;
-  top: 80%;
+  bottom: 10px;
   left: 5%;
   color: #fff;
   z-index: 999;
@@ -149,7 +149,7 @@
 }
 .LatestInsights .blogs .second-blogs .blog .img p {
   position: absolute;
-  top: 65%;
+  bottom: 10px;
   left: 5%;
   color: #fff;
   font-size: 0.8rem;

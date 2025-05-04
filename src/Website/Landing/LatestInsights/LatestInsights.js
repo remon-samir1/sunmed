@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 const LatestInsights = () => {
   return (
-    <div className="LatestInsights px-[7vw] py-[15vh]">
+    <div className="LatestInsights px-[7vw] py-[5vh]">
       <div className="text">
         <h2>Read our news</h2>
         <h3 className="uppercase">Latest insights </h3>
