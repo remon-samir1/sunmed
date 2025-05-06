@@ -14,6 +14,13 @@
 body {
   background-color: var(--bg-color);
 }
+.linear-bg {
+  background: linear-gradient(135deg, #15182b 0%, #1e2238 50%, #2c304b 100%);
+  background-blend-mode: overlay;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  
+}
+
 
 * {
   margin: 0;
