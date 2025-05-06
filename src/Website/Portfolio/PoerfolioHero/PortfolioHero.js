@@ -67,7 +67,7 @@ const PortfolioHero = () => {
   });
 
   return (
-    <div className="HeroSection PortfolioHero !overflow-visible">
+    <div className="HeroSection PortfolioHero !overflow-visible relative">
       <Header />
       <div className="content">
         <h1 ref={titleRef}>PORTFOLIO PROJECTS</h1>
@@ -86,7 +86,7 @@ const PortfolioHero = () => {
           </Link>
         </div>
       </div>
-      <div   ref={eyeRef} className="eye-contaienr flex justify-center items-start relative md:top-[-12vh] top-[-8vh]  ">
+      <div   ref={eyeRef} className="eye-contaienr flex justify-center items-start absolute   ">
     <EyeAnimation />
    </div>
     
