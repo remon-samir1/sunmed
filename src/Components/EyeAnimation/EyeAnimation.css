@@ -2,8 +2,9 @@
 
 .eye-wrapper {
   position: relative;
-  width: 350px;
-  height: 350px;
+  width: 280px;
+  height: 280px;
+   z-index: 999;
 }
 
 .eye {
@@ -35,8 +36,8 @@
 
 .iris {
   position: absolute;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
   pointer-events: none;

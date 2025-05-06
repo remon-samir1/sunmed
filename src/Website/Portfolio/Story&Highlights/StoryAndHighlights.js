@@ -7,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import SingleStory from "../../../Components/SingleStory/SingleStory";
 import { Link } from "react-router-dom";
-import EyeAnimation from "../../../Components/EyeAnimation/EyeAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,17 +36,14 @@ const StoryAndHighlights = () => {
 
   return (
     <>
-    <div ref={sectionRef} className="StoryAndHighlights py-7">
+    <div ref={sectionRef} className="StoryAndHighlights py-32 md:py-12  ">
   
-   <div className="eye-contaienr flex justify-center items-center ">
-    <EyeAnimation/>
-   </div>
-    
+
 
 
 
       <div className="highlights-container zoom-in">
-        <h3 className="px-[4vw] md:px-[7vw] py-7">our Highlights</h3>
+        <h3 className="px-[4vw] md:px-[7vw] py-4 uppercase">our Highlights</h3>
         <div className="flex justify-center items-center gap-[2vw] md:gap-[5vw] mt-10 px-[0] md:px-[7vw]">
           {[
             { src: "logo-story.png", label: "About us",to:'/highlights' },

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import './PortfolioHero.css'
 import Header from "../../../Components/Header/Header";
+import EyeAnimation from "../../../Components/EyeAnimation/EyeAnimation";
+
 const PortfolioHero = () => {
   const [coords2, setCoords2] = useState({ x: 10, y: 0 });
 
@@ -11,6 +13,8 @@ const PortfolioHero = () => {
   const paragraphRef = useRef(null);
   const link1Ref = useRef(null);
   const link2Ref = useRef(null);
+  const eyeRef = useRef(null);
+
 
   const handleMouseMove2 = (e) => {
     const rect = e.target.getBoundingClientRect();
@@ -52,10 +56,18 @@ const PortfolioHero = () => {
       delay: 1.2,
       ease: "power3.out",
     });
+      
+  gsap.from(eyeRef.current, {
+    opacity: 0,
+    scale:0.5,
+    duration: 2,
+    delay: 2, 
+    ease: "power3.out",
+  });
   });
 
   return (
-    <div className="HeroSection PortfolioHero overflow-hidden">
+    <div className="HeroSection PortfolioHero !overflow-visible">
       <Header />
       <div className="content">
         <h1 ref={titleRef}>PORTFOLIO PROJECTS</h1>
@@ -74,6 +86,10 @@ const PortfolioHero = () => {
           </Link>
         </div>
       </div>
+      <div   ref={eyeRef} className="eye-contaienr flex justify-center items-start relative top-[-12vh]  ">
+    <EyeAnimation />
+   </div>
+    
     </div>
   );
 };
