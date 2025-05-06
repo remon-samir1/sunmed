@@ -86,7 +86,7 @@ const PortfolioHero = () => {
           </Link>
         </div>
       </div>
-      <div   ref={eyeRef} className="eye-contaienr flex justify-center items-start relative top-[-12vh]  ">
+      <div   ref={eyeRef} className="eye-contaienr flex justify-center items-start relative md:top-[-12vh] top-[-8vh]  ">
     <EyeAnimation />
    </div>
     
