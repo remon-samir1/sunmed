@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
-
+// import animation from '../../../Animation/About Us.json'
 const AboutUs = () => {
   const contentRef = useRef(null);
   // const defaultOptions = {
@@ -67,6 +67,7 @@ const AboutUs = () => {
         </div>
         <div className="img">
           <img src={require("../../../Images/seo.png")} alt="" />
+  
         </div>
       </div>
       <div className="w-full bg-[#FAFAFA] py-8 ">

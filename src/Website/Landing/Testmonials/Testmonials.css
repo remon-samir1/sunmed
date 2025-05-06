@@ -29,6 +29,8 @@ font-weight: 500;
 .t-swiper  .swiper-slide {
 width: max-content !important;
 height: max-content !important;
+display: flex !important;
+justify-content: center !important;
 
 }
 
@@ -66,7 +68,7 @@ height: max-content !important;
   max-width: 240px;
 }
 
-@media (max-width:768px) {
+@media (max-width:450px) {
   .t-swiper{
     width: 95vw !important;
     height: 40vh !important;

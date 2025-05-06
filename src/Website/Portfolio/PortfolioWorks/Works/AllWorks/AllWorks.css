@@ -6,7 +6,7 @@
   flex-wrap: wrap;
 }
 .AllWorks .work{
-  width: 30%;
+  width: 30vw;
   height: 250px;
   position: relative;
  border-radius: 10px;
@@ -121,6 +121,7 @@ height: 400px !important;
   }
 .AllWorks .work{
 height: auto;
+width: 40vw;
 }
 .AllWorks .work .details{
 height: 60px;
@@ -167,3 +168,12 @@ height: 16px;
   
   }
 }
+
+@media (max-width : 600px){
+  .AllWorks .work{
+width: 85vw;
+height: 40vh;
+  }
+
+
+  }

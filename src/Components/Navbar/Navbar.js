@@ -23,6 +23,7 @@ const Navbar = () => {
         <NavLink
           onClick={() => {
             setIsOpen((prev) => !prev);
+            setOpenServe(false)
           }}
           to="/"
           className="link"
@@ -90,9 +91,9 @@ const Navbar = () => {
         <NavLink
           onClick={() => {
             setIsOpen((prev) => !prev);
-            setOpenServe((prev) => !prev);
+            setOpenServe(false);
           }}
-          to="/blog"
+          to="/single-blog"
           className="link"
         >
           Blog
@@ -100,7 +101,7 @@ const Navbar = () => {
         <NavLink
           onClick={() => {
             setIsOpen((prev) => !prev);
-            setOpenServe((prev) => !prev);
+            setOpenServe(false);
           }}
           to="/portfolio"
           className="link"

@@ -14,7 +14,6 @@ import PortFolioMediaProduction from "./Website/Portfolio/PortFolioMediaProducti
 import ContactUs from "./Website/ContactUs/ContactUs";
 import BookNow from "./Website/BookNow/BookNow";
 import DevelopmentPage from "./Website/Portfolio/DevelopmentPage/DevelopmentPage";
-import Blogs from "./Website/Blogs/Blogs";
 import HighlightsStories from "./Components/SingleStory/SingleStory";
 import StoryWithHeaderAndClose from "./Components/SingleStory/SingleStory";
 import SingleStory from "./Components/SingleStory/SingleStory";
@@ -24,6 +23,8 @@ import HighlightsPage from "./Components/HighLights/HighLights";
 import HighlightsStoriesSwiper from "./Components/HighLights/HighLights";
 import Loading from "./Components/Loading/loading";
 import LoadingContext, { LoadingCon } from "./Context/LoadingContext/LoadingContext";
+import SingleBlog from "./Website/Blogs/Single-blog/SingleBlog";
+import MainBlogPage from "./Website/Blogs/MainBlogPage/MainBlogPage";
 
 function App() {
   // height on open navbar
@@ -68,7 +69,9 @@ loading &&
         <Route element={<HighlightsStoriesSwiper />} path="/highlights" />
         <Route element={<ContactUs />} path="/contact" />
         <Route element={<BookNow />} path="/bookNow" />
-        <Route element={<Blogs />} path="/blog" />
+        
+        <Route element={<SingleBlog />} path="/single-blog" />
+        <Route element={<MainBlogPage />} path="/blogs" />
         <Route element={<MediaProduction />} path="/media-production" />
         <Route element={<WebSolutionsLanding />} path="/web-solution" />
         <Route element={<MediaBuyingLanding />} path="/media-buying" />

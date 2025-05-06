@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './Testmonials.css'
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -6,6 +6,17 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import TestmonialBox from "./TestmonialBox";
 const Testmonials = () => {
+  const [resize , setResize] = useState('')
+  useEffect(()=>{
+    const resizeWidth = ()=>{
+      setResize(window.innerWidth )
+    }
+    window.addEventListener("resize", resizeWidth)
+    return ()=> {
+      window.removeEventListener("resize",resizeWidth)
+    }
+  },[window.innerWidth])
+  console.log(resize);
   return (
     <div className="Testmonials  ">
       <div className="text ">
@@ -17,7 +28,7 @@ const Testmonials = () => {
       </div>
       <div className="t-container mt-[10vh]">
 
-      <Swiper  slidesPerView={window.innerWidth > 600 ?  3 : 1} centeredSlides={window.innerWidth > 600 ?  false : true} pagination={true}  spaceBetween={40} modules={[Pagination]} className="t-swiper">
+      <Swiper  slidesPerView={resize > 450 ?  3 : 1} centeredSlides={resize > 450 ?  false : true} pagination={true}  spaceBetween={40} modules={[Pagination]} className="t-swiper">
         <SwiperSlide>
  <TestmonialBox/>
 

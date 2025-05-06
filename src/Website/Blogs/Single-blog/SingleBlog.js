@@ -1,9 +1,9 @@
 import React from "react";
 import "./Blogs.css";
-import Header from "../../Components/Header/Header";
+import Header from "../../../Components/Header/Header";
 import { Link } from "react-router-dom";
-import Footer from "../../Components/Footer/Footer";
-const Blogs = () => {
+import Footer from "../../../Components/Footer/Footer";
+const SingleBlog = () => {
   return (
     <>
     <div className="custom-blog">
@@ -15,7 +15,7 @@ const Blogs = () => {
         </div>
         <div className="img">
           <img
-            src={require("../../Images/cairo.png")}
+            src={require("../../../Images/cairo.png")}
             alt="blog"
             loading="lazy"
           />
@@ -56,7 +56,7 @@ const Blogs = () => {
         </p>
         <div className="side-img">
           <img
-            src={require("../../Images/cairo.png")}
+            src={require("../../../Images/cairo.png")}
             alt="blog"
             loading="lazy"
           />
@@ -121,5 +121,5 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default SingleBlog;
 

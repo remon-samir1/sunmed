@@ -180,13 +180,13 @@ height: 45px;
     position: relative;
   }
   .swiper-button-prev {
-    display: none !important;
+    /* display: none ; */
   }
 }
 
 
 
-  .swiper-button-next {
+  .swiper-button-next  , .swiper-button-prev  {
     position: absolute;
     top: var(--swiper-navigation-top-offset, 50%);
     right: 0 !important;
@@ -202,13 +202,13 @@ height: 45px;
     background-color: #eeeeee;
     padding: 20px;
   }
-  .custom-next {
+  .custom-next , .custom-prev {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
-    right: 0;
+    right: 5vw;
     width: 43px;
     height: 43px;
     border-radius: 10px 0 0 10px;
@@ -216,6 +216,9 @@ height: 45px;
     justify-content: center;
     align-items: center;
     background-color: #eeeeee;
+  }
+  .custom-prev{
+    left: 5vw !important;
   }
   .custom-next img {
     width: 24px;

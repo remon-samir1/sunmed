@@ -1,0 +1,125 @@
+/* body {
+  margin: 0;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.eye-wrapper {
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+
+.eye {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 60% 40%, #ffffff 0%, #d0d0d0 100%);
+  border-radius: 50%;
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.6),
+              inset 5px 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.eye::before {
+  content: '';
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  top: -15%;
+  left: -15%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+  border-radius: 50%;
+  transform: rotate(-25deg);
+  pointer-events: none;
+}
+
+.iris {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  pointer-events: none;
+  background: black;
+  box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 0.2),
+              inset 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.iris .images {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  animation: slideImages 10s infinite linear;
+}
+
+.iris img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes slideImages {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-50%);
+  }
+  66% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.play-button:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 20px solid #d5ff00;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
+.popup-video {
+  /* display: none; */
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background: black;
+  padding: 20px;
+}
+
+.popup-video video {
+  width: 600px;
+  height: auto;
+}
