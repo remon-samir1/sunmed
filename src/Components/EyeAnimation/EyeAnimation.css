@@ -1,12 +1,4 @@
-/* body {
-  margin: 0;
-  background: #fff;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-} */
+
 
 .eye-wrapper {
   position: relative;
@@ -103,7 +95,7 @@
   display: block;
   width: 0;
   height: 0;
-  border-left: 20px solid #d5ff00;
+  border-left: 20px solid var(--main-color);
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
 }
@@ -115,7 +107,7 @@
   left: 0%;
   transform: translate(-50%, -50%);
   z-index: 999;
-  background: black;
+  background: var(--bg-color);
   padding: 20px;
 }
 

@@ -1,11 +1,107 @@
-import React from "react";
+// import React from "react";
+// import Stories from "react-insta-stories";
+// import image from '../../Images/media.png'
+// import logo from '../../Images/story-logo.png'
+// import { Link } from "react-router-dom";
+// import { Icon } from "@iconify/react";
+
+// const SingleStory = () => {
+//   const storyData = [
+//     { title: "Sunmed Story ", image: image, logo: logo },
+//     { title: "Sunmed Story", image: image, logo: logo },
+//     { title: "Sunmed Story", image: image, logo: logo },
+//   ];
+
+//   const storyContent = storyData.map((story, index) => ({
+//     content: () => {
+//       return (
+//         <div style={{ width: "100%", height: "100%", position: "relative" , cursor:'pointer' }} key={index}>
+//           <img
+//             src={story.image}
+//             alt="blurred background"
+//             style={{
+//               position: "absolute",
+//               top: 0,
+//               left: 0,
+//               width: "100%",
+//               height: "100%",
+//               objectFit: "cover",
+//               filter: "blur(5px) brightness(0.6)",
+//               zIndex: 0,
+//             }}
+//           />
+//           <img
+//             src={story.image}
+//             alt="main story"
+//             style={{
+//               position: "absolute",
+//               top: "50%",
+//               left: "50%",
+//               transform: "translate(-50%, -50%)",
+//               width: "90%",
+//               maxHeight: "90%",
+//               objectFit: "contain",
+//               zIndex: 1,
+//               borderRadius: 10,
+//             }}
+//           />
+//           <div
+//             style={{
+//               position: "absolute",
+//               top: 10,
+//               left: 10,
+//               display: "flex",
+//               alignItems: "center",
+//               gap: "10px",
+//               padding: "6px 10px",
+//               borderRadius: "20px",
+//               zIndex: 2,
+//             }}
+//           >
+//             <img
+//               src={story.logo}
+//               alt="profile"
+//               style={{ width: 30, height: 30, borderRadius: "50%" }}
+//             />
+//             <span style={{ color: "#fff", fontWeight: "bold" }}>{story.title}</span>
+//           </div>
+//         </div>
+//       );
+//     },
+//   }));
+
+//   return (
+
+//     <div className="relative   ">
+//       <div className="w-[2.8rem] z-50 h-[2.8rem] rounded-full bg-[#636572] absolute hidden  md:top-[0vh]   md:right-[20vw] md:flex justify-center items-center">
+
+//       <Link to='/portfolio' className="text-white ">
+//       <Icon icon="dashicons:no" width="25" height="25" />
+//       </Link>
+//       </div>
+//     <div className="md:w-[30vw] w-[95vw]  h-[90vh]  m-auto mt-6 rounded-lg overflow-hidden">
+//       <Stories stories={storyContent} width="100%" height="100%" />
+//     </div>
+//     </div>
+//   );
+// };
+
+// export default SingleStory;
+
+
+import React, { useRef, useEffect } from "react";
 import Stories from "react-insta-stories";
-import image from '../../Images/media.png'
-import logo from '../../Images/story-logo.png'
-import { Link } from "react-router-dom";
+import image from '../../Images/media.png';
+import logo from '../../Images/story-logo.png';
+import { useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const SingleStory = () => {
+  const navigate = useNavigate();
+  const storyWrapperRef = useRef(null);
+
   const storyData = [
     { title: "Sunmed Story ", image: image, logo: logo },
     { title: "Sunmed Story", image: image, logo: logo },
@@ -13,75 +109,91 @@ const SingleStory = () => {
   ];
 
   const storyContent = storyData.map((story, index) => ({
-    content: () => {
-      return (
-        <div style={{ width: "100%", height: "100%", position: "relative" , cursor:'pointer' }} key={index}>
+    content: () => (
+      <div style={{ width: "100%", height: "100%", position: "relative", cursor: 'pointer' }} key={index}>
+        <img
+          src={story.image}
+          alt="blurred background"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            filter: "blur(5px) brightness(0.6)",
+            zIndex: 0,
+          }}
+        />
+        <img
+          src={story.image}
+          alt="main story"
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "90%",
+            maxHeight: "90%",
+            objectFit: "contain",
+            zIndex: 1,
+            borderRadius: 10,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: 10,
+            left: 10,
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
+            padding: "6px 10px",
+            borderRadius: "20px",
+            zIndex: 2,
+          }}
+        >
           <img
-            src={story.image}
-            alt="blurred background"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              filter: "blur(5px) brightness(0.6)",
-              zIndex: 0,
-            }}
+            src={story.logo}
+            alt="profile"
+            style={{ width: 30, height: 30, borderRadius: "50%" }}
           />
-          <img
-            src={story.image}
-            alt="main story"
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "90%",
-              maxHeight: "90%",
-              objectFit: "contain",
-              zIndex: 1,
-              borderRadius: 10,
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              top: 10,
-              left: 10,
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-              padding: "6px 10px",
-              borderRadius: "20px",
-              zIndex: 2,
-            }}
-          >
-            <img
-              src={story.logo}
-              alt="profile"
-              style={{ width: 30, height: 30, borderRadius: "50%" }}
-            />
-            <span style={{ color: "#fff", fontWeight: "bold" }}>{story.title}</span>
-          </div>
+          <span style={{ color: "#fff", fontWeight: "bold" }}>{story.title}</span>
         </div>
-      );
-    },
+      </div>
+    ),
   }));
 
+  useGSAP(() => {
+    gsap.from(storyWrapperRef.current, {
+      opacity: 0,
+      scale: 0.9,
+      duration: 0.6,
+      ease: "power3.out",
+    });
+  });
+
+  const handleExit = () => {
+    gsap.to(storyWrapperRef.current, {
+      opacity: 0,
+      scale: 0.9,
+      duration: 0.6,
+      ease: "power3.out",
+      onComplete: () => navigate("/portfolio"),
+    });
+  };
+
   return (
-
-    <div className="relative   ">
+    <div className="relative">
       <div className="w-[2.8rem] z-50 h-[2.8rem] rounded-full bg-[#636572] absolute hidden  md:top-[0vh]   md:right-[20vw] md:flex justify-center items-center">
-
-      <Link to='/portfolio' className="text-white ">
-      <Icon icon="dashicons:no" width="25" height="25" />
-      </Link>
+        <button onClick={handleExit} className="text-white">
+          <Icon icon="dashicons:no" width="25" height="25" />
+        </button>
       </div>
-    <div className="md:w-[30vw] w-[95vw]  h-[90vh]  m-auto mt-6 rounded-lg overflow-hidden">
-      <Stories stories={storyContent} width="100%" height="100%" />
-    </div>
+
+      <div ref={storyWrapperRef} className="md:w-[30vw] w-[95vw] h-[90vh] m-auto mt-6 rounded-lg overflow-hidden">
+        <Stories stories={storyContent} width="100%" height="100%" />
+      </div>
     </div>
   );
 };

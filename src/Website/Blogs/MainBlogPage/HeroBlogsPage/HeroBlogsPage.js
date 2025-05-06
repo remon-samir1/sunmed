@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Header from "../../../../Components/Header/Header";
-
+import './HeroBlogsPage.css'
 const HeroBlogsPage = () => {
   const titleRef = useRef(null);
   const paragraphRef = useRef(null);
@@ -26,7 +26,7 @@ const HeroBlogsPage = () => {
   }, []);
 
   return (
-    <div className="HeroSection">
+    <div className="HeroSection HeroBlogsPage">
 
       <Header />
 
@@ -34,7 +34,7 @@ const HeroBlogsPage = () => {
 
         <h1 ref={titleRef}>OUR BLOG</h1>
 
-        <p ref={paragraphRef}>
+        <p className="w-[60vw] text-white" ref={paragraphRef}>
           Lorem ipsum dolor sit amet consectetur. Faucibus vel tempor quisque
           scelerisque et ac. Nunc ut interdum platea elementum volutpat nunc at
           sed. Cursus adipiscing ornare velit consectetur congue ipsum leo

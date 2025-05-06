@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Header from "../../Components/Header/Header";
 import "./BookNow.css";
 import { Icon } from "@iconify/react";
 import Footer from "../../Components/Footer/Footer";
 const BookNow = () => {
+  const scrollRef = useRef
+  (null)
+  useEffect(()=>{
+    scrollRef.current.scrollIntoView()
+  }
+,[])
   return (
     <div className="bg-[#fafafa]">
+      <div ref={scrollRef}></div>
+
     <Header />
       <div className="BookNow px-[7vw] py-7">
 
