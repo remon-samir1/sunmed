@@ -25,6 +25,7 @@ import Loading from "./Components/Loading/loading";
 import LoadingContext, { LoadingCon } from "./Context/LoadingContext/LoadingContext";
 import SingleBlog from "./Website/Blogs/Single-blog/SingleBlog";
 import MainBlogPage from "./Website/Blogs/MainBlogPage/MainBlogPage";
+import StudiosLanding from "./Website/Studios/StudiosLanding";
 
 function App() {
   // height on open navbar
@@ -80,6 +81,7 @@ loading &&
         <Route element={<PortfolioLanding />} path="/portfolio" />
         <Route element={<PortFolioMediaProduction />} path="/portfolio/media-production-datails" />
         <Route element={<DevelopmentPage />} path="/portfolio/development" />
+        <Route element={<StudiosLanding />} path="/digital-marketing" />
       </Routes>
     </div>
     <div>

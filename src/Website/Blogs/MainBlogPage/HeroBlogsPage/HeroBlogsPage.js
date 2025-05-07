@@ -34,7 +34,7 @@ const HeroBlogsPage = () => {
 
         <h1 ref={titleRef}>OUR BLOG</h1>
 
-        <p className="w-[60vw] text-white" ref={paragraphRef}>
+        <p className="w-[90vw] md:w-[60vw] text-white" ref={paragraphRef}>
           Lorem ipsum dolor sit amet consectetur. Faucibus vel tempor quisque
           scelerisque et ac. Nunc ut interdum platea elementum volutpat nunc at
           sed. Cursus adipiscing ornare velit consectetur congue ipsum leo

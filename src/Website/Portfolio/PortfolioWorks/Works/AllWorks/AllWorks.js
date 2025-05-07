@@ -76,7 +76,7 @@ const AllWorks = () => {
         nextEl: ".custom-next",
         prevEl: ".custom-prev"
       }}
-      slidesPerView={resize > 450 ? 3 : 1}
+      slidesPerView={'auto'}
       centeredSlides={resize > 450 ? false : true}
       modules={[Navigation]}
       spaceBetween={40}

@@ -93,7 +93,7 @@ const Navbar = () => {
             setIsOpen((prev) => !prev);
             setOpenServe(false);
           }}
-          to="/single-blog"
+          to="/blogs"
           className="link"
         >
           Blog

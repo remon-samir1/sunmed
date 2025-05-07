@@ -1,5 +1,5 @@
 .HeroBlogsPage{
-  background: url('../../../../Images/blogs-bg.png') no-repeat !important;
+  background: #fafafa url('../../../../Images/blogs-bg.png') no-repeat !important;
 }
 .HeroBlogsPage .content h1{
 color: var(--main-color);

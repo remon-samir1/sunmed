@@ -32,7 +32,7 @@ will-change: transform;
 .PhaseDevelopment .images  .card{
   width: 200px;
   height: 400px;
-
+  position: relative;
 }
 .PhaseDevelopment .images .video{
   object-fit: cover;
@@ -84,8 +84,36 @@ will-change: transform;
   text-align: center;
   display: inline-block;
 }
+.PhaseDevelopment .card .text{
+position: absolute;
+left: 8px;
+bottom: 8px;
+text-align: left;
+}
+.PhaseDevelopment .card .text h4{
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.PhaseDevelopment .card .text p{
+color: #fff;
+text-transform: uppercase;
+
+}
+.PhaseDevelopment .swiper-slide{
+  opacity: 0.6;
+  transition: 0.3s;
+  /* filter: blur(1px); */
+}
+.PhaseDevelopment .swiper-slide-active{
+  opacity: 1;
+  transition: 0.3s;
+  /* filter: blur(0); */
 
 
+}
 @media (max-width: 992px){
   .PhaseDevelopment{
    flex-direction: column;

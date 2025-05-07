@@ -7,7 +7,7 @@ import Footer from '../../../Components/Footer/Footer';
 const PortFolioMediaProduction = () => {
   const scrollRef = useRef(null)
   useEffect(()=>{
-    scrollRef.current.scrollIntoView({behavior:'smooth'})
+    scrollRef.current.scrollIntoView()
   }
 ,[])
   return (

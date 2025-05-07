@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Blogs.css";
 import Header from "../../../Components/Header/Header";
 import { Link } from "react-router-dom";
 import Footer from "../../../Components/Footer/Footer";
 const SingleBlog = () => {
+  const scrollRef = useRef(null)
+  useEffect(()=>{
+    scrollRef.current.scrollIntoView()
+  }
+,[])
   return (
     <>
+    <div ref={scrollRef}></div>
     <div className="custom-blog">
       <Header />
       <div className="contnet px-[7vw] py-5">

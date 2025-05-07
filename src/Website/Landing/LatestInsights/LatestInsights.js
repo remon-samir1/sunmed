@@ -13,7 +13,7 @@ const LatestInsights = () => {
       <div className="blogs">
         <Link className="main-blog" to='/blog'>
           <div className="img">
-            <img src={require("../../../Images/cairo.png")} alt="blog" />
+            <img src={require("../../../Images/cairo.png")} loading='lazy' alt="blog" />
             <p>
               Lorem ipsum dolor sit amet consectetur. Consequat dui nulla nunc
               ullamcorper velit. Fermentum sagittis risus
@@ -36,7 +36,7 @@ const LatestInsights = () => {
         <div className="second-blogs">
           <Link className="blog" to='/blog'>
             <div className="img">
-              <img src={require("../../../Images/cairo.png")} alt="blog" />
+              <img src={require("../../../Images/cairo.png")} loading='lazy' alt="blog" />
               <p>
                 Lorem ipsum dolor sit amet consectetur. Consequat dui nulla nunc
                 ullamcorper velit. Fermentum sagittis risus
@@ -58,7 +58,7 @@ const LatestInsights = () => {
 
           <Link className="blog" to='/blog'>
             <div className="img">
-              <img src={require("../../../Images/cairo.png")} alt="blog" />
+              <img src={require("../../../Images/cairo.png")}loading='lazy' alt="blog" />
               <p>
                 Lorem ipsum dolor sit amet consectetur. Consequat dui nulla nunc
                 ullamcorper velit. Fermentum sagittis risus

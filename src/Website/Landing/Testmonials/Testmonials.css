@@ -21,18 +21,18 @@ font-weight: 500;
   color: var(--text-color);
   font-size: 1rem;
 }
-.t-swiper{
+ .t-swiper{
   width: 85vw !important;
   height: 40vh !important;
 
-}
+ } 
 .t-swiper  .swiper-slide {
 width: max-content !important;
 height: max-content !important;
 display: flex !important;
 justify-content: center !important;
 
-}
+} 
 
 .Testmonials .swiper-pagination-bullet-active{
   background-color: var(--main-color) !important;

@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from "react";
+
+
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./PhaseDevelopment.css";
 import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
-// import {Swiper , SwiperSlide} from "swiper";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
@@ -14,13 +15,50 @@ import arrow from "../../../../Images/arrow.svg";
 gsap.registerPlugin(ScrollTrigger);
 
 const PhaseDevelopment = () => {
-  const imagesRef = useRef([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const videoRefs = useRef([]);
   const contentRef = useRef(null);
 
+  const videos = [
+    require("../../../../Videos/deve-1.mp4"),
+    require("../../../../Videos/deve-2.mp4"),
+    require("../../../../Videos/deve-3.mp4"),
+    require("../../../../Videos/deve-1.mp4"),
+    require("../../../../Videos/deve-2.mp4"),
+  ];
+
+  const contentData = [
+    {
+      phase: "PHASE 1",
+      title: "IDEATION",
+      description: "This is the ideation phase. We brainstorm and research ideas.",
+    },
+    {
+      phase: "PHASE 2",
+      title: "WIREFRAME",
+      description: "This phase focuses on building basic structures and prototypes.",
+    },
+    {
+      phase: "PHASE 3",
+      title: "DESIGN",
+      description: "We finalize the UI/UX design during this phase.",
+    },
+    {
+      phase: "PHASE 4",
+      title: "DEVELOPMENT",
+      description: "Now we bring ideas to life through clean code and logic.",
+    },
+    {
+      phase: "PHASE 5",
+      title: "DEPLOYMENT",
+      description: "Your project goes live and we monitor performance.",
+    },
+  ];
+
   useGSAP(() => {
-    gsap.from(imagesRef.current, {
+    gsap.from(videoRefs.current, {
       scrollTrigger: {
-        trigger: imagesRef.current[0],
+        trigger: videoRefs.current[0],
         start: "top 80%",
         toggleActions: "play none none reverse",
       },
@@ -45,11 +83,25 @@ const PhaseDevelopment = () => {
     });
   });
 
+  useEffect(() => {
+    videoRefs.current.forEach((video, i) => {
+      if (video) {
+        if (i === activeIndex) {
+          video.play();
+        } else {
+          video.pause();
+          video.currentTime = 0;
+        }
+      }
+    });
+  }, [activeIndex]);
+
   return (
     <div className="PhaseDevelopment md:pr-[7vw] py-[5vh]">
       <div className="images">
-        <div className="relative  md:w-[50vw]">
+        <div className="relative md:w-[50vw]">
           <Swiper
+          loop={true}
             className="mySwiper"
             navigation={
               window.innerWidth < 768 ? { nextEl: ".custom-next" } : false
@@ -57,83 +109,47 @@ const PhaseDevelopment = () => {
             slidesPerView={window.innerWidth < 768 ? 1.3 : 3}
             modules={[Navigation]}
             spaceBetween={10}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+            dir="rtl"
+          
           >
             <div className="custom-next md:hidden">
               <img src={arrow} alt="next" />
             </div>
-            <SwiperSlide>
-              <div className="card" ref={(el) => (imagesRef.current[2] = el)}>
-                <video
-                  src={require("../../../../Videos/deve-1.mp4")}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="video"
-                ></video>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              {" "}
-              <div className="card" ref={(el) => (imagesRef.current[2] = el)}>
-                <video
-                  src={require("../../../../Videos/deve-2.mp4")}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="video"
-                ></video>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card" ref={(el) => (imagesRef.current[2] = el)}>
-                <video
-                  src={require("../../../../Videos/deve-3.mp4")}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="video"
-                ></video>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card" ref={(el) => (imagesRef.current[2] = el)}>
-                <video
-                  src={require("../../../../Videos/deve-1.mp4")}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="video"
-                ></video>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card" ref={(el) => (imagesRef.current[2] = el)}>
-                <video
-                  src={require("../../../../Videos/deve-2.mp4")}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="video"
-                ></video>
-              </div>
-            </SwiperSlide>
+
+            {videos.map((videoSrc, index) => (
+              <SwiperSlide key={index}>
+                <div
+                  className={`card ${
+                    index !== activeIndex ? "blur-slide" : "active-slide"
+                  }`}
+                >
+                  <video
+                    ref={(el) => (videoRefs.current[index] = el)}
+                    src={videoSrc}
+                    muted
+                    loop
+                    playsInline
+                    className="video"
+                  ></video>
+                  <div className="text">
+                    <h4>Phase 1</h4>
+                    <p>Develpment</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
+
       <div className="content" ref={contentRef}>
-        <h5>PHASE 4</h5>
-        <h3>DEVELOPMENT</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Dictumst amet in duis feugiat
-          id.
-        </p>
+        <h5>{contentData[activeIndex].phase}</h5>
+        <h3>{contentData[activeIndex].title}</h3>
+        <p>{contentData[activeIndex].description}</p>
+
         <div className="links">
-          <Link className=" btn-hover">
+          <Link className="btn-hover">
             <span>START PROJECT</span>
             <span>
               <svg
@@ -144,15 +160,15 @@ const PhaseDevelopment = () => {
               >
                 <path
                   fill="currentColor"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="m85.333 160.617l128-74l.043.025L256 62l-42.667-24.666L42.667 136v197.333L85.333 358zm87.581 23.701l104.419-60.367l104.43 60.373l-104.419 60.368zm-23.581 35.651V346.05L256 407.716v-126.08zm256 126.081l-106.667 61.666V281.649l106.667-61.667zm-128-271.383L448 173.333v197.334l-170.667 98.667l-170.666-98.667V173.333z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
             </span>
           </Link>
           <Link className="btn-hover">
-            <span>FREE CONSULATION</span>
+            <span>FREE CONSULTATION</span>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
