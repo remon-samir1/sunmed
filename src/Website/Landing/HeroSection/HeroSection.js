@@ -85,7 +85,8 @@ const HeroSection = () => {
             Free consultation
           </Link>
 
-          <Link
+          <a
+          href="#with"
             ref={link2Ref}
             onMouseMove={handleMouseMove2}
             style={{
@@ -94,7 +95,7 @@ const HeroSection = () => {
             className="link"
           >
             Start project
-          </Link>
+          </a>
         </div>
       </div>
     </div>

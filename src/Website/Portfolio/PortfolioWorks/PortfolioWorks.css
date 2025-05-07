@@ -22,22 +22,32 @@
   justify-self: center;
   transition: 0.3s ease-in-out;
 }
+.PortfolioWorks .categories a.active{
+  background-color: var(--main-color);
+  color: #fff;
+}
 .PortfolioWorks .categories .list{
   background: #fff;
   box-shadow: 0 0 3px #a7a7a7;
   border-radius: 10px;
   /* z-index: 999; */
 }
-.PortfolioWorks .categories .list button {
+.PortfolioWorks .categories .list .child {
   background: #fff;
   border-radius: 0px 10px 10px 0;
 }
-.PortfolioWorks .categories .list button:first-child {
+.PortfolioWorks .categories .list .child:first-child {
   border-radius: 10px 0 0 10px;
 }
-.PortfolioWorks .categories .list button:hover {
+.PortfolioWorks .categories .list .child:hover {
   background-color: var(--main-color);
 }
+.PortfolioWorks .categories .list .active{
+  background-color: var(--main-color) !important;
+  color: #fff !important;
+
+}
+
 .PortfolioWorks .categories button:hover ,.PortfolioWorks .categories a:hover{
   background-size: 100% 100%;
  color: #fff;

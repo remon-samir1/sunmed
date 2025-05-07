@@ -100,7 +100,7 @@ toast.error(err.response.data.message)
     <>
   
 
-        <div className= " bg-[#FAFAFA] pt-[18vh] " ref={sectionRef} >
+        <div id="with" className= " bg-[#FAFAFA] pt-[18vh] " ref={sectionRef} >
     <Notification/>
       <div className="WithUs">
         <div className="flex justify-center items-start gap-[10vw] flex-wrap">

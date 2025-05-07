@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import TestmonialBox from "./TestmonialBox";
 const Testmonials = () => {
-  const [resize, setResize] = useState("");
+  const [resize, setResize] = useState(window.innerWidth);
   useEffect(() => {
     const resizeWidth = () => {
       setResize(window.innerWidth);

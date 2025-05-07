@@ -53,29 +53,30 @@ const Navbar = () => {
               setOpenServe((prev) => !prev);
             }}
             className="link"
+            to="/education"
+          >
+          Education Services
+          </NavLink>
+          <NavLink
+            onClick={() => {
+              setIsOpen((prev) => !prev);
+              setOpenServe((prev) => !prev);
+            }}
+            className="link"
             to="/web-solution"
           >
             Web Development
           </NavLink>
+      
           <NavLink
             onClick={() => {
               setIsOpen((prev) => !prev);
               setOpenServe((prev) => !prev);
             }}
             className="link"
-            to="/media-buying"
+            to="/digital-marketing"
           >
-            Media Buying
-          </NavLink>
-          <NavLink
-            onClick={() => {
-              setIsOpen((prev) => !prev);
-              setOpenServe((prev) => !prev);
-            }}
-            className="link"
-            to="/social-Media"
-          >
-            Social Media services
+          Digital Marketing
           </NavLink>
           <NavLink
             onClick={() => {
@@ -85,7 +86,7 @@ const Navbar = () => {
             className="link"
             to="/seo"
           >
-            Seo
+          Event Management
           </NavLink>
         </div>
         <NavLink

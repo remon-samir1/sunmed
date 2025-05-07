@@ -81,7 +81,7 @@
   transform: translate(-50%, -50%);
   width: 80px;
   height: 80px;
-  background: black;
+  background: var(--bg-color);
   border-radius: 50%;
   display: flex;
   justify-content: center;

@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Navigate, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Landing from "./Website/Landing/Landing";
 import Navbar from './Components/Navbar/Navbar';
 import MenuContext, { Menu } from './Context/MenuOpen/MenuContext';
@@ -26,6 +26,9 @@ import LoadingContext, { LoadingCon } from "./Context/LoadingContext/LoadingCont
 import SingleBlog from "./Website/Blogs/Single-blog/SingleBlog";
 import MainBlogPage from "./Website/Blogs/MainBlogPage/MainBlogPage";
 import StudiosLanding from "./Website/Studios/StudiosLanding";
+import AllWorks from "./Website/Portfolio/PortfolioWorks/Works/AllWorks/AllWorks";
+import Development from "./Website/Portfolio/PortfolioWorks/Works/Development/Development";
+import SocialMediaPage from "./Website/Portfolio/PortfolioWorks/Works/SocialMediaPage/SocialMediaPage";
 
 function App() {
   // height on open navbar
@@ -78,7 +81,16 @@ loading &&
         <Route element={<MediaBuyingLanding />} path="/media-buying" />
         <Route element={<SocialMediaLanding />} path="/social-media" />
         <Route element={<SeoLanding />} path="/seo" />
-        <Route element={<PortfolioLanding />} path="/portfolio" />
+              {/* start portfolio */}
+        <Route element={<PortfolioLanding />} path="/portfolio" >
+
+        <Route index element={<Navigate to="all" />} />
+  <Route path="all" element={<AllWorks />} />
+  <Route path="development" element={<Development />} />
+  <Route path="social-media" element={<SocialMediaPage />} />
+
+
+        </Route>
         <Route element={<PortFolioMediaProduction />} path="/portfolio/media-production-datails" />
         <Route element={<DevelopmentPage />} path="/portfolio/development" />
         <Route element={<StudiosLanding />} path="/digital-marketing" />

@@ -12,7 +12,7 @@ import { Navigation } from "swiper/modules";
 import arrow from "../../../../../Images/arrow.svg";
 
 const AllWorks = () => {
-  const [resize , setResize] = useState('')
+  const [resize , setResize] = useState(window.innerWidth)
   useEffect(()=>{
     const resizeWidth = ()=>{
       setResize(window.innerWidth )
@@ -63,16 +63,21 @@ const AllWorks = () => {
 
   return (
     <div className="AllWorks">
-    <div className="custom-prev">
+      {/* {
+        resize < 600 &&
+<>
+      <div className="custom-prev">
       <img src={arrow} alt="prev" style={{ transform: 'rotate(180deg)' }} />
     </div>
   
     <div className="custom-next">
       <img src={arrow} alt="next" />
     </div>
-  
+</>
+    }
+   */}
     <Swiper
-      navigation={{
+      navigation={ {
         nextEl: ".custom-next",
         prevEl: ".custom-prev"
       }}

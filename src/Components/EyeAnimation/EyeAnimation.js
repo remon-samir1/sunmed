@@ -53,12 +53,12 @@ const Home = () => {
     <div className="eye-wrapper">
       <div className="eye" ref={eyeRef}>
         <div className="iris" ref={irisRef}>
-          <div className="images">
-            <img src={require('../../Images/portfolio.png')} alt="1" loading="lazy"/>
+          <div className="images bg-black">
+            {/* <img src={require('../../Images/portfolio.png')} alt="1" loading="lazy"/>
             <img src={require('../../Images/hero-section.png')} alt="1" loading="lazy"/>
             <img src={require('../../Images/web-development.png')} alt="1" loading="lazy"/>
             <img src={require('../../Images/logo-story.png')} alt="1" loading="lazy"/>
-        
+         */}
           </div>
         </div>
         <div className="play-button" ref={playBtnRef} onClick={handleClick}></div>
