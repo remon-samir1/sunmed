@@ -29,7 +29,7 @@ const Testmonials = () => {
       <div className="t-container mt-[10vh]">
         <Swiper
           slidesPerView={"auto"}
-          centeredSlides={resize > 450 ? false : true}
+          centeredSlides={resize > 550 ? false : true}
           pagination={true}
           spaceBetween={40}
           modules={[Pagination]}

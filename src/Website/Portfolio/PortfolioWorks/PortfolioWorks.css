@@ -22,6 +22,10 @@
   justify-self: center;
   transition: 0.3s ease-in-out;
 }
+.PortfolioWorks .categories button.active{
+  background-color: var(--main-color);
+  color: #fff;
+}
 .PortfolioWorks .categories a.active{
   background-color: var(--main-color);
   color: #fff;
@@ -30,15 +34,34 @@
   background: #fff;
   box-shadow: 0 0 3px #a7a7a7;
   border-radius: 10px;
-  /* z-index: 999; */
+/* display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap; */
 }
 .PortfolioWorks .categories .list .child {
   background: #fff;
-  border-radius: 0px 10px 10px 0;
+  border-radius: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+
+}
+.PortfolioWorks .categories .education .child{
+  width: 220px !important;
+  white-space: pre-wrap;
+  height: 76px;
 }
 .PortfolioWorks .categories .list .child:first-child {
   border-radius: 10px 0 0 10px;
 }
+
+.PortfolioWorks .categories .list .child:last-child {
+  border-radius: 0px 10px 10px 0;
+}
+  
 .PortfolioWorks .categories .list .child:hover {
   background-color: var(--main-color);
 }

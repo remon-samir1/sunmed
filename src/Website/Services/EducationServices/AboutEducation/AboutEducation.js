@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AboutStudios = () => {
+const AboutEducation = () => {
   const contentRef = useRef(null);
 
   useGSAP(() => {
@@ -26,7 +26,7 @@ const AboutStudios = () => {
   return (
     <div className="StartProject px-[7vw] py-7 !flex-row">
       <div className="content" ref={contentRef}>
-        <p className="py-3 fz-[1.1rem]">DIGITAL MARKETING SERVICES</p>
+        <p className="py-3 fz-[1.1rem]">EDUCATION SERVICES</p>
         <h3>Our philosophy</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur. Dictumst amet in duis feugiat
@@ -46,7 +46,7 @@ const AboutStudios = () => {
       </div>
       <div className="img">
         <img
-          src={require("../../../Images/media-buying-about.png")}
+          src={require("../../../../Images/social-media.png")}
           alt="media buying"
           loading="lazy"
         />
@@ -55,4 +55,4 @@ const AboutStudios = () => {
   );
 };
 
-export default AboutStudios;
+export default AboutEducation;

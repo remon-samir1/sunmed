@@ -1,4 +1,4 @@
-export const StudioDetailsData = [
+export const DigitalMarketingData = [
   {
     icon:"bi:stars",
     title:'MEDIA BUYING',

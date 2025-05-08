@@ -84,7 +84,7 @@ const Navbar = () => {
               setOpenServe((prev) => !prev);
             }}
             className="link"
-            to="/seo"
+            to="/event-management"
           >
           Event Management
           </NavLink>

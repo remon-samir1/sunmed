@@ -4,12 +4,11 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { Link } from 'react-router-dom';
-import {  StudioDetailsData } from './StudioDetailsData';
-import OurMediaProductionCard from '../../Services/MediaProduction/OurMediaProduction/OurMediaProductionCard';
-
+import {  EventManagementDetailsData } from './EventManagementDetailsData';
+import OurMediaProductionCard from '../../MediaProduction/OurMediaProduction/OurMediaProductionCard';
 gsap.registerPlugin(ScrollTrigger);
 
-const StudioDetails = () => {
+const EventManagementDetails = () => {
   const sectionRef = useRef(null);
   const cardsRef = useRef([]);
 
@@ -51,8 +50,8 @@ const StudioDetails = () => {
         <p className='!w-[350px]'>We can offer the following services as part of our SEO campaigns:</p>
       </div>
 
-      <div className="cards">
-        {StudioDetailsData.map((data, key) => (
+      <div className="cards ">
+        {EventManagementDetailsData.map((data, key) => (
           <div
             key={key}
             ref={(el) => (cardsRef.current[key] = el)}
@@ -101,4 +100,4 @@ const StudioDetails = () => {
   );
 }
 
-export default StudioDetails;
+export default EventManagementDetails;

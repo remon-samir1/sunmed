@@ -1,0 +1,40 @@
+.PostProduction h3{
+  font-size: 1.8rem;
+  color: var(--main-color);
+  font-weight: 500;
+
+}
+
+.PostProduction .projects{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px 5vw;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.PostProduction .projects .project{
+  width: 14.5rem;
+  height: 16rem;
+  position: relative;
+}
+.PostProduction .projects .project img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.PostProduction .projects .project .text{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.PostProduction .projects .project .text h4{
+  color: var(--main-color);
+  font-style: 1rem;
+  font-weight: 500;
+}
+.PostProduction .projects .project .text p{
+  color: #fff;
+
+}

@@ -1,0 +1,46 @@
+.tranningPlatforms{
+
+}
+
+.tranningPlatforms h3{
+  font-size: 1.8rem;
+  color: var(--main-color);
+  font-weight: 500;
+
+}
+
+.tranningPlatforms .projects{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0vw;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.tranningPlatforms .projects .project{
+  flex: 0 1 30%;
+  height: 23rem;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.tranningPlatforms .projects .project img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tranningPlatforms .projects .project .text{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.tranningPlatforms .projects .project .text h4{
+  color: var(--main-color);
+  font-style: 1rem;
+  font-weight: 500;
+}
+.tranningPlatforms .projects .project .text p{
+  color: #fff;
+
+}

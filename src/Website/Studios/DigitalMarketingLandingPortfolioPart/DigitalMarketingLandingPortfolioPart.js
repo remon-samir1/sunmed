@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "./StudiosPortfolioPart.css";
+import "./DigitalMarketingLandingPortfolioPart.css";
 
-const StudiosPortfolioPart = () => {
+const DigitalMarketingLandingPortfolioPart = () => {
   const [resize, setResize] = useState(window.innerWidth);
   useEffect(() => {
     const resizeWidth = () => {
@@ -57,7 +57,7 @@ const StudiosPortfolioPart = () => {
   ];
 
   return (
-    <div className="StudiosPortfolioPart">
+    <div className="DigitalMarketingLandingPortfolioPart">
       <h3 className="pl-[5vw] py-7">OUR PORTFOLIO</h3>
       <div className="AllWorks">
         <Swiper
@@ -95,12 +95,12 @@ const StudiosPortfolioPart = () => {
       </div>
       <div className="text-center py-7">
 
-      <button className="normal-btn !rounded-none">
+      <Link to='/portfolio/social-media' className="normal-btn !rounded-none">
         SEE OUR PORTFOLIO
-      </button>
+      </Link>
       </div>
     </div>
   );
 };
 
-export default StudiosPortfolioPart;
+export default DigitalMarketingLandingPortfolioPart;

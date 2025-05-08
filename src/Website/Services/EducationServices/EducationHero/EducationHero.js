@@ -1,11 +1,11 @@
 import React, { useState, useRef } from "react";
 import gsap from "gsap"; 
-import "./StudioHero.css";
+import "./EducationHero.css";
 import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
-import Header from "../../../Components/Header/Header";
+import Header from "../../../../Components/Header/Header";
 
-const StudioHero = () => {
+const EducationHero = () => {
   const [coords1, setCoords1] = useState({ x: 10, y: 0 });
   const [coords2, setCoords2] = useState({ x: 10, y: 0 });
 
@@ -63,10 +63,10 @@ const StudioHero = () => {
   }, []); 
 
   return (
-    <div className="HeroSection StudioHero">
+    <div className="HeroSection EducationHero">
    <Header/>
       <div className="content">
-        <h1  ref={titleRef}>DIGTAL MARKETING</h1>
+        <h1  ref={titleRef}>EDUCATION SERVICES</h1>
 
         <p ref={paragraphRef}>
         We produce-stopping brand and corporate video content.
@@ -91,4 +91,4 @@ const StudioHero = () => {
   );
 };
 
-export default StudioHero;
+export default EducationHero;

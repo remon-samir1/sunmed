@@ -25,10 +25,21 @@ import Loading from "./Components/Loading/loading";
 import LoadingContext, { LoadingCon } from "./Context/LoadingContext/LoadingContext";
 import SingleBlog from "./Website/Blogs/Single-blog/SingleBlog";
 import MainBlogPage from "./Website/Blogs/MainBlogPage/MainBlogPage";
-import StudiosLanding from "./Website/Studios/StudiosLanding";
+import StudiosLanding from "./Website/Studios/DigitalMarketingLanding";
 import AllWorks from "./Website/Portfolio/PortfolioWorks/Works/AllWorks/AllWorks";
 import Development from "./Website/Portfolio/PortfolioWorks/Works/Development/Development";
 import SocialMediaPage from "./Website/Portfolio/PortfolioWorks/Works/SocialMediaPage/SocialMediaPage";
+import EducationServicesLanding from "./Website/Services/EducationServices/EducationServicesLanding";
+import PostProduction from "./Website/Portfolio/PortfolioWorks/Works/MediaWorks/PostProduction/PostProduction";
+import Photography from "./Website/Portfolio/PortfolioWorks/Works/MediaWorks/Photography/Photography";
+import RentingStudios from "./Website/Portfolio/PortfolioWorks/Works/MediaWorks/RentingStudios/RentingStudios";
+import TranningPlatforms from "./Website/Portfolio/PortfolioWorks/Works/EducationWorks/TranningPlatforms/TranningPlatforms";
+import TranningBags from "./Website/Portfolio/PortfolioWorks/Works/EducationWorks/TranningBags/TranningBags";
+import ElectronicMarketing from "./Website/Portfolio/PortfolioWorks/Works/EducationWorks/ElectronicMarketing/ElectronicMarketing";
+import TranningContent from "./Website/Portfolio/PortfolioWorks/Works/EducationWorks/TranningContent/TranningContent";
+import ProjectManagement from "./Website/Portfolio/PortfolioWorks/Works/EducationWorks/ProjectManagement/ProjectManagement";
+import VirtualProject from "./Website/Portfolio/PortfolioWorks/Works/EducationWorks/VirtualProject/VirtualProject";
+import EventManagementLanding from "./Website/Services/EventManagement/EventManagementLanding";
 
 function App() {
   // height on open navbar
@@ -76,7 +87,9 @@ loading &&
         
         <Route element={<SingleBlog />} path="/single-blog" />
         <Route element={<MainBlogPage />} path="/blogs" />
+        <Route element={<EducationServicesLanding />} path="/education" />
         <Route element={<MediaProduction />} path="/media-production" />
+  <Route path="/event-management" element={<EventManagementLanding />} />
         <Route element={<WebSolutionsLanding />} path="/web-solution" />
         <Route element={<MediaBuyingLanding />} path="/media-buying" />
         <Route element={<SocialMediaLanding />} path="/social-media" />
@@ -88,6 +101,15 @@ loading &&
   <Route path="all" element={<AllWorks />} />
   <Route path="development" element={<Development />} />
   <Route path="social-media" element={<SocialMediaPage />} />
+  <Route path="post-production" element={<PostProduction />} />
+  <Route path="Photography" element={<Photography />} />
+  <Route path="renting-studios" element={<RentingStudios />} />
+  <Route path="tranning-platforms" element={<TranningPlatforms />} />
+  <Route path="tranning-bags" element={<TranningBags />} />
+  <Route path="electronic-marketing" element={<ElectronicMarketing />} />
+  <Route path="tranning-content" element={<TranningContent />} />
+  <Route path="project-management" element={<ProjectManagement />} />
+  <Route path="virtual-project" element={<VirtualProject />} />
 
 
         </Route>

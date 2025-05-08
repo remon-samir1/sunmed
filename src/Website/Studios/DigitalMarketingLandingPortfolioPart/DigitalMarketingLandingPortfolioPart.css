@@ -1,25 +1,25 @@
-.StudiosPortfolioPart{
+.DigitalMarketingLandingPortfolioPart{
   background-color: #fafafa;
 padding: 5vh 0;
 }
-.StudiosPortfolioPart h3{
+.DigitalMarketingLandingPortfolioPart h3{
   font-size: 1.8rem;
   color: var(--main-color);
   font-weight: 500;
 }
-.StudiosPortfolioPart .work {
+.DigitalMarketingLandingPortfolioPart .work {
   width:29vw !important ;
   /* height: 300px !important; */
 }
-.StudiosPortfolioPart  .AllWorks .work{
+.DigitalMarketingLandingPortfolioPart  .AllWorks .work{
 border-radius: 0px;
 }
-.StudiosPortfolioPart .t-swiper{
+.DigitalMarketingLandingPortfolioPart .t-swiper{
   width: 90vw !important;
 }
 
 @media (max-width:768px) {
-.StudiosPortfolioPart .work {
+.DigitalMarketingLandingPortfolioPart .work {
  width: 85vw !important; 
 }
 }
