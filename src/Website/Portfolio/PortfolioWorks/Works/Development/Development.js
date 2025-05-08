@@ -1,10 +1,11 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
+import './Development.css'
 const Development = () => {
   return (
-    <div className='AllWorks flex'>
-      <div className="work">
+    <div className='AllWorks flex development'>
+      <div className="work ">
         <div className="details">
           <div className="text">
             <p>Graphic</p>
