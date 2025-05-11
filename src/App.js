@@ -40,6 +40,11 @@ import TranningContent from "./Website/Portfolio/PortfolioWorks/Works/EducationW
 import ProjectManagement from "./Website/Portfolio/PortfolioWorks/Works/EducationWorks/ProjectManagement/ProjectManagement";
 import VirtualProject from "./Website/Portfolio/PortfolioWorks/Works/EducationWorks/VirtualProject/VirtualProject";
 import EventManagementLanding from "./Website/Services/EventManagement/EventManagementLanding";
+import PostProductionLanding from "./Website/Portfolio/PortfolioWorks/Works/MediaWorks/PostProduction/PostProductionPage/PostProductionLanding";
+import RentingStudioLanding from "./Website/Portfolio/PortfolioWorks/Works/MediaWorks/RentingStudios/RentingStudioPage/RentingStudioLanding";
+import PhotographyLanding from "./Website/Portfolio/PortfolioWorks/Works/MediaWorks/Photography/PhotographyPage/PhotographyLanding";
+import Videography from "./Website/Portfolio/PortfolioWorks/Works/MediaWorks/Videography/Videography";
+import VideographyLanding from "./Website/Portfolio/PortfolioWorks/Works/MediaWorks/Videography/VideographyPage/VideographyLanding";
 
 function App() {
   // height on open navbar
@@ -94,6 +99,10 @@ loading &&
         <Route element={<MediaBuyingLanding />} path="/media-buying" />
         <Route element={<SocialMediaLanding />} path="/social-media" />
         <Route element={<SeoLanding />} path="/seo" />
+        <Route element={<PostProductionLanding />} path="/post-production-page" />
+        <Route element={<RentingStudioLanding />} path="/renting-studio-page" />
+        <Route element={<PhotographyLanding />} path="/photography-page" />
+        <Route element={<VideographyLanding />} path="/videography-page" />
               {/* start portfolio */}
         <Route element={<PortfolioLanding />} path="/portfolio" >
 
@@ -103,6 +112,7 @@ loading &&
   <Route path="social-media" element={<SocialMediaPage />} />
   <Route path="post-production" element={<PostProduction />} />
   <Route path="Photography" element={<Photography />} />
+  <Route path="videography" element={<Videography />} />
   <Route path="renting-studios" element={<RentingStudios />} />
   <Route path="tranning-platforms" element={<TranningPlatforms />} />
   <Route path="tranning-bags" element={<TranningBags />} />

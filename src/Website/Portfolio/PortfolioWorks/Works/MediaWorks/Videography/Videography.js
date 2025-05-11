@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const RentingStudios = () => {
+const Videography = () => {
   return (
     <div className='PostProduction'>
       <h3>PROJECTS</h3>
       <div className="projects">
     {
       Array.from({length:4}).map((data , index)=>(
-        <Link to='/renting-studio-page' className='project'>
+        <Link to='/videography-page' className='project'>
          <img src={require('../../../../../../Images/cairo.png')} alt="projects" loading='lazy'/>
          <div className="text">
           <h4>Project 1</h4>
@@ -21,4 +21,4 @@ const RentingStudios = () => {
   );
 }
 
-export default RentingStudios;
+export default Videography;

@@ -76,6 +76,28 @@ flex-wrap: wrap; */
  color: #fff;
 }
 
+
+/* .PortfolioWorks .categories .list.education{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: max-content !important;
+} */
+
+@media (max-width:992px) {
+
+.PortfolioWorks .categories .list.active{
+  display: grid !important;
+  grid-template-rows: repeat(2 ,auto);
+  flex-wrap: wrap;
+  left: -50%;
+  height: max-content;
+  /* width: 80vw; */
+}
+
+  
+}
 @media (max-width: 768px) {
   .high{
   height: 110px !important;

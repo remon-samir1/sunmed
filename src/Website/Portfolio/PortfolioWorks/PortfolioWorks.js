@@ -82,6 +82,7 @@ const PortfolioWorks = () => {
           >
             Media Production
           </button>
+          
           <div
             className={`list flex overflow-hidden mt-4 duration-500 ${
               openMediaProducation ? "h-14" : "h-0"
@@ -94,7 +95,10 @@ const PortfolioWorks = () => {
               Post Production
             </NavLink>
             <NavLink className="child" to="Photography">
-              Photography & Videography
+              Photography 
+            </NavLink>
+            <NavLink className="child" to="videography">
+              Videography
             </NavLink>
           </div>
         </div>
@@ -111,8 +115,8 @@ const PortfolioWorks = () => {
             Education Services
           </button>
           <div
-            className={`list education flex overflow-hidden mt-4 duration-500 ${
-              openEduaction ? "h-[69px]" : "h-0"
+            className={`list education flex  overflow-hidden mt-4 duration-500 ${
+              openEduaction ? "h-[69px] active" : "h-0"
             } absolute top-[100%] left-[-180%] z-50`}
           >
         <NavLink to="tranning-platforms" className="child">
@@ -166,7 +170,7 @@ const PortfolioWorks = () => {
         <button>Event management</button>
       </div>
 
-      <div className="data px-[2vw] md:px-[7vw] py-5 fade-in">
+      <div className="data px-[2vw] md:px-[7vw] py-5 fade-in -z-50">
         <Outlet />
       </div>
     </div>
@@ -174,3 +178,4 @@ const PortfolioWorks = () => {
 };
 
 export default PortfolioWorks;
+
