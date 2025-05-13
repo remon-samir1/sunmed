@@ -69,6 +69,10 @@ import Implementation from "./Website/Portfolio/PortfolioWorks/Works/EventManage
 import Conference from "./Website/Portfolio/PortfolioWorks/Works/EventManagementWorks/Conference/Conference";
 import ImplementationLanding from "./Website/Portfolio/PortfolioWorks/Works/EventManagementWorks/Implementation/ImplementationPage/ImplementationLanding";
 import ConferenceLanding from "./Website/Portfolio/PortfolioWorks/Works/EventManagementWorks/Conference/ConferencePage/ConferenceLanding";
+import EducationProjectDetailsLanding from "./Website/Portfolio/Details/EducationProjectDetails/EducationProjectDetailsLanding";
+import SocialMediaServDetailsHero from "./Website/Portfolio/Details/SocialMediaServDetails/SocialMediaServDetailsHero/SocialMediaServDetailsHero";
+import SocialMediaServDetailsLanding from "./Website/Portfolio/Details/SocialMediaServDetails/SocialMediaServDetailsLanding";
+import EventServDetailsLanding from "./Website/Portfolio/Details/EventServDetails/EventServDetailsLanding";
 
 function App() {
   // height on open navbar
@@ -170,7 +174,10 @@ loading &&
 
         </Route>
         <Route element={<PortFolioMediaProduction />} path="/portfolio/media-production-datails" />
-        <Route element={<DevelopmentPage />} path="/portfolio/development" />
+        <Route element={<DevelopmentPage />} path="/portfolio/development/details" />
+        <Route element={<EducationProjectDetailsLanding />} path="/portfolio/education/details" />
+        <Route element={<SocialMediaServDetailsLanding />} path="/portfolio/digital/details" />
+        <Route element={<EventServDetailsLanding />} path="/portfolio/event/details" />
         <Route element={<StudiosLanding />} path="/digital-marketing" />
       </Routes>
     </div>

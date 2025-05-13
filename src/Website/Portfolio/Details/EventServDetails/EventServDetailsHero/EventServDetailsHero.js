@@ -1,15 +1,25 @@
 import React, { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
+import gsap from "gsap"; 
+import "./EventServDetailsHero.css";
 import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
-import Header from "../../../../Components/Header/Header";
-const PortFolioMediaProductionHero = () => {
-  const [coords2, setCoords2] = useState({ x: 10, y: 0 });
+import Header from "../../../../../Components/Header/Header";
 
+const EventServDetailsHero = () => {
+  const [coords1, setCoords1] = useState({ x: 10, y: 0 });
+  const [coords2, setCoords2] = useState({ x: 10, y: 0 });
+const textP='Event management > Details'
   const titleRef = useRef(null);
   const paragraphRef = useRef(null);
   const link1Ref = useRef(null);
   const link2Ref = useRef(null);
+
+  const handleMouseMove1 = (e) => {
+    const rect = e.target.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    setCoords1({ x, y });
+  };
 
   const handleMouseMove2 = (e) => {
     const rect = e.target.getBoundingClientRect();
@@ -21,9 +31,8 @@ const PortFolioMediaProductionHero = () => {
   useGSAP(() => {
     gsap.from(titleRef.current, {
       opacity: 0,
-
-      y: 50,
-      delay: 1,
+      delay:0.5,
+      y: 100,
       duration: 1.5,
       ease: "power3.out",
     });
@@ -51,18 +60,21 @@ const PortFolioMediaProductionHero = () => {
       delay: 1.2,
       ease: "power3.out",
     });
-  });
-const text = 'Media Production > Details'
+  }, []); 
+
   return (
-    <div className="HeroSection PortfolioHero overflow-hidden">
-      <Header />
+    <div className="HeroSection EventServDetailsHero">
+   <Header/>
       <div className="content">
-        <h1 ref={titleRef}>PORTFOLIO PROJECTS</h1>
+        <h1  ref={titleRef}>Portfolio Projects</h1>
 
-       <h2 className="text-[2rem] ">{text}</h2>
+        <p ref={paragraphRef}>
+          {textP}
+        </p>
+
         <div className="flex justify-center items-center gap-7 flex-col md:flex-row  mt-3 md:mt-0">
-          <a
 
+          <a
           href="#with"
             ref={link2Ref}
             onMouseMove={handleMouseMove2}
@@ -79,4 +91,4 @@ const text = 'Media Production > Details'
   );
 };
 
-export default PortFolioMediaProductionHero;
+export default EventServDetailsHero;

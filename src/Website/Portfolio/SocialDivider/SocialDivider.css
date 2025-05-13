@@ -4,6 +4,8 @@ background: #fafafa;
 .SocialDivider .insta{
   background: url('../../../Images/bg-divider.png') no-repeat;
   height: 220px;
+  width: 100%;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;

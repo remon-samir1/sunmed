@@ -11,7 +11,7 @@ const PortFolioMediaProduction = () => {
   }
 ,[])
   return (
-    <div>
+    <div className='overflow-hidden'>
       <div ref={scrollRef}></div>
       <PortFolioMediaProductionHero/>
       <PortfolioMediaPage/>

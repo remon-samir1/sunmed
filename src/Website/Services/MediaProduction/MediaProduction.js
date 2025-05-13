@@ -4,6 +4,7 @@ import AboutMediaProduction from './AboutMediaProduction/AboutMediaProduction';
 import OurMediaProduction from './OurMediaProduction/OurMediaProduction';
 import WithUs from '../../Landing/WithUs/WithUs';
 import Footer from '../../../Components/Footer/Footer';
+import MediaProductionPortfolioPart from './MediaProductionPortfolioPart/MediaProductionPortfolioPart';
 
 const MediaProduction = () => {
   const scrollRef = useRef(null)
@@ -17,6 +18,7 @@ const MediaProduction = () => {
 
       <HeroMediaProduction/>
       <AboutMediaProduction/>
+      <MediaProductionPortfolioPart/>
       <OurMediaProduction/>
       <WithUs/>
       <Footer/>

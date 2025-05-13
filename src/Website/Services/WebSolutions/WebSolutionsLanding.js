@@ -5,6 +5,7 @@ import PhaseDevelopment from './PhaseDevelopment/PhaseDevelopment';
 import PostLaunch from './PostLaunch/PostLaunch';
 import WithUs from '../../Landing/WithUs/WithUs';
 import Footer from '../../../Components/Footer/Footer';
+import WebSolutionPortfolioPart from './WebSolutionPortfolioPart/WebSolutionPortfolioPart';
 
 const WebSolutionsLanding = () => {
   const scrollRef = useRef(null)
@@ -18,6 +19,7 @@ const WebSolutionsLanding = () => {
 
       <WebSolutionsHero/>
       <AboutWebSolution/>
+      <WebSolutionPortfolioPart/>
       <PhaseDevelopment/>
       <PostLaunch/>
       <WithUs/>

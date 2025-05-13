@@ -7,7 +7,7 @@ const RentingStudios = () => {
       <div className="projects">
     {
       Array.from({length:4}).map((data , index)=>(
-        <Link to='/renting-studio-page' className='project'>
+        <Link to='/portfolio/media-production-datails' className='project'>
          <img src={require('../../../../../../Images/cairo.png')} alt="projects" loading='lazy'/>
          <div className="text">
           <h4>Project 1</h4>

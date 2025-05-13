@@ -8,7 +8,7 @@ const TranningPlatforms = () => {
       <div className="projects">
     {
       Array.from({length:6}).map((data , index)=>(
-        <Link to='/training-platform-page' className='project'>
+        <Link to='/portfolio/education/details' className='project'>
          <img src={require('../../../../../../Images/cairo.png')} alt="projects" loading='lazy'/>
          <div className="text">
           <h4>Project 1</h4>

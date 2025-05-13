@@ -1,9 +1,10 @@
 import { Icon } from "@iconify/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const OurMediaProductionCard = (props) => {
   return (
-    <div className="OurMediaProductionCard">
+    <Link to={props.link} className="OurMediaProductionCard">
       <div className="icon-container">
         <Icon icon={props.icon} width="48" height="48" className="icon"/>
       </div>
@@ -11,7 +12,7 @@ const OurMediaProductionCard = (props) => {
       <p>
       {props.disc}
       </p>
-    </div>
+    </Link>
   );
 };
 

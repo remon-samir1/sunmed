@@ -1,0 +1,114 @@
+.EducationDetailsofProject{
+  background-color: #fafafa;
+}
+.EducationDetailsofProject .imges{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+.EducationDetailsofProject .imges .img{
+  flex: 1 1 30%;
+  max-height: 380px;
+  overflow: hidden;
+  position: relative;
+}
+.EducationDetailsofProject .imges .img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 2s;
+}
+.EducationDetailsofProject .text{
+  text-align: center;
+}
+.EducationDetailsofProject .text h3{
+  color: var(--bg-color);
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.EducationDetailsofProject .text p{
+  color: var(--bg-color);
+  font-size: 0.9rem;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+.EducationDetailsofProject .imges .img:hover > img{
+  transform: scale(1.1);
+}
+
+
+.EducationDetailsofProject .imges .img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  background: linear-gradient(to top, rgba(0, 0, 4, 0.4), transparent);
+  filter: blur(5px); 
+
+  transition: bottom 2s ease;
+  z-index: 0;
+}
+
+.EducationDetailsofProject .imges .img:hover::after {
+  bottom: -100%; 
+}
+
+
+.EducationDetailsofProject .details{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  
+  margin-top: 10vh;
+}
+.PortfolioMediaPage .content .details .detail{
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 5px;
+  flex-direction: column;
+}
+.EducationDetailsofProject .details .detail h5{
+  font-size: 1.1rem;
+  color: var(--bg-color);
+  font-weight: 500;
+}
+.EducationDetailsofProject .details .detail h4{
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--bg-color);
+}
+
+.EducationDetailsofProject .details .social-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.EducationDetailsofProject .details .social-links .icon-container{
+  width: 26px;
+  height: 26px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.EducationDetailsofProject .details .social-links .icon-container:hover{
+  border-color: var(--main-color);
+  box-shadow: 0px 0px 10px 2px var(--main-color);
+
+}
+.EducationDetailsofProject .details .social-links .icon{
+  width: 14px;
+  height: 14px;
+
+}

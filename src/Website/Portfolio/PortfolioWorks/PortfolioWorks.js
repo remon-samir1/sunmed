@@ -192,9 +192,7 @@ const PortfolioWorks = () => {
             <NavLink to="development" className="child">
               Web Development
             </NavLink>
-            <NavLink className="child" to="development-testing">
-            Development Testing
-            </NavLink>
+          
       
           </div>
         </div>

@@ -6,7 +6,7 @@ const SeoServices = () => {
     <div className='AllWorks flex'>
       <div className="img-container">
 
-      <Link to='/seo-services-page' className="work">
+      <Link to='/portfolio/digital/details' className="work">
         <div className="details">
           <div className="text">
             <p>Graphic</p>
@@ -20,7 +20,7 @@ const SeoServices = () => {
         </div>
         <img src={require('../../../../../../Images/work-1.png')} alt="work" loading='lazy' />
       </Link>
-      <Link to='/seo-services-page' className="work">
+      <Link to='/portfolio/digital/details' className="work">
       <div className="details">
           <div className="text">
             <p>Graphic</p>
@@ -38,7 +38,7 @@ const SeoServices = () => {
       </div>
       <div className="img-container container-2">
 
-      <Link to='/seo-services-page' className="work">
+      <Link to='/portfolio/digital/details' className="work">
       <div className="details">
           <div className="text">
             <p>Graphic</p>
@@ -52,7 +52,7 @@ const SeoServices = () => {
         </div>
         <img src={require('../../../../../../Images/work-3.png')} alt="work" loading='lazy' />
       </Link>
-      <Link to='/seo-services-page' className="work">
+      <Link to='/portfolio/digital/details' className="work">
       <div className="details">
           <div className="text">
             <p>Graphic</p>
@@ -69,7 +69,7 @@ const SeoServices = () => {
       </div>
       <div className="img-container">
 
-      <Link to='/seo-services-page' className="work">
+      <Link to='/portfolio/digital/details' className="work">
       <div className="details">
           <div className="text">
             <p>Graphic</p>
@@ -83,7 +83,7 @@ const SeoServices = () => {
         </div>
         <img src={require('../../../../../../Images/work-5.png')} alt="work" loading='lazy' />
       </Link>
-      <Link to='/seo-services-page' className="work">
+      <Link to='/portfolio/digital/details' className="work">
       <div className="details">
           <div className="text">
             <p>Graphic</p>

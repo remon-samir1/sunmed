@@ -56,6 +56,7 @@ const OurMediaProduction = () => {
               title={data.title}
               disc={data.disc}
               icon={data.icon}
+              link={data.link}
             />
           </div>
         ))}

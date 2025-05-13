@@ -1,15 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
-import { Link } from "react-router-dom";
+import gsap from "gsap"; 
+import './EducationProjectDetailsHero.css'
 import { useGSAP } from "@gsap/react";
-import Header from "../../../../Components/Header/Header";
-const PortFolioMediaProductionHero = () => {
+import Header from "../../../../../Components/Header/Header";
+
+
+const EducationProjectDetailsHero = () => {
   const [coords2, setCoords2] = useState({ x: 10, y: 0 });
+  const textP= 'EDUCATION SERVICES > Details'
 
   const titleRef = useRef(null);
   const paragraphRef = useRef(null);
   const link1Ref = useRef(null);
   const link2Ref = useRef(null);
+
+
 
   const handleMouseMove2 = (e) => {
     const rect = e.target.getBoundingClientRect();
@@ -21,9 +26,8 @@ const PortFolioMediaProductionHero = () => {
   useGSAP(() => {
     gsap.from(titleRef.current, {
       opacity: 0,
-
-      y: 50,
-      delay: 1,
+      delay:0.5,
+      y: 100,
       duration: 1.5,
       ease: "power3.out",
     });
@@ -51,18 +55,20 @@ const PortFolioMediaProductionHero = () => {
       delay: 1.2,
       ease: "power3.out",
     });
-  });
-const text = 'Media Production > Details'
-  return (
-    <div className="HeroSection PortfolioHero overflow-hidden">
-      <Header />
-      <div className="content">
-        <h1 ref={titleRef}>PORTFOLIO PROJECTS</h1>
+  }, []); 
 
-       <h2 className="text-[2rem] ">{text}</h2>
+  return (
+    <div className="HeroSection EducationProjectDetailsHero">
+   <Header/>
+      <div className="content">
+        <h1 className="uppercase" ref={titleRef}>Portfolio Projects</h1>
+
+        <p ref={paragraphRef} style={{letterSpacing:'2px'}}>
+          {textP}
+        </p>
+
         <div className="flex justify-center items-center gap-7 flex-col md:flex-row  mt-3 md:mt-0">
           <a
-
           href="#with"
             ref={link2Ref}
             onMouseMove={handleMouseMove2}
@@ -79,4 +85,4 @@ const text = 'Media Production > Details'
   );
 };
 
-export default PortFolioMediaProductionHero;
+export default EducationProjectDetailsHero;

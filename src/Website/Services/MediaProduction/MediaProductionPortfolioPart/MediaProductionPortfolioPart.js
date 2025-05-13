@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 
-const EventPortfolioPart = () => {
+const MediaProductionPortfolioPart = () => {
   const [resize, setResize] = useState(window.innerWidth);
   useEffect(() => {
     const resizeWidth = () => {
@@ -95,7 +95,7 @@ const EventPortfolioPart = () => {
       </div>
       <div className="text-center py-7">
 
-      <Link to='/portfolio/Implementation' className="normal-btn !rounded-none">
+      <Link to='/portfolio/post-production' className="normal-btn !rounded-none">
         SEE OUR PORTFOLIO
       </Link>
       </div>
@@ -103,4 +103,4 @@ const EventPortfolioPart = () => {
   );
 };
 
-export default EventPortfolioPart;
+export default MediaProductionPortfolioPart;

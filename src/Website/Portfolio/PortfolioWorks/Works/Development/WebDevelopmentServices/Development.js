@@ -12,7 +12,7 @@ const Development = () => {
             <p>Fimilor experience</p>
 
           </div>
-          <Link to='/web-dev-page' className="icon-container">
+          <Link to='/portfolio/development/details' className="icon-container">
 
           <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
           </Link>
@@ -26,7 +26,7 @@ const Development = () => {
             <p>Fimilor experience</p>
 
           </div>
-          <Link to='/web-dev-page' className="icon-container">
+          <Link to='/portfolio/development/details' className="icon-container">
 
           <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
           </Link>
@@ -41,7 +41,7 @@ const Development = () => {
             <p>Fimilor experience</p>
 
           </div>
-          <Link to='/web-dev-page' className="icon-container">
+          <Link to='/portfolio/development/details' className="icon-container">
 
           <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
           </Link>
@@ -55,7 +55,7 @@ const Development = () => {
             <p>Fimilor experience</p>
 
           </div>
-          <Link to='/web-dev-page' className="icon-container">
+          <Link to='/portfolio/development/details' className="icon-container">
 
           <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
           </Link>
@@ -69,7 +69,7 @@ const Development = () => {
             <p>Fimilor experience</p>
 
           </div>
-          <Link to='/web-dev-page' className="icon-container">
+          <Link to='/portfolio/development/details' className="icon-container">
 
           <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
           </Link>
@@ -83,7 +83,7 @@ const Development = () => {
             <p>Fimilor experience</p>
 
           </div>
-          <Link to='/web-dev-page' className="icon-container">
+          <Link to='/portfolio/development/details' className="icon-container">
 
           <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
           </Link>
