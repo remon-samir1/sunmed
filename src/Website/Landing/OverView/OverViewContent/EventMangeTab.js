@@ -51,8 +51,8 @@ const EventMangeTab = () => {
             odio
           </li>
         </ul>
-        <Link className="btn-hover" to="/media-buying">
-          <span>Media buying</span>
+        <Link className="btn-hover" to="/event-management">
+          <span>Event Management</span>
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import WithUs from "../Landing/WithUs/WithUs";
 import Footer from "../../Components/Footer/Footer";
@@ -8,8 +8,15 @@ import AboutDigitalMarketing from "./AboutDigitalMarketing/AboutDigitalMarketing
 import DigitalMarketingHero from "./DigitalMarketingHero/DigitalMarketingHero";
 
 const DigitalMarketingLanding = () => {
+  const scrollRef = useRef(null)
+  useEffect(()=>{
+    scrollRef.current.scrollIntoView()
+  }
+,[])
   return (
     <div className="overflow-hidden">
+      <div ref={scrollRef}></div>
+
       <DigitalMarketingHero />
       <AboutDigitalMarketing />
       <DigitalMarketingLandingPortfolioPart />

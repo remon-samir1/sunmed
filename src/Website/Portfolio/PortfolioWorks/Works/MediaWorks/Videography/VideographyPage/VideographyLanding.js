@@ -14,8 +14,8 @@ const VideographyLanding = () => {
 ,[])
   return (
     <div className='overflow-hidden'>
-      <div ref={scrollRef}></div>
       <VideographyHero/>
+      <div ref={scrollRef}></div>
       <AvailableServicesVid/>
       <SelectedServicesVid/>
       <PortfplioDivider/>

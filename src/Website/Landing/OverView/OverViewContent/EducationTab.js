@@ -51,8 +51,8 @@ const EducationTab = () => {
             odio
           </li>
         </ul>
-        <Link className="btn-hover" to="/seo">
-          <span>Seo</span>
+        <Link className="btn-hover" to="/education">
+          <span>Education Services</span>
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

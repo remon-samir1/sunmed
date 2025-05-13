@@ -51,8 +51,8 @@ const DigitalMarketingTab = () => {
             odio
           </li>
         </ul>
-        <Link className="btn-hover" to="/social-media">
-          <span>Social media</span>
+        <Link className="btn-hover" to="/digital-marketing">
+          <span>Digital Marketing</span>
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
