@@ -8,8 +8,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
 import AllWorks from "../../Portfolio/PortfolioWorks/Works/AllWorks/AllWorks";
-import SocialMediaPage from "../../Portfolio/PortfolioWorks/Works/SocialMediaPage/SocialMediaPage";
-import Development from "../../Portfolio/PortfolioWorks/Works/Development/Development";
+import SocialMediaPage from "../../Portfolio/PortfolioWorks/Works/SocialMediaServices/SocialMediaTab";
+import Development from "../../Portfolio/PortfolioWorks/Works/Development/WebDevelopmentServices/Development";
 
 gsap.registerPlugin(ScrollTrigger);
 

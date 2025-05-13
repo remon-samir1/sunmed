@@ -7,7 +7,7 @@ const VirtualProject = () => {
       <div className="projects">
     {
       Array.from({length:6}).map((data , index)=>(
-        <Link to='/portfolio/media-production-datails' className='project'>
+        <Link to='/virtual-project-page' className='project'>
          <img src={require('../../../../../../Images/cairo.png')} alt="projects" loading='lazy'/>
          <div className="text">
           <h4>Project 1</h4>

@@ -13,6 +13,8 @@ const PortfolioWorks = () => {
   const [openDigitalMarketing, setOpenDigitalMarketing] = useState(false);
   const [openMediaProducation, setOpenMediaProducation] = useState(false);
   const [openEduaction, setOpenEducation] = useState(false);
+  const [openWebSolution, setOpenWebSolution] = useState(false);
+  const [openEventManage, setOpenEventManage] = useState(false);
   const sectionRef = useRef(null);
 
   useGSAP(() => {
@@ -41,6 +43,8 @@ const PortfolioWorks = () => {
     setOpenDigitalMarketing(false);
     setOpenMediaProducation(false);
     setOpenEducation(false)
+    setOpenWebSolution(false)
+    setOpenEventManage(false)
 
   };
 
@@ -49,6 +53,9 @@ const PortfolioWorks = () => {
     setOpenWeb(false);
     setOpenMediaProducation(false);
     setOpenEducation(false)
+    setOpenWebSolution(false)
+    setOpenEventManage(false)
+
 
   };
   const toggleMediaProducationDropdown = () => {
@@ -56,9 +63,32 @@ const PortfolioWorks = () => {
     setOpenWeb(false);
     setOpenDigitalMarketing(false);
     setOpenEducation(false)
+    setOpenWebSolution(false)
+    setOpenEventManage(false)
+
   };
   const toggleEducationDropdown = () => {
     setOpenEducation(prev=>!prev)
+    setOpenMediaProducation(false);
+    setOpenWeb(false);
+    setOpenDigitalMarketing(false);
+    setOpenWebSolution(false)
+    setOpenEventManage(false)
+
+  };
+  const toggleWebSolutionDropdown = () => {
+    setOpenWebSolution(prev=>!prev)
+    setOpenEducation(false)
+    setOpenMediaProducation(false);
+    setOpenWeb(false);
+    setOpenDigitalMarketing(false);
+    setOpenEventManage(false)
+
+  };
+  const toggleEventManagementDropdown = () => {
+    setOpenEventManage(prev=>!prev)
+    setOpenWebSolution(false)
+    setOpenEducation(false)
     setOpenMediaProducation(false);
     setOpenWeb(false);
     setOpenDigitalMarketing(false);
@@ -68,7 +98,7 @@ const PortfolioWorks = () => {
     <div ref={sectionRef} className="PortfolioWorks py-[4vh] md:py-[10vh]">
       <div
         className={`categories ${
-          openWeb || openDigitalMarketing || openMediaProducation || openEduaction
+          openWeb || openDigitalMarketing||openEventManage ||openWebSolution ||openMediaProducation || openEduaction
             ? "h-[140px]"
             : "h-[100px]"
         } !duration-500 md:px-[7vw] fade-in`}
@@ -85,7 +115,7 @@ const PortfolioWorks = () => {
           
           <div
             className={`list flex overflow-hidden mt-4 duration-500 ${
-              openMediaProducation ? "h-14" : "h-0"
+              openMediaProducation ? "open" : "h-0"
             } absolute top-[100%] left-0 z-50`}
           >
             <NavLink to="renting-studios" className="child">
@@ -116,7 +146,7 @@ const PortfolioWorks = () => {
           </button>
           <div
             className={`list education flex  overflow-hidden mt-4 duration-500 ${
-              openEduaction ? "h-[69px] active" : "h-0"
+              openEduaction ? "h-[69px] " : "h-0"
             } absolute top-[100%] left-[-180%] z-50`}
           >
         <NavLink to="tranning-platforms" className="child">
@@ -143,11 +173,37 @@ const PortfolioWorks = () => {
 
 
 
+        <div className="flex flex-col items-center relative">
+          <button
+            className={`${openWebSolution && "active"}`}
+            onClick={toggleWebSolutionDropdown}
+          >
+            Web Solution
+          </button>
+          
+          <div
+            className={`list flex overflow-hidden mt-4 duration-500 ${
+              openWebSolution ? "h-14" : "h-0"
+            } absolute top-[100%] left-0 z-50`}
+          >
+            <NavLink to="web-design" className="child">
+              Wen Design
+            </NavLink>
+            <NavLink to="development" className="child">
+              Web Development
+            </NavLink>
+            <NavLink className="child" to="development-testing">
+            Development Testing
+            </NavLink>
+      
+          </div>
+        </div>
 
 
 
+  
+  
 
-        <NavLink to="development">Web Development</NavLink>
 
         <div className="flex flex-col items-center relative">
           <button onClick={toggleDigitalMarketingDropdown}>
@@ -161,13 +217,55 @@ const PortfolioWorks = () => {
             <NavLink className="child" to="social-media">
               Social media
             </NavLink>
-            <NavLink className="child" to="/">
+            <NavLink className="child" to="media-buying">
               Media buying
+            </NavLink>
+            <NavLink className="child" to="infleuncer-marketing">
+            Influencer Marketing
+            </NavLink>
+            <NavLink className="child" to="seo-services">
+            Seo
             </NavLink>
           </div>
         </div>
 
-        <button>Event management</button>
+      
+      
+
+
+
+        <div className="flex flex-col items-center relative">
+          <button
+            className={`${openEventManage && "active"}`}
+            onClick={toggleEventManagementDropdown}
+          >
+          Event Management
+          </button>
+          
+          <div
+            className={`list flex overflow-hidden mt-4 duration-500 ${
+              openEventManage ? "h-14" : "h-0"
+            } absolute top-[100%] right-0 z-50`}
+          >
+            <NavLink to="Implementation" className="child">
+            Implementation of conference-related work
+            </NavLink>
+            <NavLink to="Conference" className="child">
+            Conference management and organization
+            </NavLink>
+        
+      
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
       </div>
 
       <div className="data px-[2vw] md:px-[7vw] py-5 fade-in -z-50">

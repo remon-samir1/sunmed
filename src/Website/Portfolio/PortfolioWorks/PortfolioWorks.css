@@ -34,10 +34,8 @@
   background: #fff;
   box-shadow: 0 0 3px #a7a7a7;
   border-radius: 10px;
-/* display: flex;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap; */
+  z-index: 999;
+
 }
 .PortfolioWorks .categories .list .child {
   background: #fff;
@@ -46,6 +44,7 @@ flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
   text-align: center;
+  z-index: 9999;
 
 
 }

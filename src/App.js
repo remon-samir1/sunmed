@@ -27,8 +27,7 @@ import SingleBlog from "./Website/Blogs/Single-blog/SingleBlog";
 import MainBlogPage from "./Website/Blogs/MainBlogPage/MainBlogPage";
 import StudiosLanding from "./Website/Studios/DigitalMarketingLanding";
 import AllWorks from "./Website/Portfolio/PortfolioWorks/Works/AllWorks/AllWorks";
-import Development from "./Website/Portfolio/PortfolioWorks/Works/Development/Development";
-import SocialMediaPage from "./Website/Portfolio/PortfolioWorks/Works/SocialMediaPage/SocialMediaPage";
+import SocialMediaPage from "./Website/Portfolio/PortfolioWorks/Works/SocialMediaServices/SocialMediaTab";
 import EducationServicesLanding from "./Website/Services/EducationServices/EducationServicesLanding";
 import PostProduction from "./Website/Portfolio/PortfolioWorks/Works/MediaWorks/PostProduction/PostProduction";
 import Photography from "./Website/Portfolio/PortfolioWorks/Works/MediaWorks/Photography/Photography";
@@ -45,6 +44,31 @@ import RentingStudioLanding from "./Website/Portfolio/PortfolioWorks/Works/Media
 import PhotographyLanding from "./Website/Portfolio/PortfolioWorks/Works/MediaWorks/Photography/PhotographyPage/PhotographyLanding";
 import Videography from "./Website/Portfolio/PortfolioWorks/Works/MediaWorks/Videography/Videography";
 import VideographyLanding from "./Website/Portfolio/PortfolioWorks/Works/MediaWorks/Videography/VideographyPage/VideographyLanding";
+import VirtualProjectLanding from "./Website/Portfolio/PortfolioWorks/Works/EducationWorks/VirtualProject/VirtualProjectPage/VirtualProjectLanding";
+import ProjectManagementLanding from "./Website/Portfolio/PortfolioWorks/Works/EducationWorks/ProjectManagement/ProjectManagementPage/ProjectManagementLanding";
+import TranningContentLanding from "./Website/Portfolio/PortfolioWorks/Works/EducationWorks/TranningContent/TranningContentPage/TranningContentLanding";
+import ElectronicMarketingLanding from "./Website/Portfolio/PortfolioWorks/Works/EducationWorks/ElectronicMarketing/ElectronicMarketingPage/ElectronicMarketingLanding";
+import TranningBagsLanding from "./Website/Portfolio/PortfolioWorks/Works/EducationWorks/TranningBags/TranningBagsPage/TranningBagsLanding";
+import TranningPlatformsLanding from "./Website/Portfolio/PortfolioWorks/Works/EducationWorks/TranningPlatforms/TranningPlatformsPage/TranningPlatformsLanding";
+import Development from "./Website/Portfolio/PortfolioWorks/Works/Development/WebDevelopmentServices/Development";
+import WebDesgin from "./Website/Portfolio/PortfolioWorks/Works/Development/WebDesgin/WebDesgin";
+import DevelopmentTesting from "./Website/Portfolio/PortfolioWorks/Works/Development/DevelopmentTesting/DevelopmentTesting";
+import WebDevLanding from "./Website/Portfolio/PortfolioWorks/Works/Development/WebDevelopmentServices/WebDevPage/WebDevLanding";
+import WebDesignLanding from "./Website/Portfolio/PortfolioWorks/Works/Development/WebDesgin/WebDesignPage/WebDesignLanding";
+import DevelopmentTestingLanding from "./Website/Portfolio/PortfolioWorks/Works/Development/DevelopmentTesting/DevelopmentTestingPage/DevelopmentTestingLanding";
+import SocialMediaTab from "./Website/Portfolio/PortfolioWorks/Works/SocialMediaServices/SocialMediaTab";
+import SocialMediaServicesLanding from "./Website/Portfolio/PortfolioWorks/Works/SocialMediaServices/SocialMediaServicesPage/SocialMediaServicesLanding";
+import MediaBuyingWorks from "./Website/Portfolio/PortfolioWorks/Works/DigitalMarketingWorks/MediaBuying/MediaBuyingWorks";
+import MediaBuyingServicesLanding from "./Website/Portfolio/PortfolioWorks/Works/DigitalMarketingWorks/MediaBuying/MediaBuyingPage/MediaBuyingServicesLanding";
+import InfluencerMarketing from "./Website/Portfolio/PortfolioWorks/Works/DigitalMarketingWorks/InfluencerMarketing/InfluencerMarketing";
+import InfleuncerMarketingHero from "./Website/Portfolio/PortfolioWorks/Works/DigitalMarketingWorks/InfluencerMarketing/infleuncerMarketingPage/InfleuncerMarketingHero/InfleuncerMarketingHero";
+import InfleuncerMarketingLanding from "./Website/Portfolio/PortfolioWorks/Works/DigitalMarketingWorks/InfluencerMarketing/infleuncerMarketingPage/infleuncerMarketingLanding";
+import SeoServices from "./Website/Portfolio/PortfolioWorks/Works/DigitalMarketingWorks/SeoServices/SeoServices";
+import SeoServicesLanding from "./Website/Portfolio/PortfolioWorks/Works/DigitalMarketingWorks/SeoServices/SeoServicesPage/SeoServicesLanding";
+import Implementation from "./Website/Portfolio/PortfolioWorks/Works/EventManagementWorks/Implementation/Implementation";
+import Conference from "./Website/Portfolio/PortfolioWorks/Works/EventManagementWorks/Conference/Conference";
+import ImplementationLanding from "./Website/Portfolio/PortfolioWorks/Works/EventManagementWorks/Implementation/ImplementationPage/ImplementationLanding";
+import ConferenceLanding from "./Website/Portfolio/PortfolioWorks/Works/EventManagementWorks/Conference/ConferencePage/ConferenceLanding";
 
 function App() {
   // height on open navbar
@@ -103,13 +127,33 @@ loading &&
         <Route element={<RentingStudioLanding />} path="/renting-studio-page" />
         <Route element={<PhotographyLanding />} path="/photography-page" />
         <Route element={<VideographyLanding />} path="/videography-page" />
+        <Route element={<VirtualProjectLanding />} path="/virtual-project-page" />
+        <Route element={<ProjectManagementLanding />} path="/project-management-page" />
+        <Route element={<TranningContentLanding />} path="/rigister-training-content" />
+        <Route element={<ElectronicMarketingLanding />} path="/electronic-marketing-page" />
+        <Route element={<TranningBagsLanding />} path="/training-bags-page" />
+        <Route element={<TranningPlatformsLanding />} path="/training-platform-page" />
+        <Route element={<WebDevLanding />} path="/web-dev-page" />
+        <Route element={<WebDesignLanding />} path="/web-design-page" />
+        <Route element={<DevelopmentTestingLanding />} path="/web-testing-page" />
+        <Route element={<SocialMediaServicesLanding />} path="/social-media-page" />
+        <Route element={<MediaBuyingServicesLanding />} path="/media-buying-page" />
+        <Route element={<InfleuncerMarketingLanding />} path="/influencer-marketing-page" />
+        <Route element={<SeoServicesLanding />} path="/seo-services-page" />
+        <Route element={<ImplementationLanding />} path="/implementation-page" />
+        <Route element={<ConferenceLanding />} path="/Conference-page" />
               {/* start portfolio */}
         <Route element={<PortfolioLanding />} path="/portfolio" >
 
         <Route index element={<Navigate to="all" />} />
   <Route path="all" element={<AllWorks />} />
   <Route path="development" element={<Development />} />
-  <Route path="social-media" element={<SocialMediaPage />} />
+  <Route path="web-design" element={<WebDesgin />} />
+  <Route path="development-testing" element={<DevelopmentTesting />} />
+  <Route path="social-media" element={<SocialMediaTab />} />
+  <Route path="infleuncer-marketing" element={<InfluencerMarketing />} />
+  <Route path="seo-services" element={<SeoServices />} />
+  <Route path="media-buying" element={<MediaBuyingWorks />} />
   <Route path="post-production" element={<PostProduction />} />
   <Route path="Photography" element={<Photography />} />
   <Route path="videography" element={<Videography />} />
@@ -120,6 +164,8 @@ loading &&
   <Route path="tranning-content" element={<TranningContent />} />
   <Route path="project-management" element={<ProjectManagement />} />
   <Route path="virtual-project" element={<VirtualProject />} />
+  <Route path="Implementation" element={<Implementation />} />
+  <Route path="Conference" element={<Conference />} />
 
 
         </Route>
