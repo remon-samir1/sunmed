@@ -4,12 +4,12 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { Link } from 'react-router-dom';
-import {  DigitalMarketingData } from './DigitalMarketingData';
-import OurMediaProductionCard from '../../Services/MediaProduction/OurMediaProduction/OurMediaProductionCard';
+import { WebTypesData } from './WebTypesData';
+import OurMediaProductionCard from '../../MediaProduction/OurMediaProduction/OurMediaProductionCard';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const DigitalMarketingTypes = () => {
+const WebTypes = () => {
   const sectionRef = useRef(null);
   const cardsRef = useRef([]);
 
@@ -47,12 +47,12 @@ const DigitalMarketingTypes = () => {
 
     <div className='OurMediaProduction mediabuying' ref={sectionRef}>
       <div className="text">
-        <h3 className='!w-[350px]'>OUR DIGITAL MARKETING CAMPAGINS</h3>
+        <h3 className='!w-[350px]'>OUR WEB SOLUTION SERVICES</h3>
         <p className='!w-[350px]'>We can offer the following services as part of our SEO campaigns:</p>
       </div>
 
       <div className="cards">
-        {DigitalMarketingData.map((data, key) => (
+        {WebTypesData.map((data, key) => (
           <div
             key={key}
             ref={(el) => (cardsRef.current[key] = el)}
@@ -101,4 +101,4 @@ const DigitalMarketingTypes = () => {
   );
 }
 
-export default DigitalMarketingTypes;
+export default WebTypes;

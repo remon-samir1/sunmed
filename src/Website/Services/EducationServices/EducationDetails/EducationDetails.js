@@ -57,7 +57,7 @@ const EducationDetails = () => {
             key={key}
             ref={(el) => (cardsRef.current[key] = el)}
           >
-            <OurMediaProductionCard title={data.title} disc={data.disc} icon={data.icon} />
+            <OurMediaProductionCard link={data.link} title={data.title} disc={data.disc} icon={data.icon} />
           </div>
         ))}
       <div className="flex justify-center w-full md:justify-start items-center gap-4 mt-3">

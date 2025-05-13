@@ -74,7 +74,7 @@ const DigitalMarketingLandingPortfolioPart = () => {
                     <p>{work.title}</p>
                     <p>{work.subtitle}</p>
                   </div>
-                  <Link to={work.link} className="icon-container">
+                  <Link to="/portfolio/digital/details" className="icon-container">
                     <Icon
                       icon="solar:arrow-right-linear"
                       width="32"

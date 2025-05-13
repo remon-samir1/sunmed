@@ -95,7 +95,7 @@ const PortfolioWorks = () => {
   };
 
   return (
-    <div ref={sectionRef} className="PortfolioWorks py-[4vh] md:py-[10vh]">
+    <div id="#works" ref={sectionRef} className="PortfolioWorks py-[4vh] md:py-[10vh]">
       <div
         className={`categories ${
           openWeb || openDigitalMarketing||openEventManage ||openWebSolution ||openMediaProducation || openEduaction
