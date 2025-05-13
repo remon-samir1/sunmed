@@ -64,7 +64,7 @@ const WebDesignHero = () => {
   }, []); 
 
   return (
-    <div className="HeroSection">
+    <div className="HeroSection WebDesignHero">
    <Header/>
       <div className="content">
         <h1  ref={titleRef}>WEB DESIGN</h1>

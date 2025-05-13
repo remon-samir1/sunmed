@@ -64,7 +64,7 @@ const ConferenceHero = () => {
   }, []);
 
   return (
-    <div className="HeroSection">
+    <div className="HeroSection ConferenceHero">
       <Header />
       <div className="content">
         <h1 className="uppercase md:w-[70%] text-center" ref={titleRef}>Conference management and organization</h1>

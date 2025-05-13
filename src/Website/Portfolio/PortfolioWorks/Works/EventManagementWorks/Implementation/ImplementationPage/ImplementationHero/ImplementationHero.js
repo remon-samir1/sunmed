@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap"; 
-// import "./ImplementationHero.css";
+import "./ImplementationHero.css";
 
 import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
@@ -65,7 +65,7 @@ const ImplementationHero = () => {
   }, []); 
 
   return (
-    <div className="HeroSection">
+    <div className="HeroSection ImplementationHero">
    <Header/>
       <div className="content">
         <h1 className="uppercase text-center md:w-[65%]"  ref={titleRef}>Implementation of conference-related work</h1>

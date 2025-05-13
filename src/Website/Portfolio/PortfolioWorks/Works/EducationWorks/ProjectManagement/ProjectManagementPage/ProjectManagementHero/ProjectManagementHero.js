@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import Header from "../../../../../../../../Components/Header/Header";
+import './ProjectManagementHero.css'
 
 const ProjectManagementHero = () => {
   const [coords1, setCoords1] = useState({ x: 10, y: 0 });
@@ -62,7 +63,7 @@ const ProjectManagementHero = () => {
   }, []); 
 
   return (
-    <div className="HeroSection">
+    <div className="HeroSection ProjectManagementHero">
    <Header/>
       <div className="content">
         <h1 className="uppercase"  ref={titleRef}>Project Management</h1>

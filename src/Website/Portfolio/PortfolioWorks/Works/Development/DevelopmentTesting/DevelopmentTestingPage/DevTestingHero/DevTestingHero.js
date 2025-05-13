@@ -64,7 +64,7 @@ const DevTestingHero = () => {
   }, []); 
 
   return (
-    <div className="HeroSection">
+    <div className="HeroSection DevTestingHero">
    <Header/>
       <div className="content">
         <h1 className="uppercase"  ref={titleRef}>Development of testing systems</h1>

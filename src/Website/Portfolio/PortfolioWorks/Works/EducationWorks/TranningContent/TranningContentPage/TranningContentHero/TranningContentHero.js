@@ -63,7 +63,7 @@ const TranningContentHero = () => {
   }, []); 
 
   return (
-    <div className="HeroSection">
+    <div className="HeroSection TranningContentHero">
    <Header/>
       <div className="content">
         <h1  ref={titleRef}>RIGISTER TRAINING CONTENT</h1>
