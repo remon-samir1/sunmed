@@ -12,7 +12,7 @@ const OurLatestStudios = () => {
           Lorem ipsum dolor sit amet consectetur. Dictumst amet in duis feugiat
           id. Sed lectus ultricies elementum lectus.
         </p>
-        <Link className="link" to='/studios'>GO TO STUDIO</Link>
+        <Link className="link" to='/renting-studio-page'>GO TO STUDIO</Link>
       </div>
       <div className="images">
         <div className="top">
