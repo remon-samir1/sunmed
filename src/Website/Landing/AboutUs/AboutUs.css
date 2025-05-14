@@ -1,5 +1,5 @@
 .AboutUs{
-  background-color: #fafafa;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -33,7 +33,11 @@
 
 
 .AboutUs .img{
-  width: 35vw;
+  /* width: 35vw; */
+}
+.AboutUs .img .custom-lottie{
+  width: 500px !important;
+  background-color: red !important;
 }
 .AboutUs .img img{
   width: 100%;
