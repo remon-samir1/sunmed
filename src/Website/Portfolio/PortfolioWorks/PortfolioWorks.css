@@ -25,10 +25,12 @@
 .PortfolioWorks .categories button.active{
   background-color: var(--main-color);
   color: #fff;
+  z-index: 9999;
 }
 .PortfolioWorks .categories a.active{
   background-color: var(--main-color);
   color: #fff;
+  z-index: 9999;
 }
 .PortfolioWorks .categories .list{
   background: #fff;

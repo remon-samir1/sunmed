@@ -1,7 +1,7 @@
 
 
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Stories from "react-insta-stories";
 import image from '../../Images/media.png';
 import logo from '../../Images/story-logo.png';
@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Axios } from "../Helpers/Axios";
 
 const SingleStory = () => {
   const navigate = useNavigate();
@@ -21,6 +22,18 @@ const SingleStory = () => {
     { title: "Sunmed Story", image: image, logo: logo },
     { title: "Sunmed Story", image: image, logo: logo },
   ];
+
+
+//   GET API DATA
+useEffect(()=>{
+  Axios.get('/stories').then(data=>console.log(data))
+},[])
+
+
+
+
+
+
 
   const storyContent = storyData.map((story, index) => ({
     content: () => (
@@ -109,7 +122,7 @@ const SingleStory = () => {
   };
 
   return (
-    <div className="relative linear-bg h-[100vh] pt-6" ref={bgRef}>
+    <div className="relative linear-bg h-[100dvh] overflow-hidden pt-6" ref={bgRef}>
       <div
         ref={exitBtnRef}
         className="w-[2.8rem] z-50 h-[2.8rem] rounded-full bg-[#636572] absolute hidden  md:top-6   md:right-[20vw] md:flex justify-center items-center"

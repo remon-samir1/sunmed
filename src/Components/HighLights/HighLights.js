@@ -104,11 +104,10 @@ const HighLights = () => {
           <div className="custom-next">
               <img src={arrow} alt="next" />
             </div>
-        <SwiperSlide className="">
           <div className=" md:w-[30vw] w-[95vw]  h-[90vh]  m-auto mt-6 rounded-lg overflow-hidden">
             <Stories className='z-50' stories={storyContent} width="100%" height="100%" />
           </div>
-        </SwiperSlide>
+        {/* </SwiperSlide> */}
         <SwiperSlide>
           <div className="z-50 md:w-[30vw] w-[95vw]  h-[90vh]  m-auto mt-6 rounded-lg overflow-hidden">
             <Stories stories={storyContent} width="100%" height="100%" />
