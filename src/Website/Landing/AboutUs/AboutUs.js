@@ -107,7 +107,7 @@ const AboutUs = () => {
 
   const defaultOptions = {
     loop: true,
-    autoplay: true, // مهم جدًا علشان نتحكم بالتشغيل يدويًا
+    autoplay: true, 
     animationData: animation,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
@@ -115,7 +115,7 @@ const AboutUs = () => {
   };
 
   useGSAP(() => {
-    // أنميشن الكلام
+
     gsap.from(contentRef.current, {
       scrollTrigger: {
         trigger: contentRef.current,
@@ -128,10 +128,11 @@ const AboutUs = () => {
       ease: "power3.out",
     });
 
-    // تشغيل اللوتي عند السكروول
+
     ScrollTrigger.create({
       trigger: lottieContainerRef.current,
       start: "top 80%",
+      toggleActions:"play none none reverse",
       onEnter: () => setPlayLottie(true),
     });
   });

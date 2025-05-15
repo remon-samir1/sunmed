@@ -6,7 +6,6 @@ const Header = () => {
   const menu = useContext(Menu);
   const setIsOpen = menu.setIsOpen
   const isOpen = menu.isOpen
-  console.log(isOpen);
   return (
     <div className="custom-head ">
 

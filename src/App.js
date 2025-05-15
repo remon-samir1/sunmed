@@ -298,7 +298,7 @@ function App() {
                   </Route>
                   <Route
                     element={<PortFolioMediaProduction />}
-                    path="/portfolio/media-production-datails"
+                    path="/portfolio/media-production-datails/:id"
                   />
                   <Route
                     element={<DevelopmentPage />}

@@ -26,7 +26,7 @@ const SingleStory = () => {
 
 //   GET API DATA
 useEffect(()=>{
-  Axios.get('/stories').then(data=>console.log(data))
+  Axios.get('/stories').then(data=>(data))
 },[])
 
 

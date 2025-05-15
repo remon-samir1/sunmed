@@ -1,49 +1,78 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
+
 import "./PortfolioMediaPage.css";
 import { FaFacebookF } from "react-icons/fa6";
 import { IoLogoTwitter } from "react-icons/io5";
 import { IoLogoInstagram } from "react-icons/io";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaBehance } from "react-icons/fa";
+import { useParams } from 'react-router-dom';
+import { Axios } from '../../../../Components/Helpers/Axios';
 const PortfolioMediaPage = () => {
+  const { id } = useParams();
+    //  GET DATA
+    const [data, setData] = useState([]);
+    useEffect(() => {
+      Axios.get("/projects").then((data) => setData(data.data.data));
+    }, []);
+    const filter = data.filter(data => data.id == id )
+
+    const isImage = (url) => /\.(jpg|jpeg|png|gif|webp)$/i.test(url);
+    const isVideo = (url) => /\.(mp4|webm|ogg)$/i.test(url);
+    const formattedDate = new Date(filter[0]?.created_at).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    
+  
+  
+
+
+
+
+
+
+
+
   return (
     <div className="PortfolioMediaPage py-[10vh]">
       <div className="content px-[7vw] py-[10vh]">
         <div className="images">
-          <div className="img">
-            <img
-              src={require("../../../../Images/media.png")}
-              alt="media"
-              loading="lazy"
-            />
-          </div>
-          <div className="img">
-            <img
-              src={require("../../../../Images/media-2.png")}
-              alt="media"
-              loading="lazy"
-            />
-          </div>
+        {filter[0]?.attachments.map((data, index) => {
+  if (isImage(data)) {
+    return (
+      <div className="img" key={index}>
+        <img
+          src={data}
+          alt="media"
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+  return null; 
+})}
+
+
+
+    
         </div>
         <div className="text">
-          <h3>Media production</h3>
+          <h3 className='uppercase'>{filter[0]?.title}</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Urna neque nibh pretium hac
-            eu turpis posuere. Erat sem adipiscing non vitae lacus pellentesque
-            justo est. Non eu eu aliquet cras in a. Pharetra neque eleifend
-            nulla adipiscing faucibus feugiat interdum nibh. Commodo erat nullam
-            pharetra at mauris tincidunt lacus turpis elementum.
+          {filter[0]?.description}
           </p>
         </div>
 
         <div className="details gap-[7vw] md:gap-[10vw]">
           <div className="detail">
             <h5>Published</h5>
-            <h4>September 17, 2022</h4>
+            <h4>{formattedDate}</h4>
           </div>
           <div className="detail">
             <h5>Category</h5>
-            <h4>Branding, Graphic Design</h4>
+            <h4>{filter[0]?.service.title}</h4>
           </div>
           <div className="detail">
             <h5>Share</h5>
@@ -69,20 +98,23 @@ const PortfolioMediaPage = () => {
       </div>
 
       <div className="videos px-[7vw] md:mt-[10vh]">
-        <div className="video">
-          <video src={require("../../../../Videos/media-1.mp4")} controls></video>
-          
-        </div>
-        <div className="video">
-          <video
-            src={require("../../../../Videos/media-2.mp4")}
-            controls
-          ></video>
-        </div>
-        <div className="video hidden md:inline-block">
-          <video src={require("../../../../Videos/media-1.mp4")} controls></video>
-          
-        </div>
+
+
+        {filter[0]?.attachments.map((data, index) => {
+  if (isVideo(data)) {
+    return (
+      <div className="video">
+      <video
+        src={data}
+        controls
+      ></video>
+    </div>
+    );
+  }
+  return null; 
+})}
+
+
       </div>
     </div>
   );

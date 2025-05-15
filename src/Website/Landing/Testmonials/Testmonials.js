@@ -16,7 +16,6 @@ const Testmonials = () => {
       window.removeEventListener("resize", resizeWidth);
     };
   }, [window.innerWidth]);
-  console.log(resize);
   return (
     <div className="Testmonials  ">
       <div className="text ">
