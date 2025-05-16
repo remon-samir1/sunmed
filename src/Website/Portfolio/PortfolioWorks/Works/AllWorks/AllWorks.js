@@ -9,14 +9,20 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import arrow from "../../../../../Images/arrow.svg";
 import { Axios } from "../../../../../Components/Helpers/Axios";
+import SkeletonShow from "../../../../../Components/Skeleton/Skeleton";
 
 const AllWorks = () => {
   const [resize, setResize] = useState(window.innerWidth);
   //  GET DATA
   const [data, setData] = useState([]);
-  useEffect(() => {
-    Axios.get("/projects").then((data) => setData(data.data.data));
-  }, []);
+  const [skeleton,setSkeleton] = useState(true)
+
+    useEffect(() => {
+      Axios.get("/projects").then((data) =>{ 
+        setData(data.data.data)
+      setSkeleton(false)
+      });
+    }, []);
 
   useEffect(() => {
     const resizeWidth = () => {
@@ -27,59 +33,9 @@ const AllWorks = () => {
       window.removeEventListener("resize", resizeWidth);
     };
   }, [window.innerWidth]);
-  const works = [
-    {
-      image: "work-1.png",
-      title: "Graphic",
-      subtitle: "Fimilor experience",
-      link: "/work/1",
-    },
-    {
-      image: "work-2.png",
-      title: "Design",
-      subtitle: "UX/UI project",
-      link: "/work/2",
-    },
-    {
-      image: "work-3.png",
-      title: "Animation",
-      subtitle: "Motion graphics",
-      link: "/work/3",
-    },
-    {
-      image: "work-4.png",
-      title: "Development",
-      subtitle: "Frontend app",
-      link: "/work/4",
-    },
-    {
-      image: "work-5.png",
-      title: "Branding",
-      subtitle: "Identity design",
-      link: "/work/5",
-    },
-    {
-      image: "work-6.png",
-      title: "Photography",
-      subtitle: "Product shots",
-      link: "/work/6",
-    },
-  ];
   return (
     <div className="AllWorks">
-      {/* {
-        resize < 600 &&
-<>
-      <div className="custom-prev">
-      <img src={arrow} alt="prev" style={{ transform: 'rotate(180deg)' }} />
-    </div>
-  
-    <div className="custom-next">
-      <img src={arrow} alt="next" />
-    </div>
-</>
-    }
-   */}
+
       <Swiper
       autoplay
         navigation={{
@@ -92,7 +48,25 @@ const AllWorks = () => {
         spaceBetween={40}
         className="t-swiper"
       >
-        {data.map((work, index) => (
+        {
+        skeleton ?   
+        Array.from({length:4}).map(()=>(
+
+        <SwiperSlide>
+
+        <SkeletonShow height="250px" width="300px" length={1}  />
+        </SwiperSlide>
+        ))
+  
+:  data.length == 0 ? (
+    <div className="text-center">
+      <p className="text-gray-500 capitalize font-semibold text-[25px] ">
+        no projects Added
+      </p>
+    </div>
+  ) : 
+        
+        data.map((work, index) => (
           <SwiperSlide key={index}>
             <div className="work">
               <div className="details">

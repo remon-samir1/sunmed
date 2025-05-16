@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import 'react-loading-skeleton/dist/skeleton.css'
 import App from "./App";
 import MenuContext from "./Context/MenuOpen/MenuContext";
 import LoadingContext, { LoadingCon } from "./Context/LoadingContext/LoadingContext";

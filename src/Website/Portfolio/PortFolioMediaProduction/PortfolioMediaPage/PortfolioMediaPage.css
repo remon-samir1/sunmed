@@ -9,19 +9,20 @@
 display: flex;
 justify-content: center;
 align-items: center;
+flex-wrap: wrap;
 gap: 20px;
 }
 .PortfolioMediaPage .images .img{
-  flex: 1;
+  flex: 1 0 auto;
   max-width: 50vw;
-  max-height: 400px;
+  height: 400px;
   overflow: hidden;
 }
 .PortfolioMediaPage .images .img img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.5s ease-in-out;
+  transition: 2s ease-in-out;
 }
 .PortfolioMediaPage .images .img:hover > img{
   transform: scale(1.1);

@@ -7,6 +7,7 @@ import { Icon } from "@iconify/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,18 +95,18 @@ const DevelopmentProjectDetails = () => {
           <p>By sunmed agency</p>
 
           <div className="flex flex-col mt-3">
-            <button>
+            <button className="button">
               <Icon icon="pajamas:eye" width="22" height="22" />
               <span>Live preview</span>
             </button>
-            <button>
+            <Link className="button" to='/bookNow'>
               <Icon
                 icon="material-symbols-light:book-outline"
                 width="30"
                 height="30"
               />
               <span>Book now</span>
-            </button>
+            </Link>
           </div>
 
           <div className="details">

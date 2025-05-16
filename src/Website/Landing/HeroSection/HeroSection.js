@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import gsap from "gsap"; 
+import gsap from "gsap";
 import "./HeroSection.css";
 import Logo from "../../../Components/Logo/Logo";
 import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import Header from "../../../Components/Header/Header";
+import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
   const [coords1, setCoords1] = useState({ x: 10, y: 0 });
@@ -32,9 +33,9 @@ const HeroSection = () => {
   useGSAP(() => {
     gsap.from(titleRef.current, {
       opacity: 0,
-      delay:0.5,
+      delay: 0.5,
       y: 100,
-      duration: 1.5,
+      duration: 1,
       ease: "power3.out",
     });
 
@@ -42,7 +43,7 @@ const HeroSection = () => {
       opacity: 0,
       x: 100,
       duration: 1.5,
-      delay: 0.5,
+      delay: 1.5,
       ease: "power3.out",
     });
 
@@ -50,7 +51,7 @@ const HeroSection = () => {
       opacity: 0,
       y: 50,
       duration: 1.5,
-      delay: 1,
+      delay: 1.5,
       ease: "power3.out",
     });
 
@@ -58,16 +59,27 @@ const HeroSection = () => {
       opacity: 0,
       y: 50,
       duration: 1.5,
-      delay: 1.2,
+      delay: 1.5,
       ease: "power3.out",
     });
-  }, []); 
+  }, []);
 
   return (
     <div className="HeroSection">
-   <Header/>
+      <Header />
       <div className="content">
-        <h1  ref={titleRef}>DATA - DRIVEN REVENUE MARKETING</h1>
+
+        <TypeAnimation
+          sequence={[
+          'DATA - DRIVEN REVENUE MARKETING',
+        
+          ]}
+        
+          wrapper="h1"
+          speed={40}
+          // style={{ fontSize: '2em', display: 'inline-block' }}
+          repeat={Infinity}
+        />
 
         <p ref={paragraphRef}>
           Digital marketing agency that drives sales for your business
@@ -86,7 +98,7 @@ const HeroSection = () => {
           </Link>
 
           <a
-          href="#with"
+            href="#with"
             ref={link2Ref}
             onMouseMove={handleMouseMove2}
             style={{

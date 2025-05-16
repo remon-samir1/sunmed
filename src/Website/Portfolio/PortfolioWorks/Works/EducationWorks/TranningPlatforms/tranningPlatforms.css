@@ -19,7 +19,7 @@
   flex-wrap: wrap;
 }
 .tranningPlatforms .projects .project{
-  flex: 0 1 30%;
+  flex: 1 1 30%;
   height: 23rem;
   position: relative;
   border-radius: 8px;
@@ -43,4 +43,11 @@
 .tranningPlatforms .projects .project .text p{
   color: #fff;
 
+}
+@media (max-width : 768px) {
+.tranningPlatforms .projects .project{
+ flex: 1 1 90%; 
+ height: 18rem;
+
+}
 }

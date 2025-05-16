@@ -1,94 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
+import { Axios } from '../../../../../../Components/Helpers/Axios';
 const WebDesgin = () => {
+  const [data, setData] = useState([]);
+    const [skeleton,setSkeleton] = useState(true)
+    useEffect(() => {
+      Axios.get("/projects").then((data) =>{ 
+        setData(data.data.data)
+      setSkeleton(false)
+      });
+    }, []);
+    const filter = data.filter(data => data.service.id === 9 )
+
+
   return (
     <div className='AllWorks flex development'>
-      <div className="work ">
-        <div className="details">
-          <div className="text">
-            <p>Graphic</p>
-            <p>Fimilor experience</p>
 
-          </div>
-          <Link to='/portfolio/development/details' className="icon-container">
 
-          <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </Link>
-        </div>
-        <img src={require('../../../../../../Images/work-1.png')} alt="work" loading='lazy' />
+{
+  filter.map((data , index)=>(
+    <div className="work ">
+    <div className="details">
+      <div className="text">
+        <p>{data.title}</p>
+        <p>{data.service.title}</p>
+
       </div>
-      <div className="work">
-      <div className="details">
-          <div className="text">
-            <p>Graphic</p>
-            <p>Fimilor experience</p>
+      <Link to={`/portfolio/development/details/${data.id}`} className="icon-container">
 
-          </div>
-          <Link to='/portfolio/development/details' className="icon-container">
+      <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
+      </Link>
+    </div>
+    <img src={data.attachments[0]} alt="work" loading='lazy' className='work-img'/>
+  </div>
+  ))
+}
 
-          <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </Link>
-        </div>
-        <img src={require('../../../../../../Images/work-2.png')} alt="work" loading='lazy' />
-      </div>
 
-      <div className="work">
-      <div className="details">
-          <div className="text">
-            <p>Graphic</p>
-            <p>Fimilor experience</p>
 
-          </div>
-          <Link to='/portfolio/development/details' className="icon-container">
 
-          <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </Link>
-        </div>
-        <img src={require('../../../../../../Images/work-3.png')} alt="work" loading='lazy' />
-      </div>
-      <div className="work">
-      <div className="details">
-          <div className="text">
-            <p>Graphic</p>
-            <p>Fimilor experience</p>
 
-          </div>
-          <Link to='/portfolio/development/details' className="icon-container">
 
-          <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </Link>
-        </div>
-        <img src={require('../../../../../../Images/work-4.png')} alt="work" loading='lazy' />
-      </div>
-      <div className="work">
-      <div className="details">
-          <div className="text">
-            <p>Graphic</p>
-            <p>Fimilor experience</p>
 
-          </div>
-          <Link to='/portfolio/development/details' className="icon-container">
-
-          <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </Link>
-        </div>
-        <img src={require('../../../../../../Images/work-5.png')} alt="work" loading='lazy' />
-      </div>
-      <div className="work">
-      <div className="details">
-          <div className="text">
-            <p>Graphic</p>
-            <p>Fimilor experience</p>
-
-          </div>
-          <Link to='/portfolio/development/details' className="icon-container">
-
-          <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </Link>
-        </div>
-        <img src={require('../../../../../../Images/work-6.png')} alt="work" loading='lazy' />
-      </div>
     </div>
   );
 }

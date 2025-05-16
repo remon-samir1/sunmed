@@ -11,11 +11,11 @@
 }
 .EducationDetailsofProject .imges .img{
   flex: 1 1 30%;
-  max-height: 380px;
+  height: 380px;
   overflow: hidden;
   position: relative;
 }
-.EducationDetailsofProject .imges .img img{
+.EducationDetailsofProject .imges .img img , .EducationDetailsofProject .imges .img video {
   width: 100%;
   height: 100%;
   object-fit: cover;

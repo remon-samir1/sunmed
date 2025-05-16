@@ -302,11 +302,11 @@ function App() {
                   />
                   <Route
                     element={<DevelopmentPage />}
-                    path="/portfolio/development/details"
+                    path="/portfolio/development/details/:id"
                   />
                   <Route
                     element={<EducationProjectDetailsLanding />}
-                    path="/portfolio/education/details"
+                    path="/portfolio/education/details/:id"
                   />
                   <Route
                     element={<SocialMediaServDetailsLanding />}

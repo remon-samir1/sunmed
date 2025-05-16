@@ -54,7 +54,7 @@ const DevelopmentPageHero = () => {
   });
 
   return (
-    <div className="HeroSection PortfolioHero overflow-hidden">
+    <div className="HeroSection !bg-[#fafafa] PortfolioHero overflow-hidden">
       <Header />
       <div className="content">
         <h1 ref={titleRef}>PORTFOLIO PROJECTS</h1>
