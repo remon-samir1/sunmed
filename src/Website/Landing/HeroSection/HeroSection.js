@@ -72,12 +72,11 @@ const HeroSection = () => {
         <TypeAnimation
           sequence={[
           'DATA - DRIVEN REVENUE MARKETING',
-        
+        1000
           ]}
         
           wrapper="h1"
           speed={40}
-          // style={{ fontSize: '2em', display: 'inline-block' }}
           repeat={Infinity}
         />
 
