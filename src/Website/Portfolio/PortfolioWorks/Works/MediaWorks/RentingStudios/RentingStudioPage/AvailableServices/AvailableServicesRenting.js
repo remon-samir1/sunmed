@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './AvailableServices.css';
 import AvailableServicesBox from './AvailableServicesBox';
 import montage from '../../../../../../../../Images/montage.png';
@@ -9,10 +9,18 @@ import animationImg from '../../../../../../../../Images/avaible-services.png';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import { Axios } from '../../../../../../../../Components/Helpers/Axios';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AvailableServicesRenting = () => {
+
+  
+
+
+
+
+
   const boxesRef = useRef([]);
   const textRef = useRef(null);
 
