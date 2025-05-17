@@ -24,7 +24,7 @@ const Landing = () => {
       <OurLatestStudios />
       <StartProject />
       <OverView />
-      <Wrapper />
+      {/* <Wrapper /> */}
       <OurPartners />
       <Testmonials />
       <Divider />

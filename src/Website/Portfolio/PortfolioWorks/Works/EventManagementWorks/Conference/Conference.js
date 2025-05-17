@@ -1,94 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
+import { Axios } from '../../../../../../Components/Helpers/Axios';
+import SkeletonShow from '../../../../../../Components/Skeleton/Skeleton';
 const Conference = () => {
+  const [data, setData] = useState([]);
+  const [skeleton, setSkeleton] = useState(true);
+  useEffect(() => {
+    Axios.get("/projects").then((data) => {
+      setData(data.data.data);
+      setSkeleton(false);
+    });
+  }, []);
+  const filter = data.filter((data) => data.service.id === 25);
   return (
     <div className='AllWorks flex development'>
-      <div className="work ">
-        <div className="details">
-          <div className="text">
-            <p>Graphic</p>
-            <p>Fimilor experience</p>
-
+      {skeleton ? (
+          <div className="flex gap-6">
+            <SkeletonShow height="250px" width="300px" length={3} />
           </div>
-          <Link to='/portfolio/event/details' className="icon-container">
-
-          <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </Link>
-        </div>
-        <img src={require('../../../../../../Images/work-1.png')} alt="work" loading='lazy' />
-      </div>
-      <div className="work">
-      <div className="details">
-          <div className="text">
-            <p>Graphic</p>
-            <p>Fimilor experience</p>
-
+        ) : filter.length == 0 ? (
+          <div className="text-center">
+            <p className="text-gray-500 capitalize font-semibold text-[25px] ">
+              no projects Added
+            </p>
           </div>
-          <Link to='/portfolio/event/details' className="icon-container">
+        ) :
+        filter?.map((data,index)=>(
 
-          <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </Link>
-        </div>
-        <img src={require('../../../../../../Images/work-2.png')} alt="work" loading='lazy' />
-      </div>
-
-      <div className="work">
-      <div className="details">
-          <div className="text">
-            <p>Graphic</p>
-            <p>Fimilor experience</p>
-
+          <div key={index} className="work ">
+          <div className="details">
+            <div className="text">
+              <p>{data.title}</p>
+              <p>{data.service.title}</p>
+  
+            </div>
+            <Link to={`/portfolio/event/details/${data.id}`} className="icon-container">
+  
+            <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
+            </Link>
           </div>
-          <Link to='/portfolio/event/details' className="icon-container">
-
-          <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </Link>
+          <img src={data.attachments[0]} alt="work" loading='lazy' />
         </div>
-        <img src={require('../../../../../../Images/work-3.png')} alt="work" loading='lazy' />
-      </div>
-      <div className="work">
-      <div className="details">
-          <div className="text">
-            <p>Graphic</p>
-            <p>Fimilor experience</p>
 
-          </div>
-          <Link to='/portfolio/event/details' className="icon-container">
 
-          <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </Link>
-        </div>
-        <img src={require('../../../../../../Images/work-4.png')} alt="work" loading='lazy' />
-      </div>
-      <div className="work">
-      <div className="details">
-          <div className="text">
-            <p>Graphic</p>
-            <p>Fimilor experience</p>
-
-          </div>
-          <Link to='/portfolio/event/details' className="icon-container">
-
-          <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </Link>
-        </div>
-        <img src={require('../../../../../../Images/work-5.png')} alt="work" loading='lazy' />
-      </div>
-      <div className="work">
-      <div className="details">
-          <div className="text">
-            <p>Graphic</p>
-            <p>Fimilor experience</p>
-
-          </div>
-          <Link to='/portfolio/event/details' className="icon-container">
-
-          <Icon icon="solar:arrow-right-linear" width="32" height="32" className='icon' />
-          </Link>
-        </div>
-        <img src={require('../../../../../../Images/work-6.png')} alt="work" loading='lazy' />
-      </div>
+        ))
+      }
+    
     </div>
   );
 }

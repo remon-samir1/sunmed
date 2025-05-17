@@ -310,11 +310,11 @@ function App() {
                   />
                   <Route
                     element={<SocialMediaServDetailsLanding />}
-                    path="/portfolio/digital/details"
+                    path="/portfolio/digital/details/:id"
                   />
                   <Route
                     element={<EventServDetailsLanding />}
-                    path="/portfolio/event/details"
+                    path="/portfolio/event/details/:id"
                   />
                   <Route
                     element={<StudiosLanding />}
