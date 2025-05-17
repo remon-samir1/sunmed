@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./DevelopmentProjectDetails.css";
 import "react-image-gallery/styles/css/image-gallery.css";
 import ReactImageGallery from "react-image-gallery";
@@ -7,15 +7,29 @@ import { Icon } from "@iconify/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { Axios } from "../../../../Components/Helpers/Axios";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const DevelopmentProjectDetails = () => {
+  const { id } = useParams();
+  const [data, setData] = useState([]);
   const imageRef = useRef(null);
   const textRef = useRef(null);
   const titlesRef = useRef(null);
   const itemRef = useRef(null);
+  useEffect(() => {
+    Axios.get("/projects").then((data) => setData(data.data.data));
+  }, []);
+
+  const filter = data.filter((data) => data.id == id);
+  function Description({ description }) {
+    const cleanText = description?.replace(/<[^>]+>/g, "");
+
+    return <p>{cleanText}</p>;
+  }
+
 
   useGSAP(() => {
     const animateFromLeft = gsap.from(imageRef.current, {
@@ -25,8 +39,8 @@ const DevelopmentProjectDetails = () => {
       ease: "power3.out",
       scrollTrigger: {
         trigger: imageRef.current,
-        start: "top 70%",
-        toggleActions: "play reverse play reverse",
+        start: "top 80%",
+        // toggleActions: "play reverse play reverse",
       },
     });
 
@@ -38,7 +52,7 @@ const DevelopmentProjectDetails = () => {
       scrollTrigger: {
         trigger: textRef.current,
         start: "top 80%",
-        toggleActions: "play reverse play reverse",
+        // toggleActions: "play reverse play reverse",
       },
     });
 
@@ -50,7 +64,7 @@ const DevelopmentProjectDetails = () => {
       scrollTrigger: {
         trigger: titlesRef.current,
         start: "top 90%",
-        toggleActions: "play reverse play reverse",
+        // toggleActions: "play reverse play reverse",
       },
     });
 
@@ -62,7 +76,7 @@ const DevelopmentProjectDetails = () => {
       scrollTrigger: {
         trigger: itemRef.current,
         start: "top 90%",
-        toggleActions: "play reverse play reverse",
+        // toggleActions: "play reverse play reverse",
       },
     });
 
@@ -74,32 +88,36 @@ const DevelopmentProjectDetails = () => {
     };
   });
 
-  const images = new Array(8).fill({
-    original: photo1,
-    thumbnail: photo1,
-  });
+  const images =
+  filter.length > 0 && Array.isArray(filter[0].attachments)
+    ? filter[0].attachments.map((url) => ({
+        original: url,
+        thumbnail: url,
+      }))
+    : []; 
+
 
   return (
     <div className="DevelopmentProjectDetails px-[7vw] py-7">
       <div className="content">
         <div className="img" ref={imageRef}>
           <ReactImageGallery
-            items={images}
+            items={images && images}
             showBullets={false}
             showPlayButton={false}
           />
         </div>
 
         <div className="text" ref={textRef}>
-          <h3>QuickSpace - Multipurpose agency WordPress Theme</h3>
+          <h3>{filter[0]?.title}</h3>
           <p>By sunmed agency</p>
 
           <div className="flex flex-col mt-3">
-            <button className="button">
+            <a target="_blank" href={filter[0]?.url} className="button">
               <Icon icon="pajamas:eye" width="22" height="22" />
               <span>Live preview</span>
-            </button>
-            <Link className="button" to='/bookNow'>
+            </a>
+            <Link className="button" to="/bookNow">
               <Icon
                 icon="material-symbols-light:book-outline"
                 width="30"
@@ -114,31 +132,25 @@ const DevelopmentProjectDetails = () => {
 
             <div className="container">
               <div className="titles" ref={titlesRef}>
-                <span>File types</span>
-                <span>Additions</span>
-                <span>Compatible with</span>
-                <span>Compatible version</span>
+                {filter[0]?.attributes.map((data, index) => (
+                  <span>{data.key}</span>
+                ))}
+              </div>
+              <div className="item" ref={itemRef}>
+              {filter[0]?.attributes.map((data, index) => (
+                  <span>{data.value}</span>
+                ))}
               </div>
 
-              <div className="item" ref={itemRef}>
-                <span>Css , Html js</span>
-                <span>Responsive</span>
-                <span>Bootstrap, Elementor</span>
-                <span>Tested up </span>
-              </div>
+          
             </div>
           </div>
         </div>
       </div>
       <div className="discription">
         <h3>Descriptions</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Urna neque nibh pretium hac eu
-          turpis posuere. Erat sem adipiscing non vitae lacus pellentesque justo
-          est. Non eu eu aliquet cras in a. Pharetra neque eleifend nulla
-          adipiscing faucibus feugiat interdum nibh. Commodo erat nullam
-          pharetra at mauris tincidunt lacus turpis elementum.
-        </p>
+
+        <Description description={filter[0]?.description} />
       </div>
     </div>
   );

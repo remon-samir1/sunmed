@@ -6,6 +6,10 @@ const SocialMediaTab = () => {
     <div className='AllWorks flex'>
       <div className="img-container">
 
+
+
+        
+
       <Link to='/portfolio/digital/details' className="work">
         <div className="details">
           <div className="text">
