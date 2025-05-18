@@ -7,12 +7,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import SingleStory from "../../../Components/SingleStory/SingleStory";
 import { Link } from "react-router-dom";
+import { Axios } from "../../../Components/Helpers/Axios";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 const StoryAndHighlights = () => {
+  const [highlights , setHighlights] = useState([])
   const sectionRef = useRef(null);
-  const [showStory , setShowStory] = useState(false)
+  useEffect(()=>{
+    Axios.get('/high_lights').then(data=>setHighlights(data.data.data))
+  },[])
   useGSAP(() => {
     const el = sectionRef.current;
     gsap.fromTo(
@@ -45,17 +50,10 @@ const StoryAndHighlights = () => {
       <div className="highlights-container zoom-in">
         <h3 className="px-[4vw] md:px-[7vw] py-4 uppercase">our Highlights</h3>
         <div className="flex justify-center items-center gap-[2vw] md:gap-[5vw] mt-10 px-[0] md:px-[7vw]">
-          {[
-            { src: "logo-story.png", label: "About us",to:'/highlights' },
-            { src: "reviews1.png", label: "Reviews",to:'/highlights' },
-            { src: "highlight2.png", label: "Reviews" ,to:'/highlights'},
-            { src: "logo-story.png", label: "Reviews",to:'/highlights' },
-            { src: "logo-story.png", label: "About us" ,to:'/highlights'},
-            { src: "add-highlight.png", label: "New" ,to:'/bookNow'},
-          ].map((item, index) => (
-            <Link to={item.to} key={index} className="highlight zoom-in">
+          {highlights.map((item, index) => (
+            <Link to={`highlight/${item.id}`} key={index} className="highlight zoom-in">
               <img
-                src={require(`../../../Images/${item.src}`)}
+                src={require(`../../../Images/logo-story.png`)}
                 alt="story"
                 loading="lazy"
               />

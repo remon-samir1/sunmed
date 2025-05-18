@@ -140,7 +140,7 @@ function App() {
                   <Route element={<SingleStory />} path="/stories" />
                   <Route
                     element={<HighlightsStoriesSwiper />}
-                    path="/highlights"
+                    path="/highlights/:id"
                   />
                   <Route element={<ContactUs />} path="/contact" />
                   <Route element={<BookNow />} path="/bookNow" />
