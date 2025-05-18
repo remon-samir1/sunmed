@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './AvailableServices.css';
 import AvailableServicesBox from './AvailableServicesBox';
 import montage from '../../../../../../../../Images/montage.png';
@@ -9,10 +9,25 @@ import animationImg from '../../../../../../../../Images/avaible-services.png';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import { Axios } from '../../../../../../../../Components/Helpers/Axios';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AvailableServices = () => {
+  //  GET DATA
+  const [data, setData] = useState([]);
+  const [skeleton, setSkeleton] = useState(true);
+  useEffect(() => {
+    Axios.get("/services/5").then((data) => {
+      setData(data.data.data);
+      setSkeleton(false);
+    });
+  }, []);
+
+  const avaible = data.availableService;
+
+
+
   const boxesRef = useRef([]);
   const textRef = useRef(null);
 
@@ -49,18 +64,18 @@ const AvailableServices = () => {
     <div className='AvailableServices py-7 px-[7vw]'>
       <div className="texts" ref={textRef}>
         <h3>Available services</h3>
-        <p>Sunmed Media production services</p>
+        <p>Sunmed Media production service</p>
       </div>
       <div className="flex justify-center items-center gap-6 mt-5 pb-9 flex-wrap lg:flex-nowrap">
-        <div ref={el => boxesRef.current[0] = el}>
-          <AvailableServicesBox img={montage} text='Monatge' />
-        </div>
-        <div ref={el => boxesRef.current[1] = el}>
-          <AvailableServicesBox img={vfx} text="Visual effects (VFX)" />
-        </div>
-        <div ref={el => boxesRef.current[2] = el}>
-          <AvailableServicesBox img={animationImg} text="Animation (2D) - (3D)" />
-        </div>
+      {avaible?.map((data, index) => (
+          <div ref={(el) => (boxesRef.current[index] = el)}>
+            <AvailableServicesBox
+              img={data.image}
+              text={data.name}
+              icon={data.icon}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

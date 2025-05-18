@@ -5,8 +5,8 @@ const AvailableServicesBox = (props) => {
     <div className='AvailableServicesBox '>
       <img src={props.img} alt="services" loading='lazy' />
       <div className="details">
-        <div className="icon-container">
-        <Icon icon="system-uicons:write"color='white' width="40" height="40" />
+        <div className="icon-container ">
+        <img src={props.icon}  />
         </div>
         <span>
           {props.text}

@@ -62,7 +62,7 @@ const StoryPage = () => {
     <div
       style={{
         width: "100vw",
-        height: "98vh",
+        height: "98dvh",
         position: "relative",
       }}
       ref={bgRef}
@@ -95,7 +95,7 @@ const StoryPage = () => {
           loop
         />
       ) : (
-        <p style={{ color: "white", textAlign: "center", paddingTop: "50vh" }}>
+        <p style={{ color: "white", textAlign: "center", paddingTop: "50dvh" }}>
           Loading stories...
         </p>
       )}

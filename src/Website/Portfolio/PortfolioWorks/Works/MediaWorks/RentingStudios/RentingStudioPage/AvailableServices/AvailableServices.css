@@ -51,6 +51,11 @@
   height: 100%;
 
 }
+.AvailableServices .AvailableServicesBox .details .icon-container img{
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
 .AvailableServices .AvailableServicesBox .details span{
   color: var(--main-color);
 }

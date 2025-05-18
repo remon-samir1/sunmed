@@ -21,16 +21,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 const EducationDetailsofProject = () => {
   const { id } = useParams();
-  const [data, setData] = useState([]);
-  const [showAll, setShowAll] = useState(false);
-
+  
   const imagesRef = useRef([]);
   const videosRef = useRef([]);
   const buttonRef = useRef(null);
   const detailsRef = useRef(null);
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
-
+  
+  const [data, setData] = useState([]);
+  const [showAll, setShowAll] = useState(false);
   useEffect(() => {
     Axios.get("/projects").then((data) => setData(data.data.data));
   }, []);
