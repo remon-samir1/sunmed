@@ -80,7 +80,7 @@ const StoryPage = () => {
         </div>
         <span className="text-white font-bold uppercase">Sunmed Story</span>
       </div>
-      <Link to='/portfolio' className='absolute top-[3vh] right-[1vw] md:right-[5vw] z-50 md:w-[35px] w-[25px] h-[25px]  md:h-[35px] rounded-full bg-gray-700  flex justify-center items-center'>
+      <Link to='/portfolio' className='absolute top-[3vh] right-[0vw] md:right-[5vw] z-50 md:w-[35px] w-[25px] h-[25px]  md:h-[35px] rounded-full bg-gray-700  flex justify-center items-center'>
       <IoCloseSharp className="text-white md:w-[25px] w-[15px] md:h-[25px] h-[15px]"/>
       </Link>
 </>
