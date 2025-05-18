@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Stories from "react-insta-stories";
 import Axios from "axios";
 import { IoCloseSharp } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -26,11 +26,13 @@ const HighLights = () => {
       repeat: -1,
     });
   });
+  const {id} = useParams()
   useEffect(() => {
-    Axios.get("https://sunmedagency.com/api/stories")
+    Axios.get("https://sunmedagency.com/api/high_lights")
       .then((res) => {
-        const stories = res.data?.data;
-
+        const stories = res.data?.data.filter(data=> data.id == id);
+       console.log(stories ); 
+       console.log(res ); 
         const formattedStories = stories.flatMap((story) =>
           (Array.isArray(story.attachments) ? story.attachments : []).map(
             (url) => ({

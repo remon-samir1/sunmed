@@ -18,6 +18,7 @@ const StoryAndHighlights = () => {
   useEffect(()=>{
     Axios.get('/high_lights').then(data=>setHighlights(data.data.data))
   },[])
+  console.log(highlights);
   useGSAP(() => {
     const el = sectionRef.current;
     gsap.fromTo(
@@ -51,13 +52,13 @@ const StoryAndHighlights = () => {
         <h3 className="px-[4vw] md:px-[7vw] py-4 uppercase">our Highlights</h3>
         <div className="flex justify-center items-center gap-[2vw] md:gap-[5vw] mt-10 px-[0] md:px-[7vw]">
           {highlights.map((item, index) => (
-            <Link to={`highlight/${item.id}`} key={index} className="highlight zoom-in">
+            <Link to={`/highlights/${item.id}`} key={index} className="highlight zoom-in">
               <img
                 src={require(`../../../Images/logo-story.png`)}
                 alt="story"
                 loading="lazy"
               />
-              <span>{item.label}</span>
+              <span>Highlight {index +1}</span>
             </Link>
           ))}
         </div>
