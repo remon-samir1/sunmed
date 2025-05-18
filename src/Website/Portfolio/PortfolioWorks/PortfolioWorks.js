@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import "./PortfolioWorks.css";
+import ResponsiveWorks from "./ResponsiveWorks";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -137,7 +138,8 @@ const PortfolioWorks = () => {
       </div>
 
       <div className="data px-[2vw] md:px-[7vw] py-5 fade-in -z-[100]">
-        <Outlet />
+        <ResponsiveWorks  />
+        {/* <Outlet /> */}
       </div>
     </div>
   );
