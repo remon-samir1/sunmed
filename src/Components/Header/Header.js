@@ -11,7 +11,7 @@ const Header = () => {
 
     <div className="Header ">
       <header className="flex px-10 justify-between items-center h-20">
-        <Logo width="120px" />
+        <Logo  class="w-[95px] md:w-[120px]" />
         <div className="menu" onClick={()=>setIsOpen(prev=> !prev)}>
           <span></span>
           <span></span>

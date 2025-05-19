@@ -20,13 +20,13 @@ import PartnerSlider from "./OurPartners/PartnerSlider";
 const Landing = () => {
   const [loadScreen, setLoadScreen] = useState(false);
 
-  useEffect(() => {
-    setLoadScreen(true);
-    const timer = setTimeout(() => {
-      setLoadScreen(false);
-    }, 3000);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   setLoadScreen(true);
+  //   const timer = setTimeout(() => {
+  //     setLoadScreen(false);
+  //   }, 3000);
+  //   return () => clearTimeout(timer);
+  // }, []);
   return (
     <div className="overflow-hidden">
       {loadScreen ? (
