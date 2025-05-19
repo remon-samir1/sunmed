@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HeroSection from "./HeroSection/HeroSection";
 import AboutUs from "./AboutUs/AboutUs";
 import StartProject from "./StartProject/StartProject";
@@ -14,17 +14,30 @@ import Wrapper from "./Wrapper/Wrapper";
 import OurPartners from "./OurPartners/OurPartners";
 import Testmonials from "./Testmonials/Testmonials";
 import Loading from "../../Components/Loading/loading";
+import LoadScreen from "../../Components/LoadScreen/LoadScreen";
 
 const Landing = () => {
+  const [loadScreen, setLoadScreen] = useState(false);
+
+  useEffect(() => {
+    setLoadScreen(true);
+    const timer = setTimeout(() => {
+      setLoadScreen(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div className="overflow-hidden">
+      {loadScreen ? (
+        <LoadScreen />
+      ) :
+      <>
       <HeroSection />
       <AboutUs />
       <LandingPortfolioPart />
       <OurLatestStudios />
       <StartProject />
       <OverView />
-      {/* <Wrapper /> */}
       <OurPartners />
       <Testmonials />
       <Divider />
@@ -32,6 +45,8 @@ const Landing = () => {
       <WithUs />
       <LatestInsights />
       <Footer />
+      </>
+}
     </div>
   );
 };

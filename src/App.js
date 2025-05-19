@@ -116,7 +116,7 @@ function App() {
   //     setLoadScreen(false);
   //   }, 3000);
   //   return () => clearTimeout(timer);
-  // }, [window.location.pathname]);
+  // }, []);
   return (
     <>
       {loading && <Loading />}
@@ -145,7 +145,7 @@ function App() {
                   <Route element={<ContactUs />} path="/contact" />
                   <Route element={<BookNow />} path="/bookNow" />
 
-                  <Route element={<SingleBlog />} path="/single-blog" />
+                  <Route element={<SingleBlog />} path="/single-blog/:id" />
                   <Route element={<MainBlogPage />} path="/blogs" />
                   <Route
                     element={<EducationServicesLanding />}

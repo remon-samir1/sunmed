@@ -64,17 +64,14 @@ const HeroSection = () => {
     });
   }, []);
 
+
+
   return (
     <div className="HeroSection">
       <Header />
       <div className="content">
-
         <TypeAnimation
-          sequence={[
-          'DATA - DRIVEN REVENUE MARKETING',
-        1000
-          ]}
-        
+          sequence={["DATA - DRIVEN REVENUE MARKETING", 1000]}
           wrapper="h1"
           speed={40}
           repeat={Infinity}

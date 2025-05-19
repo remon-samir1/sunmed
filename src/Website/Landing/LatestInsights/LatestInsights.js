@@ -1,8 +1,22 @@
 import "./LatestInsights.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { Axios } from "../../../Components/Helpers/Axios";
 const LatestInsights = () => {
+
+  const [data , setData] = useState([]);
+
+  useEffect(()=>{
+    Axios.get('/blogs').then(data=>setData(data.data.data))
+
+
+  },[])
+  
+
+
+
+
   return (
     <div className="LatestInsights px-[7vw] py-[5vh]">
       <div className="text">
@@ -11,21 +25,16 @@ const LatestInsights = () => {
       </div>
 
       <div className="blogs">
-        <Link className="main-blog" to='/single-blog'>
+        <Link className="main-blog" to={`/single-blog/${data[0]?.uuid}`}>
           <div className="img">
-            <img src={require("../../../Images/cairo.png")} loading='lazy' alt="blog" />
+            <img src={data[0]?.cover} loading='lazy' alt="blog" />
             <p>
-              Lorem ipsum dolor sit amet consectetur. Consequat dui nulla nunc
-              ullamcorper velit. Fermentum sagittis risus
+            
             </p>
           </div>
           <div className="content">
-            <p>
-              Lorem ipsum dolor sit amet consectetur. Consequat dui nulla nunc
-              ullamcorper velit. Fermentum sagittis risus sed urna sit habitant
-              nibh nec. Magna blandit eget consequat odio faucibus. Nec aliquam
-              odio feugiat pulvinar malesuada. Sed massa at magna vel sed diam
-              scelerisque facilisis dignissim.
+            <p dangerouslySetInnerHTML={{__html:data[0]?.content}}>
+            
             </p>
             <div className="mt-6 flex justify-between items-center">
               <span>By sunmed agency</span>
@@ -34,20 +43,16 @@ const LatestInsights = () => {
           </div>
         </Link>
         <div className="second-blogs">
-          <Link className="blog" to='/single-blog'>
+          <Link className="blog" to={`/single-blog/${data[1]?.uuid}`}>
             <div className="img">
-              <img src={require("../../../Images/cairo.png")} loading='lazy' alt="blog" />
+              <img src={data[1]?.cover} loading='lazy' alt="blog" />
               <p>
-                Lorem ipsum dolor sit amet consectetur. Consequat dui nulla nunc
-                ullamcorper velit. Fermentum sagittis risus
+                {data[1]?.title}
               </p>
             </div>
             <div className="content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Consequat dui nulla nunc
-                ullamcorper velit. Fermentum sagittis risus sed urna sit
-                habitant nibh nec. Magna blandit eget consequat odio faucibus.
-                Nec aliquam odio feugiat pulvinar malesuada.
+              <p dangerouslySetInnerHTML={{__html:data[1]?.content}}>
+              
               </p>
               <div className="mt-12 flex justify-between items-center">
                 <span>By sunmed agency</span>
@@ -56,20 +61,16 @@ const LatestInsights = () => {
             </div>
           </Link>
 
-          <Link className="blog" to='/single-blog'>
+          <Link className="blog" to={`/single-blog/${data.uuid}`}>
             <div className="img">
-              <img src={require("../../../Images/cairo.png")}loading='lazy' alt="blog" />
+              <img src={data[2]?.cover}loading='lazy' alt="blog" />
               <p>
-                Lorem ipsum dolor sit amet consectetur. Consequat dui nulla nunc
-                ullamcorper velit. Fermentum sagittis risus
+              {data[2]?.cover}
               </p>
             </div>
             <div className="content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Consequat dui nulla nunc
-                ullamcorper velit. Fermentum sagittis risus sed urna sit
-                habitant nibh nec. Magna blandit eget consequat odio faucibus.
-                Nec aliquam odio feugiat pulvinar malesuada.
+              <p dangerouslySetInnerHTML={{__html:data[2]?.content}}>
+          
               </p>
               <div className="mt-12 flex justify-between items-center">
                 <span>By sunmed agency</span>

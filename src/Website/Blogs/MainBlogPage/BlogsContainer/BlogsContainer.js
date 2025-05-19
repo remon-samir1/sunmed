@@ -11,25 +11,20 @@ const BlogsContainer = () => {
 
   },[])
   
-    const parser = new DOMParser();
-  const doc = parser.parseFromString(data[0].content, "text/html");
-  
-  const imgs = doc.querySelectorAll("img");
-  console.log(imgs);
-  console.log(data);
   return (
     <>
     <div  className='BlogsContainer py-9 md:px-[7vw] px-[3vw]' >
-      
-      <BlogBox/>
-      <BlogBox/>
-      <BlogBox/>
-      <BlogBox/>
-      <BlogBox/>
-      <BlogBox/>
+      {
+        data.map((data,index)=>(
+    
+
+          <BlogBox key={index} cover={data.cover} id={data.uuid} content={data.content} title={data.title}/>
+        ))
+      }
+    
     </div>
       <div className="text-center  bg-[#fafafa] py-5">
-        <button className='normal-btn'>Load more</button>
+        {/* <button className='normal-btn'>Load more</button> */}
       </div>
     </>
   );

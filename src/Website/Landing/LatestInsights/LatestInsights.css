@@ -110,7 +110,9 @@
   height: 40vh;
   flex: 1;
 }
-
+.LatestInsights p img{
+  display: none;
+}
 .LatestInsights .blogs .second-blogs .blog .img {
   height: 40vh !important;
   flex: 1;
@@ -190,7 +192,7 @@
   }
   .LatestInsights .blogs .main-blog .img ,.LatestInsights .blogs .second-blogs .blog .img{
     width: 100%;
-    height: 50vh !important;
+    height: 40vh !important;
   }
   .LatestInsights .blogs .second-blogs .blog{
     flex-direction: column;
