@@ -17,7 +17,10 @@ console.log(data);
         <div className="items-container">
           {data.map((item, key) => (
             <div className="item" key={key}>
+              <div className="img">
+                
             <img src={item.image} alt="" />
+              </div>
               <span>{item.name}</span>
             </div>
           ))}

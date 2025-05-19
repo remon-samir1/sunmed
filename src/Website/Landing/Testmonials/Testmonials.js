@@ -47,7 +47,7 @@ useEffect(()=>{
             data.map((data,index)=>(
 
           <SwiperSlide>
-            <TestmonialBox img={data.img} content={data.content} name={data.name} />
+            <TestmonialBox img={data.image} content={data.content} name={data.name} />
           </SwiperSlide>
 
             ))

@@ -116,7 +116,7 @@ function App() {
   //     setLoadScreen(false);
   //   }, 3000);
   //   return () => clearTimeout(timer);
-  // }, []);
+  // }, [window.location.pathname]);
   return (
     <>
       {loading && <Loading />}
