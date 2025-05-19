@@ -75,7 +75,15 @@ flex: 1;
 
 @media (max-width:768px){
   .OurLatestStudios .images .top .img , .OurLatestStudios .images .down .img{
-    height: 30vh;
+    height: 30vh !important;
+  }
+
+  .OurLatestStudios .images .top .img , .OurLatestStudios .images .down{
+    gap: 5px;
+    margin-top: 5px;
+  }
+  .OurLatestStudios .images .top .img , .OurLatestStudios .images .top{
+    gap: 5px;
   }
 .OurLatestStudios{
 flex-direction: column;
