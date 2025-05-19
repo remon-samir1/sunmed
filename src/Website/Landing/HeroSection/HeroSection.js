@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import "./HeroSection.css";
+// import "./Canva.css";
 import Logo from "../../../Components/Logo/Logo";
 import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
@@ -8,6 +9,7 @@ import Header from "../../../Components/Header/Header";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
+  
   const [coords1, setCoords1] = useState({ x: 10, y: 0 });
   const [coords2, setCoords2] = useState({ x: 10, y: 0 });
 
@@ -63,12 +65,14 @@ const HeroSection = () => {
       ease: "power3.out",
     });
   }, []);
-
-
-
+  
+  
+  
   return (
     <div className="HeroSection">
       <Header />
+    
+
       <div className="content">
         <TypeAnimation
           sequence={["DATA - DRIVEN REVENUE MARKETING", 1000]}
@@ -106,7 +110,7 @@ const HeroSection = () => {
           </a>
         </div>
       </div>
-    </div>
+      </div>
   );
 };
 

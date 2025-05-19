@@ -11,7 +11,8 @@
 }
 .EducationDetailsofProject .imges .img{
   flex: 1 1 30%;
-  height: 380px;
+  min-width: 300px;
+  height: 23.75rem;
   overflow: hidden;
   position: relative;
 }
@@ -111,4 +112,9 @@
   width: 14px;
   height: 14px;
 
+}
+@media (max-width:768px){
+.EducationDetailsofProject .imges .img{
+height: 15rem;
+}
 }

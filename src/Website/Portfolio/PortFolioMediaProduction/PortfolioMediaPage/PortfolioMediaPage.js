@@ -60,8 +60,7 @@ const PortfolioMediaPage = () => {
         </div>
         <div className="text">
           <h3 className='uppercase'>{filter[0]?.title}</h3>
-          <p>
-          {filter[0]?.description}
+          <p dangerouslySetInnerHTML={{__html:filter[0]?.description}}>
           </p>
         </div>
 

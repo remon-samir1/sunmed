@@ -15,6 +15,7 @@ import OurPartners from "./OurPartners/OurPartners";
 import Testmonials from "./Testmonials/Testmonials";
 import Loading from "../../Components/Loading/loading";
 import LoadScreen from "../../Components/LoadScreen/LoadScreen";
+import PartnerSlider from "./OurPartners/PartnerSlider";
 
 const Landing = () => {
   const [loadScreen, setLoadScreen] = useState(false);
@@ -38,7 +39,8 @@ const Landing = () => {
       <OurLatestStudios />
       <StartProject />
       <OverView />
-      <OurPartners />
+      {/* <OurPartners /> */}
+      <PartnerSlider/>
       <Testmonials />
       <Divider />
 

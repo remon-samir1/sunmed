@@ -13,7 +13,7 @@ const BlogsContainer = () => {
   
   return (
     <>
-    <div  className='BlogsContainer py-9 md:px-[7vw] px-[3vw]' >
+    <div  className='BlogsContainer py-2 md:py-9 md:px-[7vw] px-[3vw]' >
       {
         data.map((data,index)=>(
     
