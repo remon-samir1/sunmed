@@ -9,7 +9,9 @@ const ResponsiveWorks = () => {
 
   return (
     <div className="ResponsiveWorks">
-      <button onClick={() => setOpenMedia((prev) => !prev)} className="link">
+        <NavLink className='link1' to="all">All</NavLink>
+
+      <button onClick={() => setOpenMedia((prev) => !prev)} className="link1">
         Media Producation
       </button>
       <div
@@ -54,7 +56,7 @@ const ResponsiveWorks = () => {
           Videography
         </NavLink>
       </div>
-      <button onClick={() => openeducation((prev) => !prev)} className="link">
+      <button onClick={() => openeducation((prev) => !prev)} className="link1">
         Education Services
       </button>
       <div
@@ -119,7 +121,7 @@ const ResponsiveWorks = () => {
       </div>
 
 
-      <button onClick={() => setOpenMedia((prev) => !prev)} className="link">
+      <button onClick={() => setOpenMedia((prev) => !prev)} className="link1">
         Web Solution
       </button>
       <div
@@ -146,7 +148,7 @@ const ResponsiveWorks = () => {
         </NavLink>
       
       </div>
-      <button onClick={() => setOpenMedia((prev) => !prev)} className="link">
+      <button onClick={() => setOpenMedia((prev) => !prev)} className="link1">
       Digital Marketing
       </button>
       <div

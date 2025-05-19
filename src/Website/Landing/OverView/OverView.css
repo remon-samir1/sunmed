@@ -75,13 +75,13 @@
    font-size: 0.5rem;
    margin: auto;
    text-align: center;
-   
+   display: none;
   
   }
   
   .OverView .links .link .icon{
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
   
   }
   .OverView .links .link {

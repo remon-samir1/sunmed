@@ -123,5 +123,19 @@ padding: 10px;
 }
 
 .ResponsiveWorks{
-
+  width: 100%;
+display: flex;
+justify-content: start !important;
+align-items: start !important;
+gap: 10px;
+flex-direction: column;
+}
+.ResponsiveWorks .link1{
+  width: 100%;
+text-align: left !important;
+  font-size: 1rem;
+  color: var(--bg-color);
+  letter-spacing: 1px;
+  border-bottom: 0.3px solid var(--bg-color);
+  padding: 10px;
 }

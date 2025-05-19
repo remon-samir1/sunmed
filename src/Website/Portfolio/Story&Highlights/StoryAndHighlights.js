@@ -50,7 +50,7 @@ const StoryAndHighlights = () => {
 
       <div className="highlights-container zoom-in">
         <h3 className="px-[4vw] md:px-[7vw] py-4 uppercase">our Highlights</h3>
-        <div className="flex justify-center items-center gap-[2vw] md:gap-[5vw] mt-10 px-[0] md:px-[7vw]">
+        <div className="flex justify-center md:justify-start items-center gap-[2vw] md:gap-[5vw] mt-10 px-[0] md:px-[7vw]">
           {highlights.map((item, index) => (
             <Link to={`/highlights/${item.id}`} key={index} className="highlight zoom-in">
               <img

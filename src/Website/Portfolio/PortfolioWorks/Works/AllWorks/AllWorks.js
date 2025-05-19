@@ -15,14 +15,14 @@ const AllWorks = () => {
   const [resize, setResize] = useState(window.innerWidth);
   //  GET DATA
   const [data, setData] = useState([]);
-  const [skeleton,setSkeleton] = useState(true)
+  const [skeleton, setSkeleton] = useState(true);
 
-    useEffect(() => {
-      Axios.get("/projects").then((data) =>{ 
-        setData(data.data.data)
-      setSkeleton(false)
-      });
-    }, []);
+  useEffect(() => {
+    Axios.get("/projects").then((data) => {
+      setData(data.data.data);
+      setSkeleton(false);
+    });
+  }, []);
 
   useEffect(() => {
     const resizeWidth = () => {
@@ -35,9 +35,8 @@ const AllWorks = () => {
   }, [window.innerWidth]);
   return (
     <div className="AllWorks">
-
       <Swiper
-      autoplay
+        autoplay
         navigation={{
           nextEl: ".custom-next",
           prevEl: ".custom-prev",
@@ -48,49 +47,60 @@ const AllWorks = () => {
         spaceBetween={40}
         className="t-swiper"
       >
-        {
-        skeleton ?   
-        Array.from({length:4}).map(()=>(
-
-        <SwiperSlide>
-
-        <SkeletonShow height="250px" width="300px" length={1}  />
-        </SwiperSlide>
-        ))
-  
-:  data.length == 0 ? (
-    <div className="text-center">
-      <p className="text-gray-500 capitalize font-semibold text-[25px] ">
-        no projects Added
-      </p>
-    </div>
-  ) : 
-        
-        data.map((work, index) => (
-          <SwiperSlide key={index}>
-            <div className="work">
-              <div className="details">
-                <div className="text">
-                  <p>{work.title}</p>
-                  <p>{work.service.title}</p>
+        {skeleton ? (
+          Array.from({ length: 4 }).map(() => (
+            <SwiperSlide>
+              <SkeletonShow height="250px" width="300px" length={1} />
+            </SwiperSlide>
+          ))
+        ) : data.length == 0 ? (
+          <div className="text-center">
+            <p className="text-gray-500 capitalize font-semibold text-[25px] ">
+              no projects Added
+            </p>
+          </div>
+        ) : (
+          data.map((work, index) => (
+            <SwiperSlide key={index}>
+              <div className="work">
+                <div className="details">
+                  <div className="text">
+                    <p>{work.title}</p>
+                    <p>{work.service.title}</p>
+                  </div>
+                  <Link
+                    to={
+                      [4, 5, 6, 7].includes(work.service.id)
+                        ? `/portfolio/media-production-datails/${work.id}`
+                        : [9, 10, 11, 12, 13, 14].includes(work.service.id)
+                        ? `/portfolio/education/details/${work.id}`
+                        : [16, 17].includes(work.service.id)
+                        ? `/portfolio/development/details/${work.id}`
+                        : [19, 20, 21, 22].includes(data.service.id)
+                        ? `/portfolio/digital/details/${work.id}`
+                        : [24, 25].includes(data.service.id)
+                        ? `/portfolio/event/details/${work.id}`
+                        : ""
+                    }
+                    className="icon-container"
+                  >
+                    <Icon
+                      icon="solar:arrow-right-linear"
+                      width="32"
+                      height="32"
+                      className="icon"
+                    />
+                  </Link>
                 </div>
-                <Link to={work.link} className="icon-container">
-                  <Icon
-                    icon="solar:arrow-right-linear"
-                    width="32"
-                    height="32"
-                    className="icon"
-                  />
-                </Link>
+                <img
+                  src={work.attachments[0]}
+                  alt={`work-${index + 1}`}
+                  loading="lazy"
+                />
               </div>
-              <img
-                src={work.attachments[0]}
-                alt={`work-${index + 1}`}
-                loading="lazy"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          ))
+        )}
       </Swiper>
     </div>
   );

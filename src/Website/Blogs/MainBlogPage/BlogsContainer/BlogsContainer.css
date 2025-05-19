@@ -121,4 +121,11 @@
 font-size: 0.66rem;
 
 }
+.BlogsContainer .blog {
+  min-width: 300px;
+}
+.BlogsContainer .blog .img {
+
+height: 30vh;
+}
 }

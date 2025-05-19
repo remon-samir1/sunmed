@@ -17,7 +17,7 @@ const EducationPortfolioPart = () => {
       setSkeleton(false);
     });
   }, []);
-  const filter = data.filter((data) => [9,10,11,12,13,14].includes(data.service.id));
+  const filter = data.filter((data) => [9,10,11,12,13,14].includes(data.service.id) );
 
 
 

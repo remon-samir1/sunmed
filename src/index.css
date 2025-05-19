@@ -58,7 +58,10 @@ body {
   height: 400px;
   cursor: grab;
 }
-
+.Toastify__toast{
+  position: absolute !important;
+  top: 50% !important;
+}
 .swiper-slide {
   text-align: center;
   font-size: 18px;

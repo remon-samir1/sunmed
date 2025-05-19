@@ -46,6 +46,7 @@ console.log(form);
         .then((data) => {
           setLoading(false);
           console.log(data);
+          toast.success('Send Successfly')
         });
     } catch (err) {
       console.log(err);
@@ -55,7 +56,7 @@ console.log(form);
   };
 
   return (
-    <div className="bg-[#fafafa]">
+    <div className="bg-[#fafafa] relative">
       <Notification />
       <div ref={scrollRef}></div>
       <Header />
