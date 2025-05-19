@@ -91,7 +91,7 @@ function App() {
   const isOpen = menu.isOpen;
   const resize =
     window.innerWidth > 600
-      ? "translate3d(-400px, 20%, 0) scaleY(1)"
+      ? "translate3d(-15%, 20%, 0) scaleX(0.7 ) "
       : " translate3d(-330px, 20%, 0) scaleY(1)";
   //  set Loading screen
   const LoadingContext = useContext(LoadingCon);
@@ -116,7 +116,7 @@ function App() {
   //     setLoadScreen(false);
   //   }, 3000);
   //   return () => clearTimeout(timer);
-  // }, [window.location.pathname]);
+  // }, []);
   return (
     <>
       {loading && <Loading />}
