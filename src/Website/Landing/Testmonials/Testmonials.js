@@ -5,7 +5,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import TestmonialBox from "./TestmonialBox";
+import { Axios } from "../../../Components/Helpers/Axios";
 const Testmonials = () => {
+const [data , setData] = useState([]);
+useEffect(()=>{
+  Axios.get('/Testimonials').then(data=>setData(data.data.data))
+},[])
+
+
+
   const [resize, setResize] = useState(window.innerWidth);
   useEffect(() => {
     const resizeWidth = () => {
@@ -34,7 +42,18 @@ const Testmonials = () => {
           modules={[Pagination]}
           className="t-swiper"
         >
+
+          {
+            data.map((data,index)=>(
+
           <SwiperSlide>
+            <TestmonialBox img={data.img} content={data.content} name={data.name} />
+          </SwiperSlide>
+
+            ))
+          }
+
+          {/* <SwiperSlide>
             <TestmonialBox />
           </SwiperSlide>
 
@@ -48,11 +67,7 @@ const Testmonials = () => {
 
           <SwiperSlide>
             <TestmonialBox />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <TestmonialBox />
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
       </div>
     </div>

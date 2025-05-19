@@ -1,6 +1,6 @@
 
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -23,6 +23,9 @@ import Conference from "../../Portfolio/PortfolioWorks/Works/EventManagementWork
 import MediaBuyingWorks from "../../Portfolio/PortfolioWorks/Works/DigitalMarketingWorks/MediaBuying/MediaBuyingWorks";
 import InfluencerMarketing from "../../Portfolio/PortfolioWorks/Works/DigitalMarketingWorks/InfluencerMarketing/InfluencerMarketing";
 import SeoServices from "../../Portfolio/PortfolioWorks/Works/DigitalMarketingWorks/SeoServices/SeoServices";
+import ResponsiveWorks from "../../Portfolio/PortfolioWorks/ResponsiveWorks";
+import { Icon } from "@iconify/react";
+import ResponsiveLandingPortFolio from "./ResponsiveLandingPortFolio";
 
 
 const LandingPortfolioPart = () => {
@@ -35,7 +38,13 @@ const LandingPortfolioPart = () => {
   const [openEventManage, setOpenEventManage] = useState(false);
 
   const sectionRef = useRef(null);
+  const [resize, setResize] = useState(window.innerWidth);
 
+  useEffect(() => {
+    const resizeWidth = () => setResize(window.innerWidth);
+    window.addEventListener("resize", resizeWidth);
+    return () => window.removeEventListener("resize", resizeWidth);
+  }, []);
   useGSAP(() => {
     const el = sectionRef.current;
 
@@ -112,9 +121,38 @@ const LandingPortfolioPart = () => {
     setOpenWeb(false);
     setOpenDigitalMarketing(false);
   };
+const [filter , setFilter] = useState(false)
+
+  // const pathSegments = window.location.pathname.split('/');
+  // const lastSegment = pathSegments.filter(Boolean).pop();
+  // const cleanName = lastSegment.replace(/-/g, ' ');
   return (
     <div ref={sectionRef} className="PortfolioWorks py-[4vh] md:py-[0vh]">
       <h3 className="md:pl-[7vw] py-[5vh] pl-[1rem] text-[1.8rem] text-[#cbb434] font-semibold uppercase" style={{ letterSpacing: '1px' }}>Best projects</h3>
+
+
+
+
+      {
+resize <700 ?
+
+
+ <div className="flex items-center justify-between px-[3vw]">
+<p className="py-3 px-5 font-semibold text-white bg-[#cbb434] rounded min-w-[20vw] text-center capitalize">{showData}</p>
+
+
+<div onClick={()=>setFilter(prev=>!prev)} className="cursor-pointer flex items-center gap-4 px-5 py-2 rounded border border-[#d0d1d5]">
+<Icon icon="tabler:filter-2" width="25" height="25" />
+<span>Filter</span>
+</div>
+ </div>
+ 
+
+
+
+
+
+:
       <div className={`categories ${openWeb || openDigitalMarketing || openMediaProducation || openEducation || openWebSolution || openEventManage ? "h-[140px]" : "h-[80px]"} !duration-500 md:px-[7vw] fade-in`}>
         <button onClick={() => setShowData("all")}>All</button>
 
@@ -169,9 +207,14 @@ const LandingPortfolioPart = () => {
           </div>
         </div>
       </div>
-
+}
       <div className="data px-[2vw] md:px-[7vw] py-5 fade-in">
-        {showData === "all" ? <AllWorks /> : showData === "socialMedia" ? <SocialMediaPage /> : showData === "development" ? <Development /> : showData === 'renting' ? <RentingStudios /> : showData === 'postProduction' ? <PostProduction /> : showData === 'photography' ? <Photography/> : showData === 'videography' ? <Videography/> : showData === 'platforms' ? <TranningPlatforms/> : showData === 'trainingContent' ? <TranningContent/> : showData === 'bags' ? <TranningBags/> : showData === 'electronic' ? <ElectronicMarketing/> : showData === 'virtial' ? <VirtualProject/> : showData === 'Pm' ? <ProjectManagement/> : showData === 'webDesign' ? <WebDesgin/>:showData === 'Implementation' ? <Implementation/> : showData === 'Conference' ? <Conference/> : showData==='mediaBuying'?<MediaBuyingWorks/> : showData === 'influencer' ?<InfluencerMarketing/> : showData === 'seo' && <SeoServices/>}
+        {filter?
+
+<ResponsiveLandingPortFolio setShowData={setShowData}  setFilter={setFilter}/>
+:
+        
+        showData === "all" ? <AllWorks /> : showData === "socialMedia" ? <SocialMediaPage /> : showData === "development" ? <Development /> : showData === 'renting' ? <RentingStudios /> : showData === 'postProduction' ? <PostProduction /> : showData === 'photography' ? <Photography/> : showData === 'videography' ? <Videography/> : showData === 'platforms' ? <TranningPlatforms/> : showData === 'trainingContent' ? <TranningContent/> : showData === 'bags' ? <TranningBags/> : showData === 'electronic' ? <ElectronicMarketing/> : showData === 'virtial' ? <VirtualProject/> : showData === 'Pm' ? <ProjectManagement/> : showData === 'webDesign' ? <WebDesgin/>:showData === 'Implementation' ? <Implementation/> : showData === 'Conference' ? <Conference/> : showData==='mediaBuying'?<MediaBuyingWorks/> : showData === 'influencer' ?<InfluencerMarketing/> : showData === 'seo' && <SeoServices/>}
       </div>
     </div>
   );

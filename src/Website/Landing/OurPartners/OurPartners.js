@@ -1,20 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./OurPartners.css";
 import { Icon } from "@iconify/react";
+import { Axios } from "../../../Components/Helpers/Axios";
 const OurPartners = () => {
+const [data,setData] = useState([])
+useEffect(()=>{
+  Axios.get('/partners').then(data=>setData(data.data.data))
+},[])
+console.log(data);
+
+
   return (
     <div className="OurPartners">
       <div className="content">
         <h3>our partners</h3>
         <div className="items-container">
-       {Array.from({length:6}).map((_,key)=>(
-                  <div className="item" key={key}>
-                  <Icon icon="tdesign:logo-cnb-filled" width="36" height="36" className='icon' />
-                  <span>
-                  Lorem ipsim
-                  </span>
-                  </div>
-       ))}
+          {data.map((item, key) => (
+            <div className="item" key={key}>
+            <img src={item.image} alt="" />
+              <span>{item.name}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>

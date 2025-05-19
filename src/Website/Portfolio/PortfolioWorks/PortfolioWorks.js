@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import "./PortfolioWorks.css";
 import ResponsiveWorks from "./ResponsiveWorks";
+import { Icon } from "@iconify/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +21,7 @@ const PortfolioWorks = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const sectionRef = useRef(null);
   const dropdownsRef = useRef(null);
-
+const [filter , setFilter] = useState(false)
   const toggleDropdown = (name) => {
     setOpenDropdown((prev) => (prev === name ? null : name));
   };
@@ -58,10 +59,33 @@ const PortfolioWorks = () => {
       }
     );
   });
-
+  const pathSegments = window.location.pathname.split('/');
+  const lastSegment = pathSegments.filter(Boolean).pop();
+  const cleanName = lastSegment.replace(/-/g, ' ');
   return (
     <div id="#works" ref={sectionRef} className="z-50 PortfolioWorks py-[4vh] md:py-[10vh]">
-      <div
+      {
+resize <700 ?
+
+
+ <div className="flex items-center justify-between px-[3vw]">
+<p className="py-3 px-5 font-semibold text-white bg-[#cbb434] rounded min-w-[20vw] text-center capitalize">{cleanName}</p>
+
+
+<div onClick={()=>setFilter(prev=>!prev)} className="cursor-pointer flex items-center gap-4 px-5 py-2 rounded border border-[#d0d1d5]">
+<Icon icon="tabler:filter-2" width="25" height="25" />
+<span>Filter</span>
+</div>
+ </div>
+ 
+
+
+
+
+
+:
+
+        <div
         className={`categories ${
           resize < 768 && openDropdown === "education"
             ? "h-[500px]"
@@ -70,7 +94,7 @@ const PortfolioWorks = () => {
             : "h-[110px]"
         } !duration-500 md:px-[7vw] fade-in z-[999]`}
         ref={dropdownsRef}
-      >
+        >
         <NavLink to="all" onClick={closeAllDropdowns}>All</NavLink>
 
         {/* Media Production */}
@@ -136,10 +160,16 @@ const PortfolioWorks = () => {
           </div>
         </div>
       </div>
+      }
 
       <div className="data px-[2vw] md:px-[7vw] py-5 fade-in -z-[100]">
-        <ResponsiveWorks  />
-        {/* <Outlet /> */}
+        {
+          filter?
+
+          <ResponsiveWorks  setFilter={setFilter}/>
+          :
+        <Outlet /> 
+        }
       </div>
     </div>
   );

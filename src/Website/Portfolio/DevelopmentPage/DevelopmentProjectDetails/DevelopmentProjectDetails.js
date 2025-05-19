@@ -150,7 +150,8 @@ const DevelopmentProjectDetails = () => {
       <div className="discription">
         <h3>Descriptions</h3>
 
-        <Description description={filter[0]?.description} />
+        <p  dangerouslySetInnerHTML={{__html: filter[0]?.description}}></p>
+
       </div>
     </div>
   );

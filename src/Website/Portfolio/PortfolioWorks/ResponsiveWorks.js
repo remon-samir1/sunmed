@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-const ResponsiveWorks = () => {
+const ResponsiveWorks = (props) => {
   const [OpenMedia, setOpenMedia] = useState(false);
   const [openeducation, setOpenEducation] = useState(false);
   const [openWeb, setOpenWeb] = useState(false);
@@ -9,9 +9,11 @@ const ResponsiveWorks = () => {
 
   return (
     <div className="ResponsiveWorks">
-        <NavLink className='link1' to="all">All</NavLink>
+        <NavLink onClick={()=>props.setFilter(prev=>!prev)} className='link1' to="all">All</NavLink>
 
-      <button onClick={() => setOpenMedia((prev) => !prev)} className="link1">
+      <button onClick={() => {
+        
+        setOpenMedia((prev) => !prev)}} className="link1">
         Media Producation
       </button>
       <div
@@ -21,6 +23,7 @@ const ResponsiveWorks = () => {
         <NavLink
           onClick={() => {
             setOpenMedia((prev) => !prev);
+            props.setFilter(prev=>!prev)
           }}
           className="link"
           to="renting-studios"
@@ -30,6 +33,7 @@ const ResponsiveWorks = () => {
         <NavLink
           onClick={() => {
             setOpenMedia((prev) => !prev);
+            props.setFilter(prev=>!prev)
           }}
           className="link"
           to="post-production"
@@ -39,6 +43,7 @@ const ResponsiveWorks = () => {
         <NavLink
           onClick={() => {
             setOpenMedia((prev) => !prev);
+            props.setFilter(prev=>!prev)
           }}
           className="link"
           to="Photography"
@@ -49,6 +54,7 @@ const ResponsiveWorks = () => {
         <NavLink
           onClick={() => {
             setOpenMedia((prev) => !prev);
+            props.setFilter(prev=>!prev)
           }}
           className="link"
           to="/videography"
@@ -56,16 +62,18 @@ const ResponsiveWorks = () => {
           Videography
         </NavLink>
       </div>
-      <button onClick={() => openeducation((prev) => !prev)} className="link1">
+      <button onClick={() => {
+        
+        setOpenEducation((prev) => !prev)}} className="link1">
         Education Services
       </button>
       <div
         className="services-list m-0 flex flex-col justify-start items-start gap-[6px] overflow-hidden transition-all duration-500 ease-in-out"
-        style={{ height: openeducation ? "122px" : "0px" }}
+        style={{ height: openeducation ? "172px" : "0px" }}
       >
         <NavLink
           onClick={() => {
-            openeducation((prev) => !prev);
+            props.setFilter(prev=>!prev)
           }}
           className="link"
           to="tranning-platforms"
@@ -74,7 +82,7 @@ const ResponsiveWorks = () => {
         </NavLink>
         <NavLink
           onClick={() => {
-            openeducation((prev) => !prev);
+            props.setFilter(prev=>!prev)
           }}
           className="link"
           to="tranning-bags"
@@ -83,7 +91,7 @@ const ResponsiveWorks = () => {
         </NavLink>
         <NavLink
           onClick={() => {
-            openeducation((prev) => !prev);
+            props.setFilter(prev=>!prev)
           }}
           className="link"
           to="electronic-marketing"
@@ -93,7 +101,7 @@ const ResponsiveWorks = () => {
 
         <NavLink
           onClick={() => {
-            openeducation((prev) => !prev);
+            props.setFilter(prev=>!prev)
           }}
           className="link"
           to="tranning-content"
@@ -102,7 +110,7 @@ const ResponsiveWorks = () => {
         </NavLink>
         <NavLink
           onClick={() => {
-            openeducation((prev) => !prev);
+            props.setFilter(prev=>!prev)
           }}
           className="link"
           to="project-management"
@@ -111,7 +119,7 @@ const ResponsiveWorks = () => {
         </NavLink>
         <NavLink
           onClick={() => {
-            openeducation((prev) => !prev);
+            props.setFilter(prev=>!prev)
           }}
           className="link"
           to="virtual-project"
@@ -121,16 +129,17 @@ const ResponsiveWorks = () => {
       </div>
 
 
-      <button onClick={() => setOpenMedia((prev) => !prev)} className="link1">
+      <button onClick={() => setOpenWeb((prev) => !prev)} className="link1">
         Web Solution
       </button>
       <div
         className="services-list m-0 flex flex-col justify-start items-start gap-[6px] overflow-hidden transition-all duration-500 ease-in-out"
-        style={{ height: openWeb ? "122px" : "0px" }}
+        style={{ height: openWeb ? "50px" : "0px" }}
       >
         <NavLink
           onClick={() => {
             setOpenWeb((prev) => !prev);
+            props.setFilter(prev=>!prev)
           }}
           className="link"
           to="web-design"
@@ -140,6 +149,7 @@ const ResponsiveWorks = () => {
         <NavLink
           onClick={() => {
             setOpenWeb((prev) => !prev);
+            props.setFilter(prev=>!prev)
           }}
           className="link"
           to="development"
@@ -148,16 +158,17 @@ const ResponsiveWorks = () => {
         </NavLink>
       
       </div>
-      <button onClick={() => setOpenMedia((prev) => !prev)} className="link1">
+      <button onClick={() => setOpenDigital((prev) => !prev)} className="link1">
       Digital Marketing
       </button>
       <div
         className="services-list m-0 flex flex-col justify-start items-start gap-[6px] overflow-hidden transition-all duration-500 ease-in-out"
-        style={{ height: openDigital ? "122px" : "0px" }}
+        style={{ height: openDigital ? "50px" : "0px" }}
       >
         <NavLink
           onClick={() => {
             setOpenDigital((prev) => !prev);
+            props.setFilter(prev=>!prev)
           }}
           className="link"
           to="social-media"
@@ -167,6 +178,7 @@ const ResponsiveWorks = () => {
         <NavLink
           onClick={() => {
             setOpenDigital((prev) => !prev);
+            props.setFilter(prev=>!prev)
           }}
           className="link"
           to="media-buying"

@@ -155,7 +155,9 @@ const EducationDetailsofProject = () => {
         <h3 className="uppercase" ref={titleRef}>
           {filter[0]?.title}
         </h3>
-        <p ref={descriptionRef}>{filter[0]?.description}</p>
+        {/* <p ref={descriptionRef}>{filter[0]?.description}</p> */}
+        <p ref={descriptionRef} dangerouslySetInnerHTML={{__html: filter[0]?.description}}></p>
+
       </div>
 
       <div className="imges">

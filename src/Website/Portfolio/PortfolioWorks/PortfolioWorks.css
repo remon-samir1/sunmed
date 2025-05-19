@@ -136,6 +136,13 @@ text-align: left !important;
   font-size: 1rem;
   color: var(--bg-color);
   letter-spacing: 1px;
-  border-bottom: 0.3px solid var(--bg-color);
-  padding: 10px;
+  border-bottom: 0.3px solid rgba(128, 128, 128, 0.655);
+  padding: 15px;
+}
+.ResponsiveWorks .link{
+  color: rgb(88, 86, 86);
+  margin-left: 15px;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: inline-block;
 }

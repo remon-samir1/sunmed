@@ -1,23 +1,21 @@
 import { Icon } from "@iconify/react";
 import React from "react";
 
-const TestmonialBox = () => {
+const TestmonialBox = ({name , img , content}) => {
   return (
     <div className="TestmonialBox">
       <div className="img">
         <img
-          src={require("../../../Images/testmonial.png")}
+          src={img}
           alt="testmonial"
           loading="lazy"
         />
       </div>
       <div className="text">
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Dictumst amet in duis feugiat
-          id. Sed lectus ultricies elementum lectus.
+        <p dangerouslySetInnerHTML={{__html:content.slice(0,120)}}>
         </p>
         <div className="flex justify-between items-center mt-4">
-          <p>Janet Littel</p>
+          <p>{name}</p>
           <div className="flex flex-col items-center">
             <Icon
               icon="tdesign:logo-cnb-filled"
@@ -25,7 +23,7 @@ const TestmonialBox = () => {
               height="18"
               className="icon"
             />
-            <p>Lorem ipsim</p>
+            {/* <p>Lorem ipsim</p> */}
           </div>
         </div>
       </div>
