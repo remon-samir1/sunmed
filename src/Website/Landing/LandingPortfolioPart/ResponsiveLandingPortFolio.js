@@ -206,7 +206,7 @@ const ResponsiveLandingPortFolio = (props) => {
       <button
         onClick={() => {
           props.setFilter(prev => !prev);
-          props.setShowData("All");
+          props.setShowData("all");
         }}
         className="link1"
       >
@@ -244,7 +244,7 @@ const ResponsiveLandingPortFolio = (props) => {
           onClick={() => {
             setOpenMedia(false);
             props.setFilter(prev => !prev);
-            props.setShowData("Photography");
+            props.setShowData("photography");
           }}
           className="link"
         >
@@ -254,7 +254,7 @@ const ResponsiveLandingPortFolio = (props) => {
           onClick={() => {
             setOpenMedia(false);
             props.setFilter(prev => !prev);
-            props.setShowData("Videography");
+            props.setShowData("videography");
           }}
           className="link"
         >
