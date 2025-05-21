@@ -111,7 +111,7 @@ font-size: 0.8rem;
 }
 .navbar .close{
   position: relative;
-  top: -40%; left: calc(-80px + -15% );
+  top: -40vh; left: calc(-5rem + -15%);
 cursor: pointer;
   width: 50px;
   height: 50px;
