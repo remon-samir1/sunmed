@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   right: -400px;
-  width: 400px;
+  width: 350px;
   height: 100vh;
   background: var(--bg-color);
   color: white;
@@ -29,7 +29,26 @@ gap: 10px;
 .navbar .links .link{
 font-size: 1.3rem;
 color: #fff;
+font-weight: 400;
 transition: 0.3s;
+text-transform: uppercase;
+letter-spacing: 0.2rem;
+position: relative;
+padding: 5px 0;
+overflow: hidden;
+}
+.navbar .links .link::after{
+position: absolute;
+top: 96%; left: -100%;
+content: "";
+height: 2px;
+width: 100%;
+background-color: var(--main-color);
+transition: 0.3s ease-out;
+
+}
+.navbar .links .link:hover::after{
+  left: 0;
 }
 .navbar .links .link.active{
   color: var(--main-color);
@@ -77,16 +96,22 @@ font-size: 0.8rem;
 
 
 .navbar .services-list .link{
-  font-size: 15px;
+  font-size: 13px;
+  letter-spacing: 1px;
   margin-left: 10px;
   transition: 0.5s;
+  /* padding: 25px 0;
+   */
+   /* height: 10px; */
+  display: inline-block;
+  
 }
 .navbar .services-list .link:hover{
   color: var(--main-color);
 }
 .navbar .close{
   position: relative;
-  top: -40%; left: -118px;
+  top: -40%; left: calc(-80px + -15% );
 cursor: pointer;
   width: 50px;
   height: 50px;

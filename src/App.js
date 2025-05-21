@@ -91,7 +91,7 @@ function App() {
   const isOpen = menu.isOpen;
   const resize =
     window.innerWidth > 600
-      ? "translate3d(-15%, 20%, 0) scaleX(0.7 ) "
+      ? "translate3d(-14%, 15%, 0) scaleX(0.75 ) "
       : " translate3d(-330px, 20%, 0) scaleY(1)";
   //  set Loading screen
   const LoadingContext = useContext(LoadingCon);
@@ -125,12 +125,13 @@ function App() {
       ) : (
         <>
           <Router>
-            <div className=" flex">
+            <div className=" ">
+          
               <div
-                className={`duration-700 flex-1  overflow-auto  will-change-transform`}
+                className={`duration-500 flex-1  overflow-auto  will-change-transform`}
                 style={{
                   transform: isOpen ? resize : closed,
-                  height: isOpen ? "70vh" : dynamicHeight,
+                  height: isOpen ? "75vh" : dynamicHeight,
                   margin: "auto",
                 }}
               >

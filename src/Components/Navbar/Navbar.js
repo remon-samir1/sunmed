@@ -34,8 +34,8 @@ const Navbar = () => {
           Services
         </button>
         <div
-          className="services-list m-0 flex flex-col justify-start items-start gap-[6px] overflow-hidden transition-all duration-500 ease-in-out"
-          style={{ height: openServe ? "135px" : "0px" }}
+          className="services-list m-0 flex flex-col justify-between items-start  overflow-hidden transition-all duration-500 ease-in-out"
+          style={{ height: openServe ? "160px" : "0px" }}
         >
           <NavLink
             onClick={() => {

@@ -87,11 +87,9 @@ resize <700 ?
 
         <div
         className={`categories ${
-          resize < 768 && openDropdown === "education"
-            ? "h-[500px]"
-            : resize > 768 && openDropdown === "education"
-            ? "h-[180px]"
-            : "h-[110px]"
+          openDropdown === "education" || openDropdown === "media" ||openDropdown === "web" || openDropdown === "marketing" || openDropdown === "event"
+            ? "h-[140px]"
+            : "h-[70px]"
         } !duration-500 md:px-[7vw] fade-in z-[999]`}
         ref={dropdownsRef}
         >

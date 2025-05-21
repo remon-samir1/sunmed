@@ -59,15 +59,15 @@ color: #fff;
 .Footer .content .blogs .blog{
   margin-top: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 10px;
-  width: 13rem;
+  /* width: 14rem; */
   height: 4rem;
 cursor: pointer;
 }
 .Footer .content .blogs .blog .img{
-  width: 120px;
+  width: 100px;
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
@@ -86,10 +86,10 @@ transform: scale(1.2);
 }
 .Footer .content .blogs .blog .text{
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: start;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   order: 2 !important;
 
   height: 100%;

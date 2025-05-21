@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoCallOutline } from "react-icons/io5";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoLocation } from "react-icons/io5";
@@ -12,7 +12,20 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaBehance } from "react-icons/fa";
 import { Icon } from "@iconify/react";
 import Logo from "../Logo/Logo";
+import { Axios } from "../Helpers/Axios";
+import { Link } from "react-router-dom";
 const Footer = () => {
+  const [data , setData] = useState([]);
+
+  useEffect(()=>{
+    Axios.get('/blogs').then(data=>setData(data.data.data.slice(-3)))
+
+
+  },[])
+
+
+  
+
   return (
     <footer className="Footer">
       <div className="content">
@@ -96,7 +109,45 @@ const Footer = () => {
         </div>
         <div className="blogs">
           <h4 className="header">Blogs</h4>
-          <div className="blog">
+
+
+          {
+            data.map((data,index)=>(
+
+<Link key={index} className="blog" to={`/single-blog/${data.uuid}`}>
+            <div className="img">
+              <img
+                src={data.cover}
+                alt="blog"
+                loading="lazy"
+              />
+            </div>
+            <div className="text">
+            <p >
+            {data.title}
+            </p>
+              <p className="flex items-center gap-1 ">
+                <Icon
+                  icon="fe:calendar"
+                  width="16"
+                  height="16"
+                  className="icon"
+                />
+                <span>{
+                 new Date(data.created_at).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })
+                
+                }</span>
+              </p>
+            </div>
+          </Link>
+
+            ))
+          }
+          {/* <div className="blog">
             <div className="img">
               <img
                 src={require("../../Images/blog.png")}
@@ -158,7 +209,7 @@ const Footer = () => {
                 <span>21 June, 2025</span>
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="identity">

@@ -186,6 +186,9 @@
   .LatestInsights .blogs{
     flex-direction: column;
   }
+  .LatestInsights .blogs .content{
+    width: 100%;
+  }
   .LatestInsights .blogs .main-blog{
     width: 100%;
     height: 40vh !important;
@@ -196,6 +199,7 @@
   }
   .LatestInsights .blogs .second-blogs .blog{
     flex-direction: column;
+    width: 100%;
   }
   .LatestInsights .blogs .second-blogs .blog .img p{
     top: 80%;

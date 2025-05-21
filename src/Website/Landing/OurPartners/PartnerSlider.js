@@ -21,7 +21,11 @@ useEffect(()=>{
       {
         data?.map((data,index)=>(
           
+          <>
           <img src={data.image} alt="" />
+          <img src={data.image} alt="" />
+          <img src={data.image} alt="" />
+          </>
         
         ))
       }
@@ -32,7 +36,11 @@ useEffect(()=>{
     {
         data?.map((data,index)=>(
           
+          <>
           <img src={data.image} alt="" />
+          <img src={data.image} alt="" />
+          <img src={data.image} alt="" />
+          </> 
         
         ))
       }
@@ -44,7 +52,11 @@ useEffect(()=>{
     {
         data?.map((data,index)=>(
           
+          <>
           <img src={data.image} alt="" />
+          <img src={data.image} alt="" />
+          <img src={data.image} alt="" />
+          </>
         
         ))
       }
@@ -53,8 +65,11 @@ useEffect(()=>{
     <div aria-hidden="true" class="marquee__group">
     {
         data?.map((data,index)=>(
-          
+          <>
           <img src={data.image} alt="" />
+          <img src={data.image} alt="" />
+          <img src={data.image} alt="" />
+          </>
         
         ))
       }

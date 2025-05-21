@@ -53,6 +53,7 @@ color: var(--main-color);
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
 
 }
 .OurLatestStudios .images .top .img:first-child{

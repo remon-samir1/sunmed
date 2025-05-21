@@ -1,7 +1,7 @@
 :root {
   --color-text: navy;
   --color-bg: #FAFAFA;
-  --color-bg-accent: #e6e1d8;
+  --color-bg-accent: #fafafa;
   --size: clamp(10rem, 1rem + 40vmin, 30rem);
   --gap: calc(var(--size) / 14);
   --duration: 60s;
@@ -11,7 +11,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-text: papayawhip;
+    --color-text: #fafafa;
     --color-bg: #fafafa;
     --color-bg-accent: #e6e1d8;
   }

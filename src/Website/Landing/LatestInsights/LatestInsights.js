@@ -65,7 +65,7 @@ const LatestInsights = () => {
             <div className="img">
               <img src={data[2]?.cover}loading='lazy' alt="blog" />
               <p>
-              {data[2]?.cover}
+              {data[2]?.title}
               </p>
             </div>
             <div className="content">
